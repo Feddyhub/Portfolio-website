@@ -1,0 +1,653 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* CSS - Dark Mode Stilleri (Değiştirilmedi) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --header-bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --header-bg: #1a1a1a;
+  --card-bg: #1e1e1e;
+  --border-color: #333333;
+}
+
+/* CSS - Geliştirilmiş arama çubuğu stilleri (Değiştirilmedi) */
+.search-container {
+  margin: 25px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 550px; /* Genişliği artırıldı */
+  display: flex;
+  border-radius: 35px; /* Daha yuvarlak köşeler */
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .search-box {
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.07);
+  border-color: var(--highlight-color);
+}
+
+.search-box:focus-within {
+  border-color: var(--highlight-color);
+  transform: translateY(-3px); /* Daha belirgin yükselme efekti */
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px; /* Daha fazla iç boşluk */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 18px; /* Daha büyük ikon */
+  z-index: 1;
+}
+
+.dark-mode .search-icon {
+  color: #aaa;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 16px 20px 16px 55px; /* Daha fazla yükseklik ve iç boşluk */
+  font-size: 17px; /* Daha büyük yazı tipi */
+  background: white;
+  color: #333;
+  font-family: inherit; /* Sitenin fontunu kullan */
+}
+
+.dark-mode .search-box input {
+  background: #2d2d2d;
+  color: #f1f1f1;
+}
+
+.search-box input::placeholder {
+  color: #888;
+  font-weight: 300; /* Daha ince placeholder metin */
+}
+
+.dark-mode .search-box input::placeholder {
+  color: #aaa;
+}
+
+.search-btn {
+  border: none;
+  background-color: var(--highlight-color, #6c63ff);
+  color: white;
+  padding: 0 30px; /* Daha geniş buton */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px; /* Daha büyük yazı tipi */
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px; /* Harf aralığı */
+}
+
+.search-btn:hover {
+  background-color: #5b54d4;
+  letter-spacing: 1px; /* Hover durumunda harf aralığını artır */
+}
+
+.dark-mode .search-btn:hover {
+  background-color: #7975e6;
+}
+
+.counter-value {
+  font-weight: 700;
+  color: #23c629;
+  display: inline-block;
+  position: relative;
+}
+
+.dark-mode .counter-value {
+  color: #6d8ae8;
+}
+
+.form-container input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* 3. CounterUp Styling (Değiştirilmedi) */
+.counter {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* CSS - Textbox için stil kodları (Değiştirilmedi) */
+.search-box-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 15px auto;
+  transition: all 0.3s ease;
+}
+
+.search-box-container .input-group {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-box-container .input-group-text {
+  background-color: white;
+  border-right: none;
+}
+
+.search-box-container .form-control {
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+}
+
+.search-box-container .form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.search-box-container .btn {
+  background-color: #4b6cc1;
+  border-color: #4b6cc1;
+  transition: all 0.3s ease;
+}
+
+.search-box-container .btn:hover {
+  background-color: #3a57a6;
+  border-color: #3a57a6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(75, 75, 75);
+}
+
+/* TRANSITION (Değiştirilmedi) */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV (Değiştirilmedi) */
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+.nav-links {
+  gap: 2.2rem;
+  list-style: none;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+a {
+  color: rgb(40, 40, 40);
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: rgb(60, 60, 60);
+  text-decoration: underline;
+  text-underline-offset: 0.9rem;
+  text-decoration-color: rgb(165, 165, 165);
+}
+
+.logo {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: rgb(30, 30, 30);
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU (Değiştirilmedi) */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(30, 30, 30);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(245, 245, 245);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-links a {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.45rem;
+  color: rgb(40, 40, 40);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS (Değiştirilmedi) */
+
+section {
+  padding-top: 4.5vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION (Değiştirilmedi) */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+#profile .search-container {
+  width: 100%; /* Arama container'ının tam genişlikte olmasını sağla */
+}
+#profile .button-group {
+  display: flex; /* Butonları yan yana sırala */
+  gap: 1rem; /* Butonlar arasındaki boşluk */
+}
+
+/* İsteğe bağlı olarak butonların genişliğini ayarlayabilirsiniz */
+#profile .button-group .btn {
+  flex: 1; /* Butonların eşit genişlikte olmasını sağlar */
+}
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.section__text__p1 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(60, 60, 60);
+}
+
+.section__text__p2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: rgb(50, 50, 50);
+}
+
+.title {
+  font-size: 3.1rem;
+  text-align: center;
+  font-weight: 600;
+  color: rgb(30, 30, 30);
+  margin-bottom: 1rem;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+  gap: 1.2rem;
+}
+
+/* ICONS (Değiştirilmedi) */
+
+.icon {
+  cursor: pointer;
+  height: 2.2rem;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* BUTTONS (Değiştirilmedi) */
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Bu satır eklendi */
+  gap: 10px;
+}
+
+.icon.arrow {
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(45, 45, 45) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(45, 45, 45);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(20, 20, 20);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(235, 235, 235) 0.1rem solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ABOUT SECTION (Değiştirilmedi) */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.8rem;
+  flex: 1;
+  background: white;
+  border-radius: 1.5rem;
+  border: rgb(45, 45, 45) 0.1rem solid;
+  border-color: rgb(150, 150, 150);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-container {
+  gap: 4.2rem;
+  height: 80%;
+}
+
+/* EXPERIENCE SECTION (Değiştirilmedi) */
+
+#experience {
+  position: relative;
+  /* Diğer stil tanımlamalarınız */
+  padding-bottom: 0vh; /* Mevcut bir değer varsa azaltın veya 0 yapın */
+  margin-bottom: 0vh; /* Mevcut bir değer varsa azaltın veya 0 yapın */
+}
+
+.experience-sub-title {
+  color: rgb(65, 65, 65);
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 2.2rem;
+}
+.contribute-container {
+  /* Eğer üst konteyner bir flex container ise */
+  display: flex;
+  justify-content: center; /* Yatayda ortala */
+  align-items: center; /* Dikeyde ortala (isteğe bağlı) */
+  flex-direction: column; /* İçindeki öğeleri alt alta sırala (isteğe bağlı) */
+}
+
+#experience .about-containers {
+  display: flex; /* 'details-container' div'lerini yan yana sıralar */
+  gap: 2rem; /* Aralarındaki boşluk */
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+#experience .details-container {
+  padding: 1.5rem;
+  flex: 1; /* Mevcut alanı eşit olarak paylaşmalarını sağlar */
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+#experience .article-container {
+  display: flex; /* 'article' elemanlarını yan yana sıralar */
+  text-align: initial;
+  flex-wrap: wrap; /* Gerekirse alt satıra geçmelerini sağlar */
+  justify-content: space-around; /* Aralarında eşit boşluk bırakır */
+  gap: 1.5rem; /* 'article' elemanları arasındaki boşluk */
+}
+
+#experience .article-container article {
+  display: flex; /* İçindeki görsel ve metni yan yana sıralar */
+  width: calc(50% - 1rem); /* İki tanesinin yan yana sığması için genişlik ayarı */
+  gap: 0.5rem;
+  align-items: center; /* Dikeyde ortalar */
+}
+
+/* Daha küçük ekranlar için düzenleme (isteğe bağlı) */
+@media screen and (max-width: 768px) {
+  #experience .about-containers {
+    flex-direction: column; /* Alt alta sırala */
+  }
+
+  #experience .article-container {
+    flex-direction: column; /* Alt alta sırala */
+    align-items: flex-start; /* Sola hizala */
+  }
+
+  #experience .article-container article {
+    width: 100%; /* Tam genişlik kullan */
+  }
+}
+/* Ok Butonları */
+.arrow-left, .arrow-right {
+  background-color: transparent;
+  border: 2px solid #007bff; /* Ok butonunun kenar rengi */
+  color: #007bff;
+  font-size: 28px;
+  padding: 12px 16px;
+  border-radius: 50%; /* Yuvarlak butonlar */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 15px; /* Araya boşluk ekliyoruz */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Butonlara biraz gölge */
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); /* Hoverda daha belirgin gölge */
+}
+
+.arrow-left:focus, .arrow-right:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Ok Butonlarının Konumları */
+.arrow-left {
+  position: absolute;
+  left: 10px; /* Konumu tam istediğiniz gibi yerleştirebilirsiniz */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-right {
+  position: absolute;
+  right: 10px; /* Konumu tam istediğiniz gibi yerleştirebilirsiniz */
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Counter-Up -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  </head>
+  
+  <body>
+    <nav id="desktop-nav">
+      
+      <div class="logo" id="dynamic-logo-desktop">Murat Ferhat Derya</div>
+      
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dark-mode-toggle">
+            <button id="darkModeToggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Murat Ferhat Derya</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+        
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt="Profile" >
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Murat Ferhat Derya</h1>
+        <p class="section__text__p2">Back-end Developer</p>
+        <div class="btn-container">
+          <div class="search-container">
+            <div class="search-box">
+              <i class="bi bi-search search-icon"></i>
+              <input type="text" placeholder="ask whatever you want &#128521 . . .">
+              <button class="search-btn">Search</button>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+          </div>
+        </div>
+        
+        
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/in/feddyhub'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Feddyhub'" />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+
+      <div class="contribute-container">
+        <h2>Github <span class="counter-value">312</span>+ Contributions</h2>
+        <img src="./assets/contribute-img.png" alt="Feddyhub Contributions" class="contribute-img" />
+      </div>
+
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p><span class="arkenom-text">Arkenom Teknoloji</span><br />Intern Data Scientist</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>Dokuz Eylül University<br />CS-AI Community Leader</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I'm a final-year Computer Science student with internships in Data Science and experience as a Back-end Developer. I'm passionate about building scalable APIs, deploying ML models, and continuous learning.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Scientist</h2>
+            <div class="article-container">
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Python</h3><p>Pandas, NumPy, Sklearn, etc.</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Preprocessing</h3><p>Cleaning, Encoding, Feature Engineering</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Visualization</h3><p>Matplotlib, Seaborn, Plotly</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Neural Networks</h3><p>TensorFlow, CNN, LSTM</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Time Series</h3><p>ARIMA, LSTM, Forecasting</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>MLOps & Deployment</h3><p>Docker, FastAPI, Streamlit</p></div></article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Developer</h2>
+            <div class="article-container">
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>RESTful APIs</h3><p>FastAPI, Flask</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>SQL</h3><p>PostgreSQL, MySQL</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Async Programming</h3><p>Asyncio, FastAPI</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Git & GitHub</h3><p>Version Control & CI/CD</p></div></article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+    <h1 class="title">Projects</h1>
+    <div class="projects-container">
+      <!-- İlk Proje -->
+      <div class="project-container" id="project-1">
+        <div class="project-slide">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <picture>
+                <source srcset="./assets/project-1.gif" type="image/gif" />
+                <img src="./assets/project-1.png" alt="Official Chatbot Project - Description of the project" class="project-img" />
+              </picture>
+            </div>
+            <h2 class="experience-sub-title project-title">Official Chatbot</h2>
+            <div class="button-group">
+              <!-- Sol ok butonu -->
+              <button id="prev" class="arrow-button">←</button>
+    
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/yourrepo'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://yourliveprojectdemo.com'">
+                Live Demo
+              </button>
+    
+              <!-- Sağ ok butonu -->
+              <button id="next" class="arrow-button">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- İkinci Proje -->
+      <div class="project-container" id="project-2" style="display: none;">
+        <div class="project-slide">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <picture>
+                <source srcset="./assets/project-2.gif" type="image/gif" />
+                <img src="./assets/project-2.png" alt="Price Tracker Project - Description of the project" class="project-img" />
+              </picture>
+            </div>
+            <h2 class="experience-sub-title project-title">Price Tracker</h2>
+            <div class="button-group">
+              <!-- Sol ok butonu -->
+              <button id="prev" class="arrow-left">←</button>
+    
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/yourrepo'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://yourliveprojectdemo.com'">
+                Live Demo
+              </button>
+    
+              <!-- Sağ ok butonu -->
+              <button id="next" class="arrow-button">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+
+
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:murat.ferhat@example.com">murat.ferhat@example.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://linkedin.com/in/feddyhub">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+       
+      </nav>
+      <p>Copyright &copy; 2025 Murat Ferhat Derya</p>
+    </footer>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
