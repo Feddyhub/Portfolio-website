@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+      
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
@@ -141,87 +141,189 @@
           </div>
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+      
     </section>
+    
+
     <h1 class="title">Projects</h1>
-    <div class="projects-container">
-      <!-- İlk Proje -->
-      <div class="project-container" id="project-1">
-        <div class="project-slide">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <picture>
-                <source srcset="./assets/project-1.gif" type="image/gif" />
-                <img src="./assets/project-1.png" alt="Official Chatbot Project - Description of the project" class="project-img" />
-              </picture>
-            </div>
-            <h2 class="experience-sub-title project-title">Official Chatbot</h2>
-            <div class="button-group">
-              <!-- Sol ok butonu -->
-              <button id="prev" class="arrow-button">←</button>
-    
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/yourrepo'">
-                Github
-              </button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://yourliveprojectdemo.com'">
-                Live Demo
-              </button>
-    
-              <!-- Sağ ok butonu -->
-              <button id="next" class="arrow-button">→</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <!-- İkinci Proje -->
-      <div class="project-container" id="project-2" style="display: none;">
-        <div class="project-slide">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <picture>
-                <source srcset="./assets/project-2.gif" type="image/gif" />
-                <img src="./assets/project-2.png" alt="Price Tracker Project - Description of the project" class="project-img" />
-              </picture>
-            </div>
-            <h2 class="experience-sub-title project-title">Price Tracker</h2>
-            <div class="button-group">
-              <!-- Sol ok butonu -->
-              <button id="prev" class="arrow-left">←</button>
-    
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/yourrepo'">
-                Github
-              </button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://yourliveprojectdemo.com'">
-                Live Demo
-              </button>
-    
-              <!-- Sağ ok butonu -->
-              <button id="next" class="arrow-button">→</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    </div>
-    
 
+    <section class="carousel-section">
+        <div class="carousel-projects-wrapper">
+            <!-- İlk Proje -->
+            <div class="carousel-project-item active-slide" data-slide-index="0"> <!-- data attribute eklendi -->
+                <div class="carousel-project-card">
+                    <div class="article-container">
+                        <picture>
+                            <!-- Gerçek resim yollarınızı kullanın -->
+                            <source srcset="./assets/project-1.gif" type="image/gif" />
+                            <img src="./assets/project-1.gif" alt="Official Chatbot Project" class="project-img" />
+                        </picture>
+                    </div>
+                    <h2 class="carousel-project-title">Official Chatbot</h2>
+                    <!-- YENİ: Proje Açıklaması Eklendi -->
+                    <p class="carousel-project-description">
+                        Müşteri etkileşimini artıran ve destek taleplerini 7/24 yöneten
+                        akıllı bir yapay zeka chatbot çözümü. Kolay entegrasyon ve özelleştirme seçenekleri sunar.
+                    </p>
+                    <div class="carousel-button-group">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- İkinci Proje -->
+            <div class="carousel-project-item" data-slide-index="1"> <!-- data attribute eklendi -->
+                <div class="carousel-project-card">
+                    <div class="article-container">
+                         <picture>
+                             <!-- Gerçek resim yollarınızı kullanın -->
+                             <source srcset="./assets/project-2.gif" type="image/gif" />
+                             <img src="./assets/project-2.gif" alt="Price Tracker" class="project-img" />
+                        </picture>
+                    </div>
+                    <h2 class="carousel-project-title">Price Tracker</h2>
+                    <!-- YENİ: Proje Açıklaması Eklendi -->
+                    <p class="carousel-project-description">
+                        Çeşitli e-ticaret sitelerindeki ürün fiyatlarını anlık olarak takip eden,
+                        fiyat düşüşlerinde bildirim gönderen web tabanlı bir araç. Kullanıcı dostu arayüze sahiptir.
+                    </p>
+                    <div class="carousel-button-group">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-          <p><a href="mailto:murat.ferhat@example.com">murat.ferhat@example.com</a></p>
+             <!-- Üçüncü Proje (Örnek olarak eklendi) -->
+            <div class="carousel-project-item" data-slide-index="2"> <!-- data attribute eklendi -->
+                <div class="carousel-project-card">
+                    <div class="article-container">
+                         <picture>
+                             <!-- Gerçek resim yollarınızı kullanın -->
+                            <source srcset="placeholder-proje3.gif" type="image/gif" />
+                            <img src="placeholder-proje3.png" alt="Task Manager App" class="project-img" />
+                        </picture>
+                    </div>
+                    <h2 class="carousel-project-title">Task Manager</h2>
+                    <!-- YENİ: Proje Açıklaması Eklendi -->
+                    <p class="carousel-project-description">
+                        Günlük görevleri ve projeleri yönetmek için tasarlanmış, sürükle-bırak arayüzlü,
+                        takım çalışmasına uygun, modern bir görev yönetim uygulaması.
+                    </p>
+                    <div class="carousel-button-group">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OK BUTONLARI (Mevcut yapınızdaki gibi) -->
+            <button class="carousel-arrow prev-arrow" aria-label="Previous Project">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-arrow next-arrow" aria-label="Next Project">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
-        <div class="contact-info-container">
-          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-          <p><a href="https://linkedin.com/in/feddyhub">LinkedIn</a></p>
-        </div>
-      </div>
     </section>
+
+    <section id="highlights-contact"> <!-- ID'yi değiştirdim, çakışmayı önlemek için -->
+      <p class="section__text__p1">Discover More</p>
+      <h1 class="title section-title">Highlights & Contact</h1> <!-- class="title" genel bir stil alabilir, section-title spesifik -->
+
+      <div class="experience-details-container"> <!-- Bu class ismi experience bölümünden geliyor, isterseniz değiştirebiliriz -->
+        <div class="about-containers"> <!-- Bu class ismi de about bölümünden, isterseniz değiştirebiliriz -->
+
+          <!-- Card 1: Get In Touch -->
+          <div class="details-container color-container contact-card">
+            <div class="card-header">
+              <h2 class="experience-sub-title project-title">Get In Touch</h2>
+              <p class="project-subtitle-extra">Available 24/7</p>
+            </div>
+            <div class="article-container contact-info-visuals">
+              <div class="contact-infos-list">
+                <div class="info-item">
+                  <i class="fas fa-map-marker-alt project-contact-icon"></i>
+                  <div>
+                    <h5>Location</h5>
+                    <p>12345 Fake ST NoWhere AB Country</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-phone-alt project-contact-icon"></i>
+                  <div>
+                    <h5>Phone Number</h5>
+                    <p>(123) 456-7890</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-envelope project-contact-icon"></i>
+                  <div>
+                    <h5>Email Address</h5>
+                    <p>info@website.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: WAT Anıları -->
+          <div class="details-container color-container wat-card">
+            <h2 class="experience-sub-title project-title">✨ ANILARIM ✨</h2>
+            <div class="article-container wat-slider-container">
+              <img src="./assets/slide1.png" alt="WAT Anıları 1" class="project-img">
+            </div>
+            <p class="section__text__p1 project-description-text">
+              Figosum da Figosum
+            </p>
+          </div>
+
+          <!-- Card 3: Coffee Donation -->
+          <div class="details-container color-container donate-card">
+            <div class="article-container coffee-icon-area">
+              <img src="./assets/your-coffee-icon.svg" alt="Coffee Icon" class="project-svg-icon coffee-img-custom">
+            </div>
+            <h2 class="experience-sub-title project-title coffee-title">Coffee for the Journey</h2>
+            <div class="star-rating-display">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star">☆</span>
+            </div>
+            <div class="btn-container project-input-group">
+              <textarea class="project-text-input donate-textarea" placeholder="İçinden ne geçiyorsa yaz..."></textarea>
+              <button class="btn btn-color-2 project-btn donate-action-button">
+                Support with Coffee
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Bu bölümün kendi oku olmayacak, genel section oku kullanılabilir veya kaldırılabilir -->
+      <!-- Eğer her section'ın kendi oku olacaksa, CSS'te .arrow için `position:absolute` ve `section { position:relative; }` doğru olmalı -->
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#footer'"
+      />
+    </section>
+    
     <footer>
       <nav>
         <ul class="nav-links">

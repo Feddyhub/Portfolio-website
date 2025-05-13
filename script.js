@@ -21,32 +21,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Geçiş işlemi için gerekli JavaScript kodu
-let currentProjectIndex = 0;  // Başlangıçta 1. proje görünsün
-const projects = document.querySelectorAll('.project-container');
-const totalProjects = projects.length;
+document.addEventListener('DOMContentLoaded', function() {
+  const carouselWrapper = document.querySelector('.carousel-projects-wrapper');
+  const projectItems = document.querySelectorAll('.carousel-project-item');
+  const prevButton = document.querySelector('.prev-arrow');
+  const nextButton = document.querySelector('.next-arrow');
+  const totalSlides = projectItems.length;
+  let currentIndex = 0;
 
-function showProject(index) {
-  // Tüm projeleri gizle
-  projects.forEach((project, i) => {
-    project.style.display = 'none';
+  function updateCarousel() {
+      projectItems.forEach((item, index) => {
+          if (index === currentIndex) {
+              item.classList.add('active-slide');
+          } else {
+              item.classList.remove('active-slide');
+          }
+      });
+  }
+
+  function goToSlide(index) {
+      if (index < 0) {
+          currentIndex = totalSlides - 1;
+      } else if (index >= totalSlides) {
+          currentIndex = 0;
+      } else {
+          currentIndex = index;
+      }
+      updateCarousel();
+  }
+
+  prevButton.addEventListener('click', () => {
+      goToSlide(currentIndex - 1);
   });
-  
-  // Geçerli projeyi göster
-  projects[index].style.display = 'block';
-}
 
-document.getElementById('next').addEventListener('click', () => {
-  // Sonraki projeye geç
-  currentProjectIndex = (currentProjectIndex + 1) % totalProjects;
-  showProject(currentProjectIndex);
+  nextButton.addEventListener('click', () => {
+      goToSlide(currentIndex + 1);
+  });
+
+  // Sayfa yüklendiğinde ilk slaydı aktif et
+  updateCarousel();
 });
-
-document.getElementById('prev').addEventListener('click', () => {
-  // Önceki projeye geç
-  currentProjectIndex = (currentProjectIndex - 1 + totalProjects) % totalProjects;
-  showProject(currentProjectIndex);
-});
-
-// Sayfa yüklendiğinde ilk projeyi göster
-showProject(currentProjectIndex);

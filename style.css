@@ -213,7 +213,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
-  background-color: rgb(240, 240, 240);
+  background-color:#cbcccb;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -411,6 +411,7 @@ section {
   font-weight: 600;
   color: rgb(30, 30, 30);
   margin-bottom: 1rem;
+ 
 }
 
 #socials-container {
@@ -442,7 +443,8 @@ section {
 }
 
 .icon.arrow {
-  display: block;
+  display: none;
+  overflow: none;
   margin: 20px auto;
   cursor: pointer;
 }
@@ -547,8 +549,9 @@ section {
 #experience {
   position: relative;
   /* Diğer stil tanımlamalarınız */
-  padding-bottom: 0vh; /* Mevcut bir değer varsa azaltın veya 0 yapın */
-  margin-bottom: 0vh; /* Mevcut bir değer varsa azaltın veya 0 yapın */
+  padding-bottom: 0; /* Mevcut bir değer varsa azaltın veya 0 yapın */
+  margin-bottom: -135px; /* Mevcut bir değer varsa azaltın veya 0 yapın */
+  
 }
 
 .experience-sub-title {
@@ -650,4 +653,427 @@ section {
   right: 10px; /* Konumu tam istediğiniz gibi yerleştirebilirsiniz */
   top: 50%;
   transform: translateY(-50%);
+}
+
+
+
+#highlights-contact {
+  /* Bu section için özel padding veya margin gerekirse burada tanımlanabilir. */
+  /* Üstteki genel section düzeltmeleri yapıldıysa, buraya çok fazla eklemeye gerek olmayabilir. */
+  /* Örneğin, diğer section'lardan farklı bir alt boşluk isteniyorsa: */
+  padding-bottom: 6rem; /* Örnek */
+}
+
+#highlights-contact .section__text__p1 { /* "Discover More" yazısı */
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+#highlights-contact .title.section-title { /* "Highlights & Contact" başlığı */
+  font-size: clamp(2.2rem, 5vw, 3.1rem);
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 3rem; /* Kartlarla arasına boşluk */
+}
+
+.experience-details-container {
+  /* Bu sınıf #experience bölümünden geliyor. #highlights-contact için özel bir stil gerekmiyorsa,
+     genel tanımı kullanılabilir. Örn: Üst boşluğu ayarlamak için: */
+  margin-top: 30.1px;
+  padding-top: 15px;
+}
+
+#highlights-contact .about-containers {
+  /* Bu sınıf #about bölümünden geliyor. Flex ve gap tanımları oradan miras alınır.
+     #highlights-contact için özel bir stil gerekmiyorsa, genel tanımı kullanılabilir.
+     Örn: Kartları ortalamak için (genel .about-containers'da yoksa): */
+  display: flex; /* Zaten .about-containers genel tanımında var */
+  justify-content: center; /* Kartları yatayda ortala */
+  gap: 2rem; /* Zaten .about-containers genel tanımında var */
+  flex-wrap: wrap; /* Zaten .about-containers genel tanımında var */
+}
+
+/* KARTLARIN GENEL STİLİ (#highlights-contact içindeki .details-container) */
+#highlights-contact .details-container.color-container {
+  padding: 1.8rem;
+  flex: 1 1 320px; /* Büyüme, küçülme, temel genişlik */
+  max-width: 400px;
+  min-height: 500px; /* Kartların benzer yükseklikte olması ve içeriğin iyi dağılması için */
+  background: var(--card-bg);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Başlık/içerik üstte, buton/input grubu altta */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#highlights-contact .details-container.color-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+.dark-mode #highlights-contact .details-container.color-container:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08); /* Dark mode için hover gölgesi */
+}
+
+/* KART İÇİ article-container (resim/ikon/bilgi alanı) */
+#highlights-contact .article-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-grow: 0; /* Genellikle içeriğin büyümesini istemeyiz, spesifik kartlar hariç */
+}
+
+/* KART BAŞLIKLARI (.experience-sub-title.project-title) */
+#highlights-contact .experience-sub-title.project-title {
+  /* Bu sınıf #experience bölümünden geliyor. #highlights-contact için özelleştirme: */
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.6rem; /* Kart başlıkları için uygun bir boyut */
+  margin-top: 0; /* Kartın en üstündeyse */
+  margin-bottom: 1rem; /* Altındaki içerikle boşluk */
+}
+
+/* CARD 1: GET IN TOUCH (.contact-card) */
+.contact-card .card-header {
+  width: 100%;
+  margin-bottom: 1.5rem; /* İletişim bilgileriyle arası boşluk */
+}
+.contact-card .experience-sub-title.project-title {
+  margin-bottom: 0.4rem; /* "Available" yazısıyla daha az boşluk */
+}
+.contact-card .project-subtitle-extra { /* "Available 24/7" */
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-top: 0;
+}
+.contact-card .contact-info-visuals { /* İletişim bilgilerini saran .article-container */
+  align-items: flex-start;
+  flex-grow: 1; /* Dikeyde kalan boşluğu bu alan doldursun */
+  justify-content: center; /* İçindeki .contact-infos-list'i dikeyde ortala */
+  width: 100%;
+  margin-bottom: 0; /* Kartın en altına kadar uzanabilir */
+}
+.contact-infos-list {
+  text-align: left;
+  width: 100%;
+  padding: 0 0.5rem; /* Kenarlardan hafif iç boşluk */
+}
+.contact-infos-list .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  gap: 1rem;
+}
+.project-contact-icon { /* Font Awesome ikonları için */
+  font-size: 1.6rem;
+  color: var(--highlight-color, #6c63ff); /* :root'ta tanımlanabilir */
+  width: 30px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.contact-infos-list h5 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-color);
+  font-weight: 500; /* Normalden biraz daha kalın */
+}
+.contact-infos-list p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  word-break: break-word; /* Uzun e-postaların taşmasını engeller */
+}
+
+/* CARD 2: WAT ANILARI (.wat-card) */
+.wat-card .experience-sub-title.project-title { /* "✨ WAT ANILARI ✨" */
+  margin-bottom: 1.5rem; /* Resimle arası boşluk */
+}
+.wat-card .wat-slider-container { /* Resim alanı */
+  min-height: 200px; /* Resim için bir yükseklik */
+  margin-bottom: 1.5rem; /* Açıklama yazısıyla arası boşluk */
+  width: 100%;
+  display: flex; /* Resmi ortalamak için */
+  justify-content: center;
+}
+.wat-card .project-img { /* WAT anıları resmi */
+  border-radius: 1rem;
+  width: 100%; /* Kapsayıcısının genişliğine uysun */
+  max-width: 300px; /* Resmin çok fazla büyümesini engelle */
+  height: auto; /* Orantıyı koru */
+  max-height: 220px; /* Maksimum yükseklik */
+  object-fit: cover; /* Alana sığdırırken kırp */
+  border: 1px solid var(--border-color);
+}
+.wat-card .project-description-text { /* WAT anıları açıklama yazısı */
+  /* .section__text__p1 genel stilini kullanır, burada özelleştirilebilir */
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0.5rem 1rem 0.5rem;
+  flex-grow: 1; /* Varsa dikeyde kalan boşluğu doldurur */
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* CARD 3: COFFEE DONATION (.donate-card) */
+.donate-card .coffee-icon-area { /* Kahve ikonu alanı */
+  min-height: 120px; /* İkon için yeterli yükseklik */
+  margin-bottom: 0; /* Başlıkla daha yakın olması için */
+}
+.donate-card .project-svg-icon.coffee-img-custom { /* Kendi yüklediğiniz SVG için */
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin-bottom: 1rem; /* Başlıkla SVG ikonu arası boşluk */
+}
+
+.donate-card .experience-sub-title.project-title.coffee-title { /* "Coffee for the Journey" */
+  font-size: 1.4rem; /* Biraz daha küçük */
+  margin-bottom: 0.8rem; /* Yıldızlarla arası boşluk */
+}
+.star-rating-display {
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 2rem;
+}
+.star-rating-display .star {
+  color: #ccc; /* Boş yıldız */
+}
+.dark-mode .star-rating-display .star {
+  color: #555; /* Dark mode için boş yıldız */
+}
+.star-rating-display .star.filled {
+  color: #FFD700; /* Dolu yıldız */
+}
+
+/* Textarea ve Buton Grubu */
+#highlights-contact .project-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Textarea ve buton arası boşluk */
+  width: 100%;
+  padding: 0 1rem; /* Kartın kenarlarından taşmasın diye */
+  /* margin-top: auto; .details-container > justify-content: space-between ile altta kalır */
+}
+.donate-textarea.project-text-input {
+  padding: 0.9rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  font-size: 1rem;
+  min-height: 120px; /* Daha yüksek textarea */
+  resize: vertical; /* Sadece dikeyde boyutlandırılsın */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif; /* Genel fontu kullansın */
+}
+.donate-textarea.project-text-input::placeholder {
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+/* "Support with Coffee" BUTONU */
+/* Genel .btn ve .btn-color-2 stillerini kullanır.
+   Eğer farklı bir görünüm isteniyorsa, burada özelleştirilir. */
+.donate-action-button.project-btn {
+  /* .btn sınıfından temel padding, font-size, border-radius alır */
+  /* .btn-color-2'den temel renkleri alabilir veya burada tamamen ezilebilir */
+  background-color: #28a745; /* Başarı/destek rengi */
+  border-color: #28a745;
+  color: white;
+  width: 100%; /* Input grubu içinde tam genişlik */
+}
+.donate-action-button.project-btn:hover {
+  background-color: #1e7e34; /* Koyu tonu */
+  border-color: #1e7e34;
+  /* transform: translateY(-3px); .btn:hover'dan gelir */
+}
+.dark-mode .donate-action-button.project-btn {
+    background-color: #38bf5a; /* Dark mode için farklı bir yeşil tonu */
+    border-color: #38bf5a;
+}
+.dark-mode .donate-action-button.project-btn:hover {
+    background-color: #2da14a;
+    border-color: #2da14a;
+}
+/* === CAROUSEL PROJECTS SECTION === */
+
+.carousel-section {
+  
+  padding-bottom: 0;
+  margin-bottom: 0;
+  
+}
+
+.carousel-projects-wrapper {
+  position: relative;
+  width: 90%;
+  /* GÜNCELLEME: Yatayda %8 daha büyük */
+  max-width: 930px; /* Önceki 860px idi, 860 * 1.08 ≈ 929 */
+  margin: 1rem auto 0 auto;
+  overflow: hidden;
+  border-radius: 1.5rem; /* Wrapper'ın köşeleri yuvarlak kalabilir */
+}
+
+.carousel-project-item {
+  display: none;
+  width: 100%;
+  animation: fadeEffect 0.6s ease-in-out;
+}
+
+.carousel-project-item.active-slide {
+  display: block;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0.3;}
+  to {opacity: 1;}
+}
+
+/* GÜNCELLEME: Kontrast Kart Stili */
+.carousel-project-card {
+  background-color: rgba(255, 255, 255, 0.453); /* Tam Siyah Arka Plan */
+  border: 1px solid #000000; /* Siyah üzerinde hafif görünür kenarlık */
+  color: #000000; /* Beyaz Ana Metin Rengi */
+  border-radius: 1.5rem; /* Kart köşeleri */
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 690px; /* Boyut aynı kalıyor */
+  box-shadow: 0 6px 15px rgba(255,255,255,0.05); /* Beyaz gölge deneyebiliriz */
+}
+
+.carousel-project-card .article-container {
+  width: 100%;
+  /* GÜNCELLEME: Resim alanı da yatay büyümeye uyumlu */
+  max-width: 680px; /* Önceki 630px idi, orantılı artış */
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #222; /* Resim yüklenmezse diye koyu alan */
+}
+
+.carousel-project-card .project-img {
+  width: 100%;
+  height: auto;
+  max-height: 370px; /* Dikey boyut aynı */
+  object-fit: cover;
+  display: block;
+  border-radius: 1rem;
+}
+
+/* GÜNCELLEME: Kontrast Başlık ve Açıklama */
+.carousel-project-title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #000000; /* Beyaz Başlık */
+  margin-bottom: 0.8rem;
+}
+
+.carousel-project-description {
+  font-size: 1rem;
+  color: #d70606; /* Biraz daha soluk beyaz açıklama */
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  max-width: 90%;
+  min-height: 60px;
+}
+
+.carousel-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+/* GÜNCELLEME: Kontrast Ok Butonları (Yuvarlak Değil) */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #f5f7fa; /* Beyaz Arka Plan */
+  color: #de0d0dac; /* Siyah İkon/Yazı Rengi */
+  border: 1px solid #e8393943; /* Hafif gri kenarlık */
+  /* border-radius: 50%; KALDIRILDI */
+  border-radius: 8px; /* Hafif yuvarlak köşeler (0 isterseniz tamamen kare olur) */
+  width: 45px; /* Boyut biraz küçültülebilir (isteğe bağlı) */
+  height: 55px; /* Dikdörtgen hissi için yükseklik fazla olabilir */
+  /* Veya kare isterseniz: height: 45px; */
+  font-size: 1.8rem; /* İkon boyutu */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Siyah üzerinde beyaz gölge zor */
+}
+/* HTML'de <span class="arrow-icon">...</span> kullandıysanız: */
+.arrow-icon {
+  font-weight: bold;
+  line-height: 1;
+}
+/* Veya FontAwesome <i class="..."> kullandıysanız, font-size ayarı yeterli */
+
+
+.carousel-arrow:hover {
+  background-color: #dddddd; /* Hover'da hafif grileşen beyaz */
+  color: #000000;
+  border-color: #999;
+  transform: translateY(-50%)  scale(1.15); /* Hafif büyüme */
+}
+.carousel-arrow:focus {
+  outline: none;
+  /* Kontrast focus halkası */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Siyah focus halkası */
+}
+
+/* Kontrast oklar için dark mode stilleri artık GEREKSİZ */
+/* body.dark-mode .carousel-arrow { ... } */
+
+
+.prev-arrow {
+  left: 20px;
+  /* İsteğe bağlı: Hafif içe dönük görünüm için */
+  /* border-top-right-radius: 15px; */
+  /* border-bottom-right-radius: 15px; */
+}
+
+.next-arrow {
+  right: 20px;
+   /* İsteğe bağlı: Hafif içe dönük görünüm için */
+  /* border-top-left-radius: 15px; */
+  /* border-bottom-left-radius: 15px; */
+}
+
+
+
+/* GÜNCELLEME: Kontrast Carousel Butonları */
+.carousel-button-group .btn {
+  background-color: #ffffff; /* Beyaz Buton Arka Planı */
+  color: #000000; /* Siyah Buton Yazısı */
+  border: 1px solid #ccc; /* Hafif Gri Kenarlık */
+  border-radius: 2rem; /* Butonlar yuvarlak kalabilir veya oklar gibi 8px yapabilirsiniz */
+  /* border-radius: 8px; */
+  min-width: 120px;
+  padding: 0.8rem 1.5rem;
+  box-shadow: none; /* Gölge kaldırıldı */
+  transition: all 0.3s ease;
+}
+
+.carousel-button-group .btn:hover {
+  background-color: #333333; /* Hover'da Koyu Gri Arka Plan */
+  color: #ffffff; /* Beyaz Yazı */
+  border-color: #333333; /* Kenarlık rengi de aynı */
+  transform: translateY(-2px);
 }
