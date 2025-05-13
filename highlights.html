@@ -1,0 +1,203 @@
+<!-- Add Font Awesome CDN for icons -->
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+
+<section class="container py-5" id="contact-highlights">
+  <h2 class="text-center mb-4">Contact & Highlights</h2>
+  <div class="row g-4">
+    <!-- Contact Information Box -->
+    <div class="col-md-4 d-flex">
+      <div
+        class="card shadow-sm w-100 h-100 d-flex flex-column justify-content-between"
+      >
+        <div class="card-body text-center">
+          <h5 class="card-title">Contact Information</h5>
+          <p class="card-text">Email: example@example.com</p>
+          <p class="card-text">Phone: +123 456 789</p>
+          <p class="card-text">Address: 123 Street, City, Country</p>
+
+          <!-- Email Me Button -->
+
+          <div class="mt-3 w-50 d-flex justify-content-center mx-auto">
+            <a
+              href="mailto:info@website.com"
+              class="btn btn-outline-dark btn-sm"
+            >
+              <i class="fas fa-envelope me-2"></i>
+              Email Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Memories Box -->
+    <div class="col-md-4 d-flex">
+      <div
+        class="card shadow-sm w-100 h-100 d-flex flex-column justify-content-between"
+      >
+        <img
+          src="./assets/slide1.png"
+          alt="WAT Anıları 1"
+          class="project-img card-img-top"
+        />
+        <div class="card-body text-center">
+          <h5 class="card-title">My Memories</h5>
+          <p class="card-text">Figosum da figosum</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coffee Box -->
+    <div class="col-md-4 d-flex">
+      <div
+        class="card shadow-sm w-100 h-100 d-flex flex-column justify-content-between"
+      >
+        <div class="card-body text-center">
+          <h5 class="card-title">Get Me a Coffee</h5>
+          <p class="card-text">
+            If you appreciate my work, feel free to buy me a coffee!
+          </p>
+
+          <!-- Rating System -->
+          <div class="mb-3">
+            <label for="rating" class="form-label">Rate My Work</label>
+            <div id="rating" class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5" class="fa fa-star"></label>
+
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4" class="fa fa-star"></label>
+
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3" class="fa fa-star"></label>
+
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2" class="fa fa-star"></label>
+
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1" class="fa fa-star"></label>
+            </div>
+          </div>
+
+          <!-- Textarea for Message -->
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="3"
+              placeholder="Write a message..."
+            ></textarea>
+          </div>
+
+          <!-- Support with Coffee Button -->
+          <a
+            href="https://www.buymeacoffee.com/yourusername"
+            target="_blank"
+            class="btn"
+            style="
+              padding: 20px;
+              border-radius: 20px;
+              background-color: rgb(122, 186, 26);
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <!-- Font Awesome Coffee Icon -->
+            <i class="fas fa-mug-hot me-2"></i>
+            Support with Coffee
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body {
+    flex: 1;
+  }
+
+  .card-img-top {
+    object-fit: cover;
+    height: 400px;
+  }
+
+  .card-title {
+    text-align: center;
+  }
+
+  /* Vertically center content inside the card */
+  .d-flex {
+    display: flex;
+  }
+
+  .flex-column {
+    flex-direction: column;
+  }
+
+  .justify-content-between {
+    justify-content: space-between;
+  }
+
+  /* Optional: Center card content vertically */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Add some space for form elements */
+  .form-select,
+  .form-control {
+    width: 100%;
+  }
+
+  /* Style for star rating system */
+  .star-rating {
+    display: flex;
+    justify-content: center;
+  }
+
+  .star-rating input {
+    display: none;
+  }
+
+  .star-rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+  }
+
+  .star-rating input:checked ~ label {
+    color: #ffc107;
+  }
+
+  .star-rating input:hover ~ label,
+  .star-rating label:hover {
+    color: #ffc107;
+  }
+
+  .star-rating label:active {
+    color: #f39c12;
+  }
+
+  /* Styling the button */
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

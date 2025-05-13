@@ -5,341 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- jQuery -->
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- AOS CSS for Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Counter-Up -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .img-fluid {
+        max-width: 80%;
+        height: auto;
+      }
+    </style>
   </head>
-  
+
   <body>
-    <nav id="desktop-nav">
-      
-      <div class="logo" id="dynamic-logo-desktop">Murat Ferhat Derya</div>
-      
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="dark-mode-toggle">
-            <button id="darkModeToggle">
-              <i class="fas fa-moon"></i>
-            </button>
-          </li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#" id="animated-text">
+          Murat Ferhat Derya
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Murat Ferhat Derya</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </ul>
-        
+
+    <!-- Sections -->
+    <div id="profile-container"></div>
+    <div id="about-container"></div>
+    <div id="experience-container"></div>
+    <div id="projects-container"></div>
+    <div id="contact-highlights-container"></div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+      <div class="container text-center">
+        <p>&copy; 2025 Murat Ferhat Derya</p>
+        <p>
+          <a href="#about" class="text-decoration-none">About</a>
+          |
+          <a href="#experience" class="text-decoration-none">Experience</a>
+          |
+          <a href="#projects" class="text-decoration-none">Projects</a>
+          |
+          <a href="#contact" class="text-decoration-none">Contact</a>
+        </p>
       </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpg" alt="Profile" >
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Murat Ferhat Derya</h1>
-        <p class="section__text__p2">Back-end Developer</p>
-        <div class="btn-container">
-          <div class="search-container">
-            <div class="search-box">
-              <i class="bi bi-search search-icon"></i>
-              <input type="text" placeholder="ask whatever you want &#128521 . . .">
-              <button class="search-btn">Search</button>
-            </div>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
-            <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-          </div>
-        </div>
-        
-        
-        <div id="socials-container">
-          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/in/feddyhub'" />
-          <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Feddyhub'" />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-
-      <div class="contribute-container">
-        <h2>Github <span class="counter-value">312</span>+ Contributions</h2>
-        <img src="./assets/contribute-img.png" alt="Feddyhub Contributions" class="contribute-img" />
-      </div>
-
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-              <h3>Experience</h3>
-              <p><span class="arkenom-text">Arkenom Teknoloji</span><br />Intern Data Scientist</p>
-            </div>
-            <div class="details-container">
-              <img src="./assets/education.png" alt="Education icon" class="icon" />
-              <h3>Education</h3>
-              <p>Dokuz Eylül University<br />CS-AI Community Leader</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I'm a final-year Computer Science student with internships in Data Science and experience as a Back-end Developer. I'm passionate about building scalable APIs, deploying ML models, and continuous learning.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Data Scientist</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Python</h3><p>Pandas, NumPy, Sklearn, etc.</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Preprocessing</h3><p>Cleaning, Encoding, Feature Engineering</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Visualization</h3><p>Matplotlib, Seaborn, Plotly</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Neural Networks</h3><p>TensorFlow, CNN, LSTM</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Time Series</h3><p>ARIMA, LSTM, Forecasting</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>MLOps & Deployment</h3><p>Docker, FastAPI, Streamlit</p></div></article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Developer</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>RESTful APIs</h3><p>FastAPI, Flask</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>SQL</h3><p>PostgreSQL, MySQL</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Async Programming</h3><p>Asyncio, FastAPI</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Git & GitHub</h3><p>Version Control & CI/CD</p></div></article>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-    
-
-    <h1 class="title">Projects</h1>
-
-    <section class="carousel-section">
-        <div class="carousel-projects-wrapper">
-            <!-- İlk Proje -->
-            <div class="carousel-project-item active-slide" data-slide-index="0"> <!-- data attribute eklendi -->
-                <div class="carousel-project-card">
-                    <div class="article-container">
-                        <picture>
-                            <!-- Gerçek resim yollarınızı kullanın -->
-                            <source srcset="./assets/project-1.gif" type="image/gif" />
-                            <img src="./assets/project-1.gif" alt="Official Chatbot Project" class="project-img" />
-                        </picture>
-                    </div>
-                    <h2 class="carousel-project-title">Official Chatbot</h2>
-                    <!-- YENİ: Proje Açıklaması Eklendi -->
-                    <p class="carousel-project-description">
-                        Müşteri etkileşimini artıran ve destek taleplerini 7/24 yöneten
-                        akıllı bir yapay zeka chatbot çözümü. Kolay entegrasyon ve özelleştirme seçenekleri sunar.
-                    </p>
-                    <div class="carousel-button-group">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- İkinci Proje -->
-            <div class="carousel-project-item" data-slide-index="1"> <!-- data attribute eklendi -->
-                <div class="carousel-project-card">
-                    <div class="article-container">
-                         <picture>
-                             <!-- Gerçek resim yollarınızı kullanın -->
-                             <source srcset="./assets/project-2.gif" type="image/gif" />
-                             <img src="./assets/project-2.gif" alt="Price Tracker" class="project-img" />
-                        </picture>
-                    </div>
-                    <h2 class="carousel-project-title">Price Tracker</h2>
-                    <!-- YENİ: Proje Açıklaması Eklendi -->
-                    <p class="carousel-project-description">
-                        Çeşitli e-ticaret sitelerindeki ürün fiyatlarını anlık olarak takip eden,
-                        fiyat düşüşlerinde bildirim gönderen web tabanlı bir araç. Kullanıcı dostu arayüze sahiptir.
-                    </p>
-                    <div class="carousel-button-group">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-             <!-- Üçüncü Proje (Örnek olarak eklendi) -->
-            <div class="carousel-project-item" data-slide-index="2"> <!-- data attribute eklendi -->
-                <div class="carousel-project-card">
-                    <div class="article-container">
-                         <picture>
-                             <!-- Gerçek resim yollarınızı kullanın -->
-                            <source srcset="placeholder-proje3.gif" type="image/gif" />
-                            <img src="placeholder-proje3.png" alt="Task Manager App" class="project-img" />
-                        </picture>
-                    </div>
-                    <h2 class="carousel-project-title">Task Manager</h2>
-                    <!-- YENİ: Proje Açıklaması Eklendi -->
-                    <p class="carousel-project-description">
-                        Günlük görevleri ve projeleri yönetmek için tasarlanmış, sürükle-bırak arayüzlü,
-                        takım çalışmasına uygun, modern bir görev yönetim uygulaması.
-                    </p>
-                    <div class="carousel-button-group">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- OK BUTONLARI (Mevcut yapınızdaki gibi) -->
-            <button class="carousel-arrow prev-arrow" aria-label="Previous Project">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="carousel-arrow next-arrow" aria-label="Next Project">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
-
-    <section id="highlights-contact"> <!-- ID'yi değiştirdim, çakışmayı önlemek için -->
-      <p class="section__text__p1">Discover More</p>
-      <h1 class="title section-title">Highlights & Contact</h1> <!-- class="title" genel bir stil alabilir, section-title spesifik -->
-
-      <div class="experience-details-container"> <!-- Bu class ismi experience bölümünden geliyor, isterseniz değiştirebiliriz -->
-        <div class="about-containers"> <!-- Bu class ismi de about bölümünden, isterseniz değiştirebiliriz -->
-
-          <!-- Card 1: Get In Touch -->
-          <div class="details-container color-container contact-card">
-            <div class="card-header">
-              <h2 class="experience-sub-title project-title">Get In Touch</h2>
-              <p class="project-subtitle-extra">Available 24/7</p>
-            </div>
-            <div class="article-container contact-info-visuals">
-              <div class="contact-infos-list">
-                <div class="info-item">
-                  <i class="fas fa-map-marker-alt project-contact-icon"></i>
-                  <div>
-                    <h5>Location</h5>
-                    <p>12345 Fake ST NoWhere AB Country</p>
-                  </div>
-                </div>
-                <div class="info-item">
-                  <i class="fas fa-phone-alt project-contact-icon"></i>
-                  <div>
-                    <h5>Phone Number</h5>
-                    <p>(123) 456-7890</p>
-                  </div>
-                </div>
-                <div class="info-item">
-                  <i class="fas fa-envelope project-contact-icon"></i>
-                  <div>
-                    <h5>Email Address</h5>
-                    <p>info@website.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: WAT Anıları -->
-          <div class="details-container color-container wat-card">
-            <h2 class="experience-sub-title project-title">✨ ANILARIM ✨</h2>
-            <div class="article-container wat-slider-container">
-              <img src="./assets/slide1.png" alt="WAT Anıları 1" class="project-img">
-            </div>
-            <p class="section__text__p1 project-description-text">
-              Figosum da Figosum
-            </p>
-          </div>
-
-          <!-- Card 3: Coffee Donation -->
-          <div class="details-container color-container donate-card">
-            <div class="article-container coffee-icon-area">
-              <img src="./assets/your-coffee-icon.svg" alt="Coffee Icon" class="project-svg-icon coffee-img-custom">
-            </div>
-            <h2 class="experience-sub-title project-title coffee-title">Coffee for the Journey</h2>
-            <div class="star-rating-display">
-                <span class="star filled">★</span>
-                <span class="star filled">★</span>
-                <span class="star filled">★</span>
-                <span class="star filled">★</span>
-                <span class="star">☆</span>
-            </div>
-            <div class="btn-container project-input-group">
-              <textarea class="project-text-input donate-textarea" placeholder="İçinden ne geçiyorsa yaz..."></textarea>
-              <button class="btn btn-color-2 project-btn donate-action-button">
-                Support with Coffee
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <!-- Bu bölümün kendi oku olmayacak, genel section oku kullanılabilir veya kaldırılabilir -->
-      <!-- Eğer her section'ın kendi oku olacaksa, CSS'te .arrow için `position:absolute` ve `section { position:relative; }` doğru olmalı -->
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#footer'"
-      />
-    </section>
-    
-    <footer>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-       
-      </nav>
-      <p>Copyright &copy; 2025 Murat Ferhat Derya</p>
     </footer>
-    <script>
-      AOS.init();
-    </script>
-    <script src="script.js"></script>
 
+    <script>
+      async function loadContent() {
+        document.getElementById('profile-container').innerHTML = await fetch(
+          'profile.html'
+        ).then((res) => res.text());
+        document.getElementById('about-container').innerHTML = await fetch(
+          'about.html'
+        ).then((res) => res.text());
+        document.getElementById('experience-container').innerHTML = await fetch(
+          'experience.html'
+        ).then((res) => res.text());
+        document.getElementById('projects-container').innerHTML = await fetch(
+          'projects.html'
+        ).then((res) => res.text());
+        document.getElementById('contact-highlights-container').innerHTML =
+          await fetch('highlights.html').then((res) => res.text());
+      }
+      loadContent();
+
+      const texts = ['Murat Ferhat Derya', 'fedai.ai', 'kimkio'];
+      let index = 0;
+
+      function changeText() {
+        const textElement = document.getElementById('animated-text');
+        textElement.textContent = texts[index];
+        index = (index + 1) % texts.length;
+      }
+
+      setInterval(changeText, 2000);
+    </script>
   </body>
 </html>
