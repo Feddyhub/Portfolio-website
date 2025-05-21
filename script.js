@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     '<span class="arkenom-text">OptiWisdom</span><br>Intern Data Analyst',
     '<span class="arkenom-text">FEDAI</span><br>YouTube Content Creator',
     '<span class="arkenom-text">Sunset Pier</span><br>Dishwasher - New Jersey',
-    '<span class="arkenom-text">Azzura Pizza</span><br>Prep Cook - New Jersey'
   ];
 
   const educationTexts = [

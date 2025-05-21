@@ -1313,13 +1313,12 @@ a:hover {
 
 
 /*======================================================
+
 /* Dış çerçeve */
 .lang-toggle-wrapper {
   display: flex;
   align-items: center;
 }
-
-/* Toggle container */
 .lang-switch {
   position: relative;
   display: inline-block;
@@ -1327,24 +1326,26 @@ a:hover {
   height: 36px;
 }
 
-/* Checkbox gizli */
 .lang-switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Arka plan (slider bar) */
 .lang-slider {
   position: absolute;
-  inset: 0;
-  background-color: #e74c3c; /* Kırmızı başlangıç */
-  border-radius: 34px;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2ecec; /* koyu ama modern bir gri tonu */
+
   transition: background-color 0.4s;
+  border-radius: 34px;
 }
 
-/* Kayan top */
+/* Kayan top (dil topu) */
 .lang-slider::before {
   content: "";
   position: absolute;
@@ -1352,17 +1353,56 @@ a:hover {
   width: 28px;
   top: 4px;
   left: 4px;
-  background-color: white;
+  background-color: #423f3f; /* neredeyse beyaz */
   border-radius: 50%;
-  transition: transform 0.4s;
+  transition: transform 0.4s, background-color 0.4s;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  z-index: 2;
 }
 
-/* Aktif durum: mavi bar + sağa kayan top */
+/* Aktif durum: sağa kayan top ve mavi benzeri arka plan */
 .lang-switch input:checked + .lang-slider {
   background-color: #3498db;
 }
 
 .lang-switch input:checked + .lang-slider::before {
   transform: translateX(34px);
+  background-color: #ffffff;
+}
+
+/* Bayrak ikonları */
+.lang-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 22px;
+  width: 22px;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.lang-icon.left {
+  left: 8px;
+}
+
+.lang-icon.right {
+  right: 8px;
+}
+
+/* Başlangıçta Türk bayrağı görünür, USA düşük opak */
+.lang-switch input:not(:checked) + .lang-slider .left {
+  opacity: 1; /* 🇹🇷 aktif */
+}
+
+.lang-switch input:not(:checked) + .lang-slider .right {
+  opacity: 1; /* 🇺🇸 pasif */
+}
+
+/* Switch açıkken: USA aktif, Türk bayrağı düşük opak */
+.lang-switch input:checked + .lang-slider .left {
+  opacity: 1;
+}
+
+.lang-switch input:checked + .lang-slider .right {
+  opacity: 1;
 }
