@@ -21,6 +21,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const experienceElement = document.getElementById('experience-text');
+  const educationElement = document.getElementById('education-text');
+
+  const experienceTexts = [
+    '<span class="arkenom-text">Arkenom Teknoloji</span><br>Intern Data Scientist',
+    '<span class="arkenom-text">OptiWisdom</span><br>Intern Data Analyst',
+    '<span class="arkenom-text">FEDAI</span><br>YouTube Content Creator',
+    '<span class="arkenom-text">Sunset Pier</span><br>Dishwasher - New Jersey',
+    '<span class="arkenom-text">Azzura Pizza</span><br>Prep Cook - New Jersey'
+  ];
+
+  const educationTexts = [
+    'Dokuz Eylül University<br>CS-AI Community Leader',
+    'Faculty of Science <br>Content Creator with LightBoard'
+  ];
+
+  let experienceIndex = 0;
+  let educationIndex = 0;
+
+  if (experienceElement) {
+    setInterval(() => {
+      experienceElement.innerHTML = experienceTexts[experienceIndex];
+      experienceIndex = (experienceIndex + 1) % experienceTexts.length;
+    }, 3580);
+  }
+
+  if (educationElement) {
+    setInterval(() => {
+      educationElement.innerHTML = educationTexts[educationIndex];
+      educationIndex = (educationIndex + 1) % educationTexts.length;
+    }, 4660);
+  }
+});
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const carouselWrapper = document.querySelector('.carousel-projects-wrapper');
   const projectItems = document.querySelectorAll('.carousel-project-item');
@@ -112,15 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function toggleLang(input) {
-  const lang = input.checked ? 'tr' : 'usa';
-  
-  // arka plan görselini değiştir
-  document.querySelector(".lang-slider").style.backgroundImage = `url('${lang}.png')`;
-
-  // varsa içerik dili değiştir
-  setLanguage(lang);
+  const lang = input.checked ? "usa" : "tr";
+  setLanguage(lang); // varsa bu fonksiyonunla dili değiştir
 }
 
-}
+
+
 
 

@@ -589,30 +589,35 @@ a:hover {
 
 /* ICONS (Değiştirilmedi) */
 
+#mode-icon {
+  font-size: 2.1rem; /* ikon büyüklüğü sadece bu belirler */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .icon {
   cursor: pointer;
-  height: 2.2rem;
+  height: 2.5rem;
   transition: transform 0.3s ease;
 }
 
 .icon-button {
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.3rem;
-  transition: transform 0.2s, color 0.2s;
+  font-size: 2.6rem; /* 🌙 ikon boyutu */
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .icon-button:hover {
-  transform:scale(1.3); /* scale için daha tipik bir değer */
-  color: #444;
+  background-color: rgba(255, 255, 255, 0.1); /* veya koyu tema için rgba(255,255,255,0.05) */
+  transform: scale(1.1);
 }
 
-.icon-button.clicked {
-  transform: translateX(-2200%) translateY(1100%) scale(25.3);
-  color: #444;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Animasyon süresi ve geçiş efekti */
-}
+
 
 .icon:hover {
   transform: scale(1.1);
@@ -1308,72 +1313,56 @@ a:hover {
 
 
 /*======================================================
-
-/* Wrapper ayarı (li etrafı) */
+/* Dış çerçeve */
 .lang-toggle-wrapper {
   display: flex;
   align-items: center;
 }
 
-/* Ana switch yapısı */
+/* Toggle container */
 .lang-switch {
   position: relative;
   display: inline-block;
-  width: 66px;
-  height: 30px;
+  width: 70px;
+  height: 36px;
 }
 
-/* Gömülü checkbox gizle */
+/* Checkbox gizli */
 .lang-switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Slider çizimi */
+/* Arka plan (slider bar) */
 .lang-slider {
-  background-color: #444;
-  background-image: url("tr.png");
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: center left;
-  border-radius: 34px;
-  cursor: pointer;
-  transition: background-color 0.4s ease-in-out;
   position: absolute;
   inset: 0;
+  background-color: #e74c3c; /* Kırmızı başlangıç */
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.4s;
 }
 
-
-
+/* Kayan top */
 .lang-slider::before {
   content: "";
   position: absolute;
-  height: 24px;
-  width: 24px;
+  height: 28px;
+  width: 28px;
+  top: 4px;
   left: 4px;
-  bottom: 3px;
-  background-color: red;
+  background-color: white;
   border-radius: 50%;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Aktif durum: mavi bar + sağa kayan top */
+.lang-switch input:checked + .lang-slider {
+  background-color: #3498db;
 }
 
 .lang-switch input:checked + .lang-slider::before {
-  transform: translateX(36px); /* 66 - 24 - 6px padding */
+  transform: translateX(34px);
 }
-
-.lang-switch input:checked + .lang-slider {
-  background-color: #007bff;
-  background-image: url("usa.png");
-}
-
-.lang-slider::after {
-  content: \"TR\";
-}
-
-/* Aktif olduğunda */
-.lang-switch input:checked + .lang-slider {
-  background-color: #007bff;
-}
-
-
