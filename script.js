@@ -61,3 +61,53 @@ document.addEventListener('DOMContentLoaded', function() {
   // Sayfa yüklendiğinde ilk slaydı aktif et
   updateCarousel();
 });
+
+
+const iconButtons = document.querySelectorAll('.icon-button');
+const animationDuration = 600; // CSS'deki transition süresi (milisaniye)
+const holdDuration = 750; // Simgenin animasyon sonunda bekleme süresi (milisaniye)
+
+iconButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.add('clicked');
+
+    // Animasyon süresi + bekleme süresi kadar sonra 'clicked' sınıfını kaldır
+    setTimeout(() => {
+      button.classList.remove('clicked');
+    }, animationDuration + holdDuration);
+  });
+});
+
+
+
+// Accordion açma/kapama fonksiyonu
+function toggleAccordion(index) {
+  const items = document.querySelectorAll('.accordion-item');
+  items[index].classList.toggle('open');
+}
+
+
+
+// Scroll animasyonu: IntersectionObserver
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const fadeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Hedef class'lar
+  const fadeElements = document.querySelectorAll('.fade-in-section, .fade-scale-section, .fade-left, .fade-right');
+  fadeElements.forEach(el => fadeObserver.observe(el));
+});
+
+
+

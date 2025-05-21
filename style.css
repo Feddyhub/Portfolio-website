@@ -207,16 +207,16 @@ a,
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV (Değiştirilmedi) */
-
+/* Genel NAV ayarları */
 nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
-  background-color:#cbcccb;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #1f1f1f; /* siyaha yakın koyu gri */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Flex yapı */
 nav,
 .nav-links {
   display: flex;
@@ -227,29 +227,48 @@ nav,
   list-style: none;
   font-size: 1.45rem;
   font-weight: 500;
+  align-items: center;
 }
 
+/* Link stilleri */
 a {
-  color: rgb(40, 40, 40);
+  color: #d2d2d2; /* açık gri - beyaz arası */
   text-decoration: none;
-  text-decoration-color: white;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
-  color: rgb(60, 60, 60);
+  color: #ffffff; /* tam beyaz */
   text-decoration: underline;
-  text-underline-offset: 0.9rem;
-  text-decoration-color: rgb(165, 165, 165);
+  text-underline-offset: 0.8rem;
+  text-decoration-color: #888888; /* gri alt çizgi */
 }
 
+/* Logo kısmı (sol) */
 .logo {
   font-size: 2.1rem;
   font-weight: 600;
-  color: rgb(30, 30, 30);
+  color: #f5f5f5; /* neredeyse beyaz */
 }
 
 .logo:hover {
   cursor: default;
+}
+
+/* Dark mode butonunun uyumu */
+.dark-mode-toggle button {
+  background: transparent;
+  border: 1px solid #555;
+  padding: 6px 10px;
+  color: #d2d2d2;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #888;
 }
 
 /* HAMBURGER MENU (Değiştirilmedi) */
@@ -339,18 +358,165 @@ a:hover {
 }
 
 /* SECTIONS (Değiştirilmedi) */
+/* Genel yapı ve tema düzenlemeleri */
 
-section {
-  padding-top: 4.5vh;
-  height: 96vh;
-  margin: 0 10rem;
-  box-sizing: border-box;
-  min-height: fit-content;
-}
 
+/* Genel yapı düzeni */
 .section-container {
   display: flex;
+  align-items: flex-start; 
+  justify-content: flex-start;
+  padding: 2rem;
+  transform: translateX(8%);
+  gap: 2rem; /* Elemanlar arasında boşluk */
 }
+
+.about-details-container {
+  margin-top: 10px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%; /* Daha geniş alan */
+  padding-left: 40px;
+  transform: translateX(0px); /* Sağ tarafa kaydırma */
+}
+
+
+.about-containers {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Projeler sığmadığında alt satıra geçsin */
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 48%; /* Daha uygun genişlik */
+}
+
+.details-container h3 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.text-container {
+  padding: 1rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-item {
+  width: 100%;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-header {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: var(--highlight-color);
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+/* Dark Mode ve Flex düzenlemeleri */
+.dark-mode .accordion-header {
+  background-color: #333;
+}
+
+.dark-mode .accordion-content {
+  background-color: #2d2d2d;
+  color: #f1f1f1;
+}
+
+/* Fotoğrafın sabit pozisyonu */
+.section__pic-container {
+  width: 30%; /* Fotoğrafın genişliği %30 */
+  margin-right: 2rem;
+  position: relative;
+  flex-shrink: 0; /* Resmin küçülmesini engeller */
+}
+
+.about-pic {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block; /* Resmin düzgün yerleşmesi için */
+  transform: translateX(0px)
+  
+}
+
+/* Accordion (Açılır içerik) stilleri */
+.accordion-item.open .accordion-content {
+  display: block;
+}
+
+/* Button Animations for Accordion */
+.accordion-item {
+  max-height: 1000px; /* Yüksekliği arttırarak açılır içerik için alan sağladık */
+  overflow: hidden;
+}
+
+/* Buton ve başlık stilleri */
+.accordion-header h3 {
+  font-size: 1rem;
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 750px) {
+  .section-container {
+    flex-direction: column; /* Küçük ekranlarda dikey düzen */
+    gap: 1rem;
+  }
+
+  .about-details-container {
+    width: 100%; /* Detaylar tam genişlik */
+  }
+
+  .about-containers {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .details-container {
+    width: 100%; /* Projeler küçük ekranlarda tam genişlik */
+  }
+
+  .section__pic-container {
+    width: 70%; /* Resim tam genişlik */
+    margin-left: 120px;
+    margin-bottom: 0; /* Küçük ekranlarda resim ile metin arasına boşluk ekleyelim */
+    transform: translateY(-120%);
+  }
+}
+
+
+
 
 /* PROFILE SECTION (Değiştirilmedi) */
 
@@ -429,6 +595,25 @@ section {
   transition: transform 0.3s ease;
 }
 
+.icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.icon-button:hover {
+  transform:scale(1.3); /* scale için daha tipik bir değer */
+  color: #444;
+}
+
+.icon-button.clicked {
+  transform: translateX(-2200%) translateY(1100%) scale(25.3);
+  color: #444;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Animasyon süresi ve geçiş efekti */
+}
+
 .icon:hover {
   transform: scale(1.1);
 }
@@ -498,6 +683,8 @@ section {
 
 .about-containers {
   gap: 2rem;
+  padding-bottom: 10px;
+  padding-top: 10px;
   margin-bottom: 2rem;
   margin-top: 2.5rem;
 }
@@ -505,11 +692,13 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
+  
 }
 
 .about-pic {
@@ -526,7 +715,7 @@ section {
 .details-container {
   padding: 1.8rem;
   flex: 1;
-  background: white;
+  background: #f9f9f9; /* <-- burada değişiklik yapıldı */
   border-radius: 1.5rem;
   border: rgb(45, 45, 45) 0.1rem solid;
   border-color: rgb(150, 150, 150);
@@ -534,87 +723,94 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .details-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .section-container {
-  gap: 4.2rem;
-  height: 80%;
+  gap: 3rem;
+  height: 100%;
 }
+
+
 
 /* EXPERIENCE SECTION (Değiştirilmedi) */
 
+
 #experience {
   position: relative;
-  /* Diğer stil tanımlamalarınız */
-  padding-bottom: 0; /* Mevcut bir değer varsa azaltın veya 0 yapın */
-  margin-bottom: -135px; /* Mevcut bir değer varsa azaltın veya 0 yapın */
-  
+  padding: 15px; /* Yukarı ve aşağıda boşluk ekledik */
+  margin-bottom: 10px; /* Alt boşluğu koruduk */
+  display: flex;
+  justify-content: center; /* İçeriği yatayda ortaladık */
 }
 
 .experience-sub-title {
   color: rgb(65, 65, 65);
   font-weight: 600;
-  font-size: 1.8rem;
-  margin-bottom: 2.2rem;
-}
-.contribute-container {
-  /* Eğer üst konteyner bir flex container ise */
-  display: flex;
-  justify-content: center; /* Yatayda ortala */
-  align-items: center; /* Dikeyde ortala (isteğe bağlı) */
-  flex-direction: column; /* İçindeki öğeleri alt alta sırala (isteğe bağlı) */
-}
-
-#experience .about-containers {
-  display: flex; /* 'details-container' div'lerini yan yana sıralar */
-  gap: 2rem; /* Aralarındaki boşluk */
+  font-size: 1rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  text-align: center; /* Yazıyı yatayda ortaladık */
 }
 
-#experience .details-container {
-  padding: 1.5rem;
-  flex: 1; /* Mevcut alanı eşit olarak paylaşmalarını sağlar */
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
+.experience-detail-container {
+  max-width: 800px; /* Container'ın genişliğini sınırladık */
+  width: 100%; /* Container genişliğini %100 yaparak esnek olmasını sağladık */
+  padding: 0px; /* İçerik ile sınır arasına boşluk ekledik */
+  margin: 0 auto; /* Ortalamak için */
+  box-sizing: border-box; /* Padding dahil box modelini kullanıyoruz */
 }
 
-#experience .article-container {
-  display: flex; /* 'article' elemanlarını yan yana sıralar */
-  text-align: initial;
-  flex-wrap: wrap; /* Gerekirse alt satıra geçmelerini sağlar */
-  justify-content: space-around; /* Aralarında eşit boşluk bırakır */
-  gap: 1.5rem; /* 'article' elemanları arasındaki boşluk */
+
+@keyframes rgbFlow {
+  0%   { background-color: rgba(255, 255, 255, 0.4); } /* Beyaz %88 */
+  25%  { background-color: rgba(255, 0, 0, 0.4); }     /* Kırmızı %88 */
+  50%  { background-color: rgba(0, 255, 0, 0.4); }     /* Yeşil %88 */
+  75%  { background-color: rgba(0, 0, 255, 0.4); }     /* Mavi %88 */
+  100% { background-color: rgba(255, 0, 255, 0.4); }   /* Mor %88 */
 }
 
-#experience .article-container article {
-  display: flex; /* İçindeki görsel ve metni yan yana sıralar */
-  width: calc(50% - 1rem); /* İki tanesinin yan yana sığması için genişlik ayarı */
-  gap: 0.5rem;
-  align-items: center; /* Dikeyde ortalar */
+.contribute-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: fit-content;
+  max-width: 90%;
+  padding: 1.2rem 2rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+
+  background-color: rgba(255, 255, 255, 0.88); /* Başlangıçta beyaz ve %88 opak */
+  color: #000000;
+  transition: background-color 0.5s ease;
 }
 
-/* Daha küçük ekranlar için düzenleme (isteğe bağlı) */
-@media screen and (max-width: 768px) {
-  #experience .about-containers {
-    flex-direction: column; /* Alt alta sırala */
-  }
-
-  #experience .article-container {
-    flex-direction: column; /* Alt alta sırala */
-    align-items: flex-start; /* Sola hizala */
-  }
-
-  #experience .article-container article {
-    width: 100%; /* Tam genişlik kullan */
-  }
+.contribute-container:hover {
+  animation: rgbFlow 1.9s infinite linear;
+  animation-fill-mode: forwards;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Ok Butonları */
 .arrow-left, .arrow-right {
   background-color: transparent;
@@ -683,8 +879,8 @@ section {
 .experience-details-container {
   /* Bu sınıf #experience bölümünden geliyor. #highlights-contact için özel bir stil gerekmiyorsa,
      genel tanımı kullanılabilir. Örn: Üst boşluğu ayarlamak için: */
-  margin-top: 30.1px;
-  padding-top: 15px;
+  margin-top: 5px;
+  padding-top: 10px;
 }
 
 #highlights-contact .about-containers {
@@ -902,23 +1098,31 @@ section {
     background-color: #2da14a;
     border-color: #2da14a;
 }
-/* === CAROUSEL PROJECTS SECTION === */
+
+
+
+
+
+
+
 
 .carousel-section {
-  
-  padding-bottom: 0;
-  margin-bottom: 0;
-  
+  padding-top: 8px;
+  margin-top: 8px;
 }
-
 .carousel-projects-wrapper {
+  margin-top: 5px;
+  padding-top: 5px;
   position: relative;
-  width: 90%;
-  /* GÜNCELLEME: Yatayda %8 daha büyük */
-  max-width: 930px; /* Önceki 860px idi, 860 * 1.08 ≈ 929 */
+  width: 100%;
+  max-width: 1015px;
   margin: 1rem auto 0 auto;
   overflow: hidden;
-  border-radius: 1.5rem; /* Wrapper'ın köşeleri yuvarlak kalabilir */
+  border-radius: 0.5rem; /* Keskin köşeler için daha küçük bir border-radius */
+  transform: scaleX(0.81) scaleY(0.81); /* Bu değeri normalleştirerek sabit tutuyoruz */
+  background-color: #f4f1eb;
+  /* Eğer sabitlenmesini isterseniz, aşağıdaki kodu kullanabilirsiniz */
+  /* position: fixed; top: 10px; left: 50%; transform: translateX(-50%); */
 }
 
 .carousel-project-item {
@@ -926,67 +1130,59 @@ section {
   width: 100%;
   animation: fadeEffect 0.6s ease-in-out;
 }
-
 .carousel-project-item.active-slide {
   display: block;
 }
-
 @keyframes fadeEffect {
   from {opacity: 0.3;}
   to {opacity: 1;}
 }
-
-/* GÜNCELLEME: Kontrast Kart Stili */
 .carousel-project-card {
-  background-color: rgba(255, 255, 255, 0.453); /* Tam Siyah Arka Plan */
-  border: 1px solid #000000; /* Siyah üzerinde hafif görünür kenarlık */
-  color: #000000; /* Beyaz Ana Metin Rengi */
-  border-radius: 1.5rem; /* Kart köşeleri */
-  padding: 2rem;
+  background-color: #f9f9f9; /* Beyaza yakın açık gri */
+  border: 1px solid #000000;
+  color: #000000;
+  border-radius: 1.5rem;
+  padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 690px; /* Boyut aynı kalıyor */
-  box-shadow: 0 6px 15px rgba(255,255,255,0.05); /* Beyaz gölge deneyebiliriz */
+  min-height: 650px;
+  box-shadow: 0 6px 15px rgba(255,255,255,0.05);
+  padding-bottom: 120px;
 }
-
 .carousel-project-card .article-container {
   width: 100%;
-  /* GÜNCELLEME: Resim alanı da yatay büyümeye uyumlu */
-  max-width: 680px; /* Önceki 630px idi, orantılı artış */
-  margin-bottom: 1.5rem;
+  max-width: 646px;
+  margin-bottom: 2.5rem;
   border-radius: 1rem;
   overflow: hidden;
-  background-color: #222; /* Resim yüklenmezse diye koyu alan */
+  transform: scale(0.97, 1.06) skew(-1.5deg);
+  padding-top:1px;
 }
-
 .carousel-project-card .project-img {
   width: 100%;
   height: auto;
-  max-height: 370px; /* Dikey boyut aynı */
+  max-height: 350px;
   object-fit: cover;
   display: block;
   border-radius: 1rem;
 }
-
-/* GÜNCELLEME: Kontrast Başlık ve Açıklama */
 .carousel-project-title {
-  font-size: 1.9rem;
+  font-size: 2rem;
+  padding:2px ;
   font-weight: 600;
-  color: #000000; /* Beyaz Başlık */
+  color: #000000;
   margin-bottom: 0.8rem;
 }
-
 .carousel-project-description {
-  font-size: 1rem;
-  color: #d70606; /* Biraz daha soluk beyaz açıklama */
+  font-size: 1.05rem;
+  color: #2c2c2c;
   line-height: 1.6;
   margin-bottom: 1.8rem;
   max-width: 90%;
   min-height: 60px;
 }
-
 .carousel-button-group {
   display: flex;
   justify-content: center;
@@ -995,85 +1191,117 @@ section {
   width: 100%;
   padding-bottom: 0.5rem;
 }
-
-/* GÜNCELLEME: Kontrast Ok Butonları (Yuvarlak Değil) */
 .carousel-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(1.08);
   z-index: 10;
-  background-color: #f5f7fa; /* Beyaz Arka Plan */
-  color: #de0d0dac; /* Siyah İkon/Yazı Rengi */
-  border: 1px solid #e8393943; /* Hafif gri kenarlık */
-  /* border-radius: 50%; KALDIRILDI */
-  border-radius: 8px; /* Hafif yuvarlak köşeler (0 isterseniz tamamen kare olur) */
-  width: 45px; /* Boyut biraz küçültülebilir (isteğe bağlı) */
-  height: 55px; /* Dikdörtgen hissi için yükseklik fazla olabilir */
-  /* Veya kare isterseniz: height: 45px; */
-  font-size: 1.8rem; /* İkon boyutu */
+  background-color: #333333; /* Renk biraz açıklaştırıldı: 2a2a2a -> 333333 */
+  color: #d2d2d2;
+  border: 1px solid #555;
+  width: 52px;
+  height: 52px;
+  font-size: 1.8rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Siyah üzerinde beyaz gölge zor */
-}
-/* HTML'de <span class="arrow-icon">...</span> kullandıysanız: */
-.arrow-icon {
   font-weight: bold;
-  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  /* Ters köşeleri yumuşatmak için border-radius değerleri */
+  border-radius: 6px 12px 6px 12px; /* Sol üst, sağ üst, sağ alt, sol alt */
 }
-/* Veya FontAwesome <i class="..."> kullandıysanız, font-size ayarı yeterli */
-
 
 .carousel-arrow:hover {
-  background-color: #dddddd; /* Hover'da hafif grileşen beyaz */
-  color: #000000;
-  border-color: #999;
-  transform: translateY(-50%)  scale(1.15); /* Hafif büyüme */
+  background-color: #3d3d3d; /* Hover rengi de biraz açıklaştırıldı */
+  color: #ffffff;
+  border-color: #888;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(-50%) scale(1.12);
+  text-decoration: none;
 }
-.carousel-arrow:focus {
-  outline: none;
-  /* Kontrast focus halkası */
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Siyah focus halkası */
-}
-
-/* Kontrast oklar için dark mode stilleri artık GEREKSİZ */
-/* body.dark-mode .carousel-arrow { ... } */
-
 
 .prev-arrow {
-  left: 20px;
-  /* İsteğe bağlı: Hafif içe dönük görünüm için */
-  /* border-top-right-radius: 15px; */
-  /* border-bottom-right-radius: 15px; */
+  left: 15px;
+  border-radius: 12px 6px 12px 6px; /* Önceki buton için ters köşeler */
 }
 
 .next-arrow {
-  right: 20px;
-   /* İsteğe bağlı: Hafif içe dönük görünüm için */
-  /* border-top-left-radius: 15px; */
-  /* border-bottom-left-radius: 15px; */
+  right: 15px;
+  border-radius: 6px 12px 6px 12px; /* Sonraki buton için ters köşeler */
+}
+
+/* Arrow içeriğini konumlandırma */
+.prev-arrow::before,
+.next-arrow::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border-top: 3px solid #d2d2d2; /* Ok rengi link rengiyle aynı */
+  border-right: 3px solid #d2d2d2; /* Ok rengi link rengiyle aynı */
+  transition: border-color 0.3s ease;
+}
+
+.carousel-arrow:hover::before {
+  border-top-color: #ffffff; /* Hover durumunda ok rengi beyaz */
+  border-right-color: #ffffff; /* Hover durumunda ok rengi beyaz */
+}
+
+.prev-arrow::before {
+  transform: rotate(-135deg);
+  margin-left: 7px;
+}
+
+.next-arrow::before {
+  transform: rotate(45deg);
+  margin-right: 7px;
 }
 
 
+/* =================================================================================*/
 
-/* GÜNCELLEME: Kontrast Carousel Butonları */
-.carousel-button-group .btn {
-  background-color: #ffffff; /* Beyaz Buton Arka Planı */
-  color: #000000; /* Siyah Buton Yazısı */
-  border: 1px solid #ccc; /* Hafif Gri Kenarlık */
-  border-radius: 2rem; /* Butonlar yuvarlak kalabilir veya oklar gibi 8px yapabilirsiniz */
-  /* border-radius: 8px; */
-  min-width: 120px;
-  padding: 0.8rem 1.5rem;
-  box-shadow: none; /* Gölge kaldırıldı */
-  transition: all 0.3s ease;
+
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.carousel-button-group .btn:hover {
-  background-color: #333333; /* Hover'da Koyu Gri Arka Plan */
-  color: #ffffff; /* Beyaz Yazı */
-  border-color: #333333; /* Kenarlık rengi de aynı */
-  transform: translateY(-2px);
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.fade-scale-section {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: all 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-scale-section.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade-left.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade-right.visible {
+  opacity: 1;
+  transform: none;
 }

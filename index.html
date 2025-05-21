@@ -4,35 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-9VXYXqKyvKHzN1t9UuNqzCDQf9KFLiT96aZpQa2Pb5qE+9VCv0JxHtbj3so+j1n1cOi5znLk+lNT6hRA0rG1Rg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- jQuery -->
+    <script src="https://kit.fontawesome.com/your_fontawesome_kit_id.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Counter-Up -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
   </head>
-  
+
   <body>
     <nav id="desktop-nav">
-      
       <div class="logo" id="dynamic-logo-desktop">Murat Ferhat Derya</div>
-      
+
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="dark-mode-toggle">
-            <button id="darkModeToggle">
-              <i class="fas fa-moon"></i>
+          <li><a href="#about" data-i18n="about">About</a></li>
+          <li><a href="#experience" data-i18n="experience">Experience</a></li>
+          <li><a href="#projects" data-i18n="projects">Projects</a></li>
+          <li><a href="#contact" data-i18n="contact">Contact</a></li>
+
+          <li class="nav-item">
+            <button id="darkModeToggle" class="icon-button" title="Toggle Dark Mode">
+              <span id="mode-icon">🌙</span>
             </button>
           </li>
+
+          <li class="nav-item language-toggle">
+            <button class="icon-button" onclick="setLanguage('en')" title="English">
+                <i class="fas fa-flag-uk"></i>
+            </button>
+            <button class="icon-button" onclick="setLanguage('tr')" title="Türkçe">
+                <i class="fas fa-flag-turkey"></i>
+            </button>
+        </li>
+        </ul>
+      </div>
     </nav>
+    
     <nav id="hamburger-nav">
       <div class="logo">Murat Ferhat Derya</div>
       <div class="hamburger-menu">
@@ -83,10 +100,13 @@
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
 
-      <div class="contribute-container">
+      <div class="contribute-container" id="contributeBox">
         <h2>Github <span class="counter-value">312</span>+ Contributions</h2>
         <img src="./assets/contribute-img.png" alt="Feddyhub Contributions" class="contribute-img" />
       </div>
+      
+
+
 
       <div class="section-container">
         <div class="section__pic-container">
@@ -110,51 +130,106 @@
               I'm a final-year Computer Science student with internships in Data Science and experience as a Back-end Developer. I'm passionate about building scalable APIs, deploying ML models, and continuous learning.
             </p>
           </div>
+          
+          <!-- Accordion Section -->
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(0)">
+                <h3>Work and Travel Amerika</h3>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  I had the opportunity to work in the USA as part of the Work and Travel program, gaining valuable international work experience and exposure to new cultures.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(1)">
+                <h3>CSAI Baskanligi</h3>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  As the president of the CS-AI Community, I led various initiatives to promote AI and Data Science knowledge among university students.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(2)">
+                <h3>FEDAI Youtube Kanali</h3>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  I manage the FEDAI YouTube channel, where I share my insights and tutorials on Data Science and AI, aiming to help others in the field.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Data Scientist</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Python</h3><p>Pandas, NumPy, Sklearn, etc.</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Preprocessing</h3><p>Cleaning, Encoding, Feature Engineering</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Visualization</h3><p>Matplotlib, Seaborn, Plotly</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Neural Networks</h3><p>TensorFlow, CNN, LSTM</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Time Series</h3><p>ARIMA, LSTM, Forecasting</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>MLOps & Deployment</h3><p>Docker, FastAPI, Streamlit</p></div></article>
+
+
+
+
+
+      <section id="experience">
+        <p class="section__text__p1"></p>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <!-- Data Scientist -->
+            <div class="details-container">
+              <h2 class="experience-sub-title">Data Scientist</h2>
+              <div class="article-container">
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Python</h3><p>Pandas, NumPy, Sklearn, etc.</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Preprocessing</h3><p>Cleaning, Encoding, Feature Engineering</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Visualization</h3><p>Matplotlib, Seaborn, Plotly</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Neural Networks</h3><p>TensorFlow, CNN, LSTM</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Time Series</h3><p>ARIMA, LSTM, Forecasting</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>MLOps & Deployment</h3><p>Docker, FastAPI, Streamlit</p></div></article>
+              </div>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Developer</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>RESTful APIs</h3><p>FastAPI, Flask</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>SQL</h3><p>PostgreSQL, MySQL</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Async Programming</h3><p>Asyncio, FastAPI</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Git & GitHub</h3><p>Version Control & CI/CD</p></div></article>
+            <!-- Backend Developer -->
+            <div class="details-container">
+              <h2 class="experience-sub-title">Backend Developer</h2>
+              <div class="article-container">
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>RESTful APIs</h3><p>FastAPI, Flask</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>SQL</h3><p>PostgreSQL, MySQL</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Async Programming</h3><p>Asyncio, FastAPI</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Git & GitHub</h3><p>Version Control & CI/CD</p></div></article>
+              </div>
+            </div>
+            <!-- Frontend Developer -->
+            <div class="details-container">
+              <h2 class="experience-sub-title">Frontend Developer</h2>
+              <div class="article-container">
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>HTML</h3><p>Semantik HTML5, DOM manipülasyonu</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>CSS</h3><p>Flexbox, Grid, Sass, Animations</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>JavaScript</h3><p>ES6+, DOM, Event Handling, Fetch API</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>React</h3><p>React Hooks, Redux, Router</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>UI/UX Design</h3><p>Figma, Adobe XD, Web Design Principles</p></div></article>
+                <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Version Control</h3><p>Git, GitHub, GitLab</p></div></article>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       
-    </section>
+
     
 
-    <h1 class="title">Projects</h1>
-
     <section class="carousel-section">
+      
         <div class="carousel-projects-wrapper">
             <!-- İlk Proje -->
             <div class="carousel-project-item active-slide" data-slide-index="0"> <!-- data attribute eklendi -->
+              
                 <div class="carousel-project-card">
+                  <h1 class="title">Projects</h1>
                     <div class="article-container">
+                      
                         <picture>
                             <!-- Gerçek resim yollarınızı kullanın -->
+                            
                             <source srcset="./assets/project-1.gif" type="image/gif" />
                             <img src="./assets/project-1.gif" alt="Official Chatbot Project" class="project-img" />
                         </picture>
@@ -231,12 +306,16 @@
             </div>
 
             <!-- OK BUTONLARI (Mevcut yapınızdaki gibi) -->
-            <button class="carousel-arrow prev-arrow" aria-label="Previous Project">
-                <i class="fas fa-chevron-left"></i>
+            <button class="carousel-arrow prev-arrow">
+              <i class="fas fa-chevron-left"></i>
             </button>
-            <button class="carousel-arrow next-arrow" aria-label="Next Project">
-                <i class="fas fa-chevron-right"></i>
+            <button class="carousel-arrow next-arrow">
+              <i class="fas fa-chevron-right"></i>
             </button>
+            
+
+
+            
         </div>
     </section>
 
