@@ -111,3 +111,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+function toggleLang(input) {
+  const lang = input.checked ? 'tr' : 'usa';
+  
+  // arka plan görselini değiştir
+  document.querySelector(".lang-slider").style.backgroundImage = `url('${lang}.png')`;
+
+  // varsa içerik dili değiştir
+  setLanguage(lang);
+}
+
+}
+
+

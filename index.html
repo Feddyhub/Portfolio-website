@@ -36,16 +36,14 @@
             <button id="darkModeToggle" class="icon-button" title="Toggle Dark Mode">
               <span id="mode-icon">🌙</span>
             </button>
-          </li>
+          <li class="nav-item lang-toggle-wrapper">
+  <label class="lang-switch">
+    <input type="checkbox" onchange="toggleLang(this)">
+    <span class="lang-slider"></span>
+  </label>
+</li>
 
-          <li class="nav-item language-toggle">
-            <button class="icon-button" onclick="setLanguage('en')" title="English">
-                <i class="fas fa-flag-uk"></i>
-            </button>
-            <button class="icon-button" onclick="setLanguage('tr')" title="Türkçe">
-                <i class="fas fa-flag-turkey"></i>
-            </button>
-        </li>
+        
         </ul>
       </div>
     </nav>

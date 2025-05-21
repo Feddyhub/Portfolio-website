@@ -1260,7 +1260,7 @@ a:hover {
 }
 
 
-/* =================================================================================*/
+/* =============Burayi index_scroll_ready'de kullaniyorum.====================================================================*/
 
 
 
@@ -1305,3 +1305,75 @@ a:hover {
   opacity: 1;
   transform: none;
 }
+
+
+/*======================================================
+
+/* Wrapper ayarı (li etrafı) */
+.lang-toggle-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Ana switch yapısı */
+.lang-switch {
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 30px;
+}
+
+/* Gömülü checkbox gizle */
+.lang-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider çizimi */
+.lang-slider {
+  background-color: #444;
+  background-image: url("tr.png");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+  position: absolute;
+  inset: 0;
+}
+
+
+
+.lang-slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 3px;
+  background-color: red;
+  border-radius: 50%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.lang-switch input:checked + .lang-slider::before {
+  transform: translateX(36px); /* 66 - 24 - 6px padding */
+}
+
+.lang-switch input:checked + .lang-slider {
+  background-color: #007bff;
+  background-image: url("usa.png");
+}
+
+.lang-slider::after {
+  content: \"TR\";
+}
+
+/* Aktif olduğunda */
+.lang-switch input:checked + .lang-slider {
+  background-color: #007bff;
+}
+
+
