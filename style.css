@@ -1003,9 +1003,10 @@ a:hover {
   margin-bottom: 1.5rem; /* Resimle arası boşluk */
 }
 .wat-card .wat-slider-container { /* Resim alanı */
-  min-height: 200px; /* Resim için bir yükseklik */
+ /* Resim için bir yükseklik */
   margin-bottom: 1.5rem; /* Açıklama yazısıyla arası boşluk */
   width: 100%;
+  height: 100%;
   display: flex; /* Resmi ortalamak için */
   justify-content: center;
 }
@@ -1031,19 +1032,31 @@ a:hover {
 /* CARD 3: COFFEE DONATION (.donate-card) */
 .donate-card .coffee-icon-area { /* Kahve ikonu alanı */
   min-height: 120px; /* İkon için yeterli yükseklik */
-  margin-bottom: 0; /* Başlıkla daha yakın olması için */
+  margin-bottom: 1px; /* Başlıkla daha yakın olması için */
+  padding-top: 2px;
 }
 .donate-card .project-svg-icon.coffee-img-custom { /* Kendi yüklediğiniz SVG için */
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
-  margin-bottom: 1rem; /* Başlıkla SVG ikonu arası boşluk */
+  margin-bottom: 0.7rem; /* Başlıkla SVG ikonu arası boşluk */
 }
 
 .donate-card .experience-sub-title.project-title.coffee-title { /* "Coffee for the Journey" */
-  font-size: 1.4rem; /* Biraz daha küçük */
-  margin-bottom: 0.8rem; /* Yıldızlarla arası boşluk */
+  font-size: 1.8rem; /* Biraz daha küçük */
+  margin-bottom: 0.6rem; /* Yıldızlarla arası boşluk */
 }
+
+.contact-map-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+
 .star-rating-display {
   margin: 0.5rem 0 1.5rem 0;
   font-size: 2rem;
@@ -1111,18 +1124,24 @@ a:hover {
 
 
 
-
-
+.carousel-project-title-main {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 650;
+  color: var(--accent-color); /* mevcut temaya uyum sağlar */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
 
 
 .carousel-section {
-  padding-top: 8px;
-  margin-top: 8px;
+  padding-top: 3px;
+  margin-top: 3px;
 }
 .carousel-projects-wrapper {
-  margin-top: 5px;
-  padding-top: 5px;
+  margin-top: 1px;
+  padding-top: 1px;
   position: relative;
   width: 100%;
   max-width: 1015px;
@@ -1130,7 +1149,7 @@ a:hover {
   overflow: hidden;
   border-radius: 0.5rem; /* Keskin köşeler için daha küçük bir border-radius */
   transform: scaleX(0.81) scaleY(0.81); /* Bu değeri normalleştirerek sabit tutuyoruz */
-  background-color: #f4f1eb;
+  background-color: #ffffff;
   /* Eğer sabitlenmesini isterseniz, aşağıdaki kodu kullanabilirsiniz */
   /* position: fixed; top: 10px; left: 50%; transform: translateX(-50%); */
 }
@@ -1163,13 +1182,15 @@ a:hover {
   padding-bottom: 120px;
 }
 .carousel-project-card .article-container {
-  width: 100%;
+  width: 150%;
   max-width: 646px;
-  margin-bottom: 2.5rem;
-  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-radius: 2rem;
   overflow: hidden;
-  transform: scale(0.97, 1.06) skew(-1.5deg);
-  padding-top:1px;
+  transform: scale(0.97, 0.96) skew(-1.2deg);
+  padding-top:2rem;
+  margin-top: 1rem;
 }
 .carousel-project-card .project-img {
   width: 100%;
@@ -1181,10 +1202,11 @@ a:hover {
 }
 .carousel-project-title {
   font-size: 2rem;
-  padding:2px ;
-  font-weight: 600;
+  margin-top: 1.2rem ;
+  padding-top: 0.8rem;
+  font-weight: 580;
   color: #000000;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 .carousel-project-description {
   font-size: 1.05rem;
