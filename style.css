@@ -1,5 +1,10 @@
 /* GENERAL */
 
+body, html {
+  overflow-x: hidden;
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 /* CSS - Dark Mode Stilleri (Değiştirilmedi) */
@@ -1147,7 +1152,8 @@ a:hover {
   border: 1px solid #000000;
   color: #000000;
   border-radius: 1.5rem;
-  padding: 1rem;
+  padding-top: 3px;
+  padding: 2px;
   text-align: center;
   display: flex;
   flex-direction: column;

@@ -52,6 +52,61 @@ Her videoda  izleyici deneyimini geliştirmeye çalıştım.</p>
 
 
 
+✈️ 2. sınıf yaz tatilimde Work and Travel programı kapsamında New Jersey, ABD’de 4 ay yaşama ve çalışma deneyimi edindim.
+
+🌍 Bu süreç bana hem kültürel farkındalık 🧠 hem de yabancı dil pratiği 🗣️ kazandırdı. 🤝 Aynı zamanda sorumluluk alma, ekip içinde uyumlu çalışabilme ve 🧭 yeni ortamlara hızlı adapte olma yeteneklerimi geliştirmemde büyük rol oynadı.
+
+
+
+
+
+Benim bir projem var bunu kartta tanitiyorum ornek bu :
+
+
+
+ <h2 class="carousel-project-title">Official Chatbot</h2>
+                    <!-- YENİ: Proje Açıklaması Eklendi -->
+                    <p class="carousel-project-description">
+                        Müşteri etkileşimini artıran ve destek taleplerini 7/24 yöneten
+                        akıllı bir yapay zeka chatbot çözümü. Kolay entegrasyon ve özelleştirme seçenekleri sunar.
+                    </p>
+
+
+
+
+
+Bunun gibi
+
+Chatbot
+
+...."burayi sen doldur"
+
+
+Weather API AI Agent
+
+istedigin sehri tiklamak yerine buraya farkli sekillerde "ima ettiginde bile aniden cevabini veren bir chatbot.
+
+
+Send Email AI Agent
+
+Rehberinde olan kisiye , o kisinin Yasi , unvani , hatta sevdigi renge kadar bilip o kisiye ozgu SENIN ISTEDIGIN ICERIK VE BASLIK ile mesaj uretebilen bir AI
+(yakinda otomatik mail atabilecek)
+
+
+Kurumsal Sirketler icin FAQ Agent
+
+Karsidaki kisinin tekduze Cok sorulan sorulari degil de bir buton koyup sizin sirketinize has cevaplar verebildigi ve bunu konusma hatasi lehce farkliligina takilmadan cevaplayabilen bir FAQ Agent.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
