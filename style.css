@@ -1207,12 +1207,15 @@ a:hover {
   font-weight: 580;
   color: #000000;
   margin-bottom: 1.5rem;
+
 }
 .carousel-project-description {
   font-size: 1.05rem;
   color: #2c2c2c;
   line-height: 1.6;
   margin-bottom: 1.8rem;
+margin-top: 0.8rem;
+padding-top:0.8rem;
   max-width: 90%;
   min-height: 60px;
 }
@@ -1433,4 +1436,16 @@ a:hover {
 
 .lang-switch input:checked + .lang-slider .right {
   opacity: 1;
+}
+
+
+
+
+
+#memory-slider img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  transition: opacity 0.5s ease-in-out;
 }

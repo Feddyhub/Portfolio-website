@@ -158,3 +158,32 @@ function toggleLang(input) {
 
 
 
+
+const slideFolder = './assets/memory-slide/';
+  const slides = [
+    {
+      file: 'slide1.jpg',
+      caption: 'Burada arkadaşlarla eğleniyoruz. 🎉'
+    },
+    {
+      file: 'slide2.jpg',
+      caption: 'Sahil kenarında güzel bir gün. 🌊'
+    },
+    {
+      file: 'slide3.jpg',
+      caption: 'Hackathon sabahı, kahveler elimizde ☕'
+    }
+    // Listeyi istediğin kadar uzatabilirsin
+  ];
+
+  let currentIndex = 0;
+  const slideImg = document.getElementById('memory-slide-img');
+  const slideCaption = document.getElementById('memory-slide-caption');
+
+  function showNextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    slideImg.src = slideFolder + slides[currentIndex].file;
+    slideCaption.textContent = slides[currentIndex].caption;
+  }
+
+  setInterval(showNextSlide, 3000);
