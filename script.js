@@ -261,7 +261,7 @@ function toggleLang(checkbox) {
 
     counters.forEach(counter => {
       const target = +counter.getAttribute("data-target");
-      const duration = 4111;
+      const duration = 4411;
       const stepTime = 20;
 
       let count = 0;
@@ -291,4 +291,50 @@ function toggleLang(checkbox) {
     });
   });
 
+
+
+
+
+
+  const starContainer = document.getElementById('starRating');
+  const stars = starContainer.querySelectorAll('.star');
+  let locked = false;
+  let rating = 2; // Başlangıçta 2 yıldız dolu
+
+  function updateStars(tempRating = rating) {
+    stars.forEach((star, index) => {
+      star.classList.toggle('filled', index < tempRating);
+    });
+  }
+
+  updateStars(); // İlk yüklemede 2 yıldız dolu
+
+  stars.forEach((star, idx) => {
+    star.addEventListener('mouseenter', () => {
+      if (!locked) updateStars(idx + 1);
+    });
+
+    star.addEventListener('mouseleave', () => {
+      if (!locked) updateStars(); // Geri eski rating'e dön
+    });
+
+    star.addEventListener('click', () => {
+      if (!locked) {
+        rating = idx + 1;
+        updateStars();
+        locked = true;
+        starContainer.classList.add('locked');
+        console.log("Kullanıcının verdiği puan:", rating);
+      }
+    });
+  });
+
+
+
+
+
+
+  document.querySelector('.donate-action-button').addEventListener('click', function () {
+    window.location.href = '/donate/donate.html';
+  });
 

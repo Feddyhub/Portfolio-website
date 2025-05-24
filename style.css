@@ -758,7 +758,7 @@ a:hover {
 }
 
 .experience-sub-title {
-  color: rgb(65, 65, 65);
+  color: rgb(38, 38, 38);
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 2rem;
@@ -896,6 +896,32 @@ a:hover {
   margin-top: 5px;
   padding-top: 10px;
 }
+
+#experience .experience-sub-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  font-family: 'Barlow Condensed', 'Arial Black', sans-serif;
+  letter-spacing: 0.75px;
+  color: #111;
+  border: 0.4px solid rgba(243, 10, 10, 0.05);
+  border-radius: 14px;
+}
+body.dark-mode #experience .experience-sub-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  font-family: 'Barlow Condensed', 'Arial Black', sans-serif;
+  letter-spacing: 0.75px;
+  color: #f1f1f1; /* Açık yazı rengi */
+  border: 0.4px solid rgba(255, 255, 255, 0.08); /* Açık ama silik çizgi */
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.02); /* Hafif arka plan farkı */
+}
+
+
 
 #highlights-contact .about-containers {
   /* Bu sınıf #about bölümünden geliyor. Flex ve gap tanımları oradan miras alınır.
@@ -2713,7 +2739,7 @@ body.dark-mode .carousel-project-description {
 }
 
 body.dark-mode .carousel-arrow {
-  background-color: #dddddd;
+  background-color: #933636;
   color: #000000;
   border-color: #cccccc;
 }
@@ -2765,4 +2791,24 @@ body.dark-mode .carousel-project-card .btn {
 body.dark-mode .carousel-project-card .btn:hover {
   background-color: #eeeeee !important;
   color: #1a1a1a !important;
+}
+
+
+
+
+/*========*/
+
+.star-rating-display .star {
+  font-size: 2.5rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating-display .star.filled {
+  color: #FFD700;
+}
+
+.star-rating-display.locked .star {
+  cursor: default;
 }
