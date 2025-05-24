@@ -1028,39 +1028,23 @@ a:hover {
   color: var(--text-color);
   opacity: 0.9;
 }
-/* Kart yapısını daha yumuşak ve ortalanmış hale getir */
-.donate-card {
-  align-items: center;
-  padding: 2rem 1.5rem;
-  border-radius: 1.6rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
 
-/* Yeni başlık - bağış odaklı */
-.donate-card .experience-sub-title.project-title.coffee-title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--text-color);
-  text-align: center;
+/* CARD 3: COFFEE DONATION (.donate-card) */
+.donate-card .coffee-icon-area { /* Kahve ikonu alanı */
+  min-height: 120px; /* İkon için yeterli yükseklik */
+  margin-bottom: 1px; /* Başlıkla daha yakın olması için */
+  padding-top: 2px;
 }
-
-/* Resmi büyütüp daha yumuşak göstermek */
-.donate-card .project-svg-icon.coffee-img-custom {
-  width: 270px;
-  height: 270px;
+.donate-card .project-svg-icon.coffee-img-custom { /* Kendi yüklediğiniz SVG için */
+  width: 150px;
+  height: 150px;
   object-fit: contain;
-  border-radius: 2rem;
-  margin-bottom: 0.2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  margin-bottom: 0.7rem; /* Başlıkla SVG ikonu arası boşluk */
 }
 
-/* Resim alanını ortala */
-.donate-card .article-container.coffee-icon-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0rem;
+.donate-card .experience-sub-title.project-title.coffee-title { /* "Coffee for the Journey" */
+  font-size: 1.8rem; /* Biraz daha küçük */
+  margin-bottom: 0.6rem; /* Yıldızlarla arası boşluk */
 }
 
 .contact-map-img {
@@ -1147,8 +1131,6 @@ a:hover {
   color: var(--accent-color); /* mevcut temaya uyum sağlar */
   text-align: center;
   margin-bottom: 1.5rem;
-  border-radius: 2px;
-
 }
 
 
@@ -1875,7 +1857,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
   width: 48%; /* Daha uygun genişlik */
 }
 
@@ -2504,6 +2486,98 @@ a:hover {
   opacity: 0.9;
 }
 
+/* CARD 3: COFFEE DONATION (.donate-card) */
+.donate-card .coffee-icon-area { /* Kahve ikonu alanı */
+  min-height: 120px; /* İkon için yeterli yükseklik */
+  margin-bottom: 1px; /* Başlıkla daha yakın olması için */
+  padding-top: 2px;
+}
+.donate-card .project-svg-icon.coffee-img-custom { /* Kendi yüklediğiniz SVG için */
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 0.7rem; /* Başlıkla SVG ikonu arası boşluk */
+}
+
+.donate-card .experience-sub-title.project-title.coffee-title { /* "Coffee for the Journey" */
+  font-size: 1.8rem; /* Biraz daha küçük */
+  margin-bottom: 0.6rem; /* Yıldızlarla arası boşluk */
+}
+
+.contact-map-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+
+.star-rating-display {
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 2rem;
+}
+.star-rating-display .star {
+  color: #ccc; /* Boş yıldız */
+}
+.dark-mode .star-rating-display .star {
+  color: #555; /* Dark mode için boş yıldız */
+}
+.star-rating-display .star.filled {
+  color: #FFD700; /* Dolu yıldız */
+}
+
+/* Textarea ve Buton Grubu */
+#highlights-contact .project-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Textarea ve buton arası boşluk */
+  width: 100%;
+  padding: 0 1rem; /* Kartın kenarlarından taşmasın diye */
+  /* margin-top: auto; .details-container > justify-content: space-between ile altta kalır */
+}
+.donate-textarea.project-text-input {
+  padding: 0.9rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  font-size: 1rem;
+  min-height: 120px; /* Daha yüksek textarea */
+  resize: vertical; /* Sadece dikeyde boyutlandırılsın */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif; /* Genel fontu kullansın */
+}
+.donate-textarea.project-text-input::placeholder {
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+/* "Support with Coffee" BUTONU */
+/* Genel .btn ve .btn-color-2 stillerini kullanır.
+   Eğer farklı bir görünüm isteniyorsa, burada özelleştirilir. */
+.donate-action-button.project-btn {
+  /* .btn sınıfından temel padding, font-size, border-radius alır */
+  /* .btn-color-2'den temel renkleri alabilir veya burada tamamen ezilebilir */
+  background-color: #28a745; /* Başarı/destek rengi */
+  border-color: #28a745;
+  color: white;
+  width: 100%; /* Input grubu içinde tam genişlik */
+}
+.donate-action-button.project-btn:hover {
+  background-color: #1e7e34; /* Koyu tonu */
+  border-color: #1e7e34;
+  /* transform: translateY(-3px); .btn:hover'dan gelir */
+}
+.dark-mode .donate-action-button.project-btn {
+    background-color: #38bf5a; /* Dark mode için farklı bir yeşil tonu */
+    border-color: #38bf5a;
+}
+.dark-mode .donate-action-button.project-btn:hover {
+    background-color: #2da14a;
+    border-color: #2da14a;
+}
 
 
 
@@ -2514,8 +2588,6 @@ a:hover {
   color: var(--accent-color); /* mevcut temaya uyum sağlar */
   text-align: center;
   margin-bottom: 1.5rem;
-  border-radius: 1.2rem;
-padding: 0.6rem 1.4rem;
 }
 
 
@@ -2680,125 +2752,75 @@ padding-top:0.8rem;
   margin-right: 7px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* ======================= */
-/* KONTRAST TEMA DARK MODE */
-/* ======================= */
-body.dark-mode {
-  background-color: #2d2d2d; /* Siyah yerine doğal koyu gri */
+/* === DARK MODE KONTRAST STİLLERİ === */
+.dark-mode body {
+  background-color: #121212;
   color: #f1f1f1;
 }
 
-body.dark-mode nav {
-  background-color: #ffffff;
+.dark-mode nav {
+  background-color: #1a1a1a;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode a {
+.dark-mode a {
+  color: #d2d2d2;
+}
+.dark-mode a:hover {
+  color: #ffffff;
+  text-decoration-color: #bbbbbb;
+}
+
+.dark-mode .logo {
   color: #ffffff;
 }
-body.dark-mode a:hover {
-  color: #333333; /* #222222 yerine biraz daha açık */
-  text-decoration-color: #dddddd;
-}
 
-body.dark-mode .logo {
-  color: #000000;
-}
-
-body.dark-mode p,
-body.dark-mode .section__text p,
-body.dark-mode .section__text__p1,
-body.dark-mode .section__text__p2,
-body.dark-mode .title,
-body.dark-mode .experience-sub-title {
+.dark-mode p,
+.dark-mode .section__text p,
+.dark-mode .section__text__p1,
+.dark-mode .section__text__p2,
+.dark-mode .title,
+.dark-mode .experience-sub-title {
   color: #f1f1f1;
 }
 
-body.dark-mode .details-container,
-body.dark-mode .carousel-project-card {
-  background-color: #2e2e2e; /* #2b2b2b yerine biraz daha açık */
+.dark-mode .details-container,
+.dark-mode .carousel-project-card {
+  background-color: #1e1e1e;
   color: #f1f1f1;
+  border-color: #333333;
+}
+
+.dark-mode .contribute-container {
+  background-color: rgba(20, 20, 20, 0.88);
+  color: #f1f1f1;
+}
+
+.dark-mode .search-box-container .input-group-text,
+.dark-mode .search-box-container .btn {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+
+.dark-mode .carousel-project-title,
+.dark-mode .carousel-project-description {
+  color: #f1f1f1;
+}
+
+.dark-mode .carousel-arrow {
+  background-color: #444444;
+  color: #ffffff;
   border-color: #777;
 }
 
-body.dark-mode .contribute-container {
-  background-color: rgba(35, 35, 35, 0.95); /* Biraz daha açık ton */
-  color: #f1f1f1;
-}
-
-body.dark-mode .search-box-container .input-group-text,
-body.dark-mode .search-box-container .btn {
-  background-color: #3a3a3a;
+.dark-mode .btn-color-1,
+.dark-mode .btn-color-2:hover {
+  background: #222222;
   color: #ffffff;
+  border: 1px solid #888;
 }
 
-body.dark-mode .carousel-project-title,
-body.dark-mode .carousel-project-description {
-  color: #ffffff !important; /* Görünürlük için !important eklendi */
-}
-
-body.dark-mode .carousel-arrow {
-  background-color: #dddddd;
-  color: #000000;
-  border-color: #cccccc;
-}
-
-body.dark-mode .btn-color-1,
-body.dark-mode .btn-color-2:hover {
-  background: #ffffff;
-  color: #1a1a1a; /* #121212 yerine daha yumuşak */
-  border: 1px solid #dddddd;
-}
-
-body.dark-mode .btn-color-1:hover {
-  background: #eeeeee;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
-/* === NAV LINKS VE CAROUSEL UYUMLU DARK TEMA === */
-body.dark-mode .nav-links a {
-  color: #000000; /* Linkler koyu tema içinde siyah olsun */
-}
-
-body.dark-mode .nav-links a:hover {
-  color: #333333; /* #222222 yerine biraz daha açık */
-  text-decoration-color: #aaaaaa;
-}
-
-body.dark-mode .carousel-projects-wrapper {
-  background-color: #1e1e1e; /* #1a1a1a yerine biraz daha açık */
-  border-color: #555;
-}
-
-body.dark-mode .carousel-project-title-main {
-  color: #ffffff !important; /* #000000 yerine beyaz - görünürlük için */
-}
-
-body.dark-mode .carousel-project-card {
-  background-color: #2e2e2e;
-  color: #ffffff;
-  border-color: #666666;
-}
-
-/* === CAROUSEL CARD BUTONLARI İÇİN EK DÜZELTME === */
-body.dark-mode .carousel-project-card .btn {
-  background-color: #ffffff !important;
-  color: #1a1a1a !important;
-  border: 1px solid #dddddd !important;
-}
-
-body.dark-mode .carousel-project-card .btn:hover {
-  background-color: #eeeeee !important;
-  color: #1a1a1a !important;
+.dark-mode .btn-color-1:hover {
+  background: #111111;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }

@@ -186,4 +186,9 @@ const slideFolder = './assets/memory-slide/';
     slideCaption.textContent = slides[currentIndex].caption;
   }
 
-  setInterval(showNextSlide, 3000);
+  setInterval(showNextSlide, 7000);
+
+
+ document.getElementById('darkModeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
