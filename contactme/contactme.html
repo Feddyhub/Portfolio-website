@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Contact Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .typing-animation {
+            border-right: 2px solid #667eea;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #667eea; }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-border {
+            animation: pulse-border 2s infinite;
+        }
+        
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+        }
+        
+        .skill-badge {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            background-size: 200% 200%;
+            animation: gradient-shift 3s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #667eea;
+            border-radius: 50%;
+            animation: particle-float 4s infinite linear;
+        }
+        
+        @keyframes particle-float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen relative overflow-x-hidden">
+    <!-- Floating Particles -->
+    <div id="particles-container" class="fixed inset-0 pointer-events-none z-0"></div>
+    
+    <!-- Main Container -->
+    <div class="relative z-10 min-h-screen py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Header Section -->
+            <header class="text-center mb-16 fade-in">
+                <div class="floating">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 neon-text">
+                        <span id="typing-text" class="typing-animation">İletişime Geç</span>
+                    </h1>
+                </div>
+                <div class="max-w-3xl mx-auto glass-morphism rounded-2xl p-8 hover-lift">
+                    <p class="text-xl text-gray-200 leading-relaxed mb-6">
+                        👋 Merhaba! Ben 4. sınıf Bilgisayar Mühendisliği öğrencisiyim. 
+                        <span class="text-yellow-300 font-semibold">Backend geliştirme</span> ve 
+                        <span class="text-green-300 font-semibold">veri bilimi</span> alanlarında tutkulu, 
+                        <span class="text-blue-300 font-semibold">LLM modelleri</span> konusunda deneyimliyim.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="skill-badge text-white px-4 py-2 rounded-full text-sm font-medium">🚀 Backend Development</span>
+                        <span class="skill-badge text-white px-4 py-2 rounded-full text-sm font-medium">📊 Data Science</span>
+                        <span class="skill-badge text-white px-4 py-2 rounded-full text-sm font-medium">🤖 LLM Models</span>
+                        <span class="skill-badge text-white px-4 py-2 rounded-full text-sm font-medium">🎓 CS Student</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Grid -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                
+                <!-- Contact Form -->
+                <div class="fade-in glass-morphism rounded-3xl p-8 hover-lift glow-effect">
+                    <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                        <i class="fas fa-paper-plane mr-4 text-yellow-400"></i>
+                        Mesaj Gönder
+                    </h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="group">
+                            <label class="block text-gray-300 font-medium mb-2">İsim & Soyisim</label>
+                            <input type="text" id="name" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:bg-white/20 transition-all duration-300" placeholder="Adınızı yazın..." required>
+                        </div>
+                        <div class="group">
+                            <label class="block text-gray-300 font-medium mb-2">E-posta Adresi</label>
+                            <input type="email" id="email" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:bg-white/20 transition-all duration-300" placeholder="email@example.com" required>
+                        </div>
+                        <div class="group">
+                            <label class="block text-gray-300 font-medium mb-2">Proje Türü</label>
+                            <select id="project-type" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-yellow-400 focus:bg-white/20 transition-all duration-300">
+                                <option value="">Bir kategori seçin...</option>
+                                <option value="backend">Backend Geliştirme</option>
+                                <option value="data-science">Veri Analizi & Data Science</option>
+                                <option value="llm">LLM & AI Projeleri</option>
+                                <option value="fullstack">Full Stack Geliştirme</option>
+                                <option value="consultation">Danışmanlık</option>
+                                <option value="other">Diğer</option>
+                            </select>
+                        </div>
+                        <div class="group">
+                            <label class="block text-gray-300 font-medium mb-2">Mesajınız</label>
+                            <textarea id="message" rows="4" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 focus:bg-white/20 transition-all duration-300 resize-none" placeholder="Projeniz hakkında detayları paylaşın..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-4 px-8 rounded-xl hover:from-yellow-300 hover:to-orange-400 transform hover:scale-105 transition-all duration-300 pulse-border">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Mesajı Gönder
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info & Social -->
+                <div class="space-y-8">
+                    
+                    <!-- Contact Details -->
+                    <div class="fade-in glass-morphism rounded-3xl p-8 hover-lift">
+                        <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                            <i class="fas fa-address-book mr-4 text-green-400"></i>
+                            İletişim Bilgileri
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="flex items-center group cursor-pointer hover:bg-white/10 p-3 rounded-xl transition-all duration-300">
+                                <div class="bg-blue-500 p-3 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300 text-sm">E-posta</p>
+                                    <p class="text-white font-medium">muratferhatderya@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center group cursor-pointer hover:bg-white/10 p-3 rounded-xl transition-all duration-300">
+                                <div class="bg-green-500 p-3 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300 text-sm">Telefon</p>
+                                    <p class="text-white font-medium">+90 543 236 39 18</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center group cursor-pointer hover:bg-white/10 p-3 rounded-xl transition-all duration-300">
+                                <div class="bg-purple-500 p-3 rounded-full mr-4 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-300 text-sm">Konum</p>
+                                    <p class="text-white font-medium">Türkiye</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="fade-in glass-morphism rounded-3xl p-8 hover-lift">
+                        <h2 class="text-2xl font-bold text-white mb-6 flex items-center">
+                            <i class="fas fa-share-alt mr-3 text-pink-400"></i>
+                            Sosyal Medya
+                        </h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl text-center transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                <i class="fab fa-linkedin text-2xl mb-2"></i>
+                                <p class="text-sm font-medium">LinkedIn</p>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 text-white p-4 rounded-xl text-center transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                <i class="fab fa-github text-2xl mb-2"></i>
+                                <p class="text-sm font-medium">GitHub</p>
+                            </a>
+                            <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-xl text-center transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                <i class="fab fa-twitter text-2xl mb-2"></i>
+                                <p class="text-sm font-medium">Twitter</p>
+                            </a>
+                            <a href="#" class="bg-red-600 hover:bg-red-700 text-white p-4 rounded-xl text-center transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                <i class="fab fa-instagram text-2xl mb-2"></i>
+                                <p class="text-sm font-medium">Instagram</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bonus Sections -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                
+                <!-- Skills & Expertise -->
+                <div class="fade-in glass-morphism rounded-3xl p-6 hover-lift">
+                    <div class="text-center">
+                        <div class="bg-gradient-to-r from-blue-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 floating">
+                            <i class="fas fa-code text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Teknik Yetenekler</h3>
+                        <p class="text-gray-300 text-sm mb-4">Python, Node.js, Database Design, Machine Learning, API Development</p>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Response Time -->
+                <div class="fade-in glass-morphism rounded-3xl p-6 hover-lift">
+                    <div class="text-center">
+                        <div class="bg-gradient-to-r from-green-500 to-teal-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 floating">
+                            <i class="fas fa-clock text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Hızlı Yanıt</h3>
+                        <p class="text-gray-300 text-sm mb-4">Genellikle 24 saat içinde geri dönüş yapıyorum</p>
+                        <div class="flex items-center justify-center">
+                            <span class="bg-green-500 w-3 h-3 rounded-full mr-2 animate-pulse"></span>
+                            <span class="text-green-400 text-sm">Aktif</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Rate -->
+                <div class="fade-in glass-morphism rounded-3xl p-6 hover-lift">
+                    <div class="text-center">
+                        <div class="bg-gradient-to-r from-yellow-500 to-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 floating">
+                            <i class="fas fa-star text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Kalite Odaklı</h3>
+                        <p class="text-gray-300 text-sm mb-4">Clean code, best practices ve sürdürülebilir çözümler</p>
+                        <div class="flex justify-center">
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="fade-in text-center glass-morphism rounded-3xl p-12 hover-lift">
+                <h2 class="text-4xl font-bold text-white mb-6">Bir Proje Fikrimin Var! 💡</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Backend geliştirme, veri analizi veya AI projeleri için birlikte çalışalım. 
+                    Fikrini gerçeğe dönüştürmek için buradayım!
+                </p>
+                <button onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'})" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full text-lg transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                    <i class="fas fa-rocket mr-2"></i>
+                    Hemen İletişime Geç
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Typing Animation
+        const text = "İletişime Geç";
+        const typingElement = document.getElementById('typing-text');
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                typingElement.innerHTML = text.slice(0, index + 1);
+                index++;
+                setTimeout(typeWriter, 150);
+            }
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const projectType = document.getElementById('project-type').value;
+            const message = document.getElementById('message').value;
+            
+            // Simulate form submission
+            const button = e.target.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Gönderiliyor...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Mesaj Gönderildi!';
+                button.classList.remove('from-yellow-400', 'to-orange-500');
+                button.classList.add('from-green-400', 'to-green-600');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('from-green-400', 'to-green-600');
+                    button.classList.add('from-yellow-400', 'to-orange-500');
+                    button.disabled = false;
+                    e.target.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Floating particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            particle.style.animationDelay = Math.random() * 2 + 's';
+            
+            document.getElementById('particles-container').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 5000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 800);
+
+        // Initialize typing animation
+        setTimeout(typeWriter, 1000);
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add parallax effect to floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.floating');
+            
+            parallax.forEach(element => {
+                const speed = 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
