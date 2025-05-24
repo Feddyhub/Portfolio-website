@@ -790,21 +790,25 @@ a:hover {
 
   width: fit-content;
   max-width: 90%;
-  padding: 1.2rem 2rem;
-  margin: 2rem auto;
-  border-radius: 1rem;
+  padding: 1rem ;
+  margin: 1rem auto;
+  border-radius: 1.031rem;
 
   background-color: rgba(255, 255, 255, 0.88); /* Başlangıçta beyaz ve %88 opak */
   color: #000000;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.6s ease;
 }
 
 .contribute-container:hover {
-  animation: rgbFlow 1.9s infinite linear;
+  animation: rgbFlow 0.7s infinite linear;
   animation-fill-mode: forwards;
 }
 
 
+
+.contribute-container:hover {
+  animation: rgbFlow 1.9s infinite linear, bounceUp 0.6s ease;
+}
 
 
 
@@ -2247,46 +2251,6 @@ a:hover {
   margin: 0 auto; /* Ortalamak için */
   box-sizing: border-box; /* Padding dahil box modelini kullanıyoruz */
 }
-
-
-@keyframes rgbFlow {
-  0%   { background-color: rgba(255, 255, 255, 0.4); } /* Beyaz %88 */
-  25%  { background-color: rgba(255, 0, 0, 0.4); }     /* Kırmızı %88 */
-  50%  { background-color: rgba(0, 255, 0, 0.4); }     /* Yeşil %88 */
-  75%  { background-color: rgba(0, 0, 255, 0.4); }     /* Mavi %88 */
-  100% { background-color: rgba(255, 0, 255, 0.4); }   /* Mor %88 */
-}
-
-.contribute-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  width: fit-content;
-  max-width: 90%;
-  padding: 1.2rem 2rem;
-  margin: 2rem auto;
-  border-radius: 1rem;
-
-  background-color: rgba(255, 255, 255, 0.88); /* Başlangıçta beyaz ve %88 opak */
-  color: #000000;
-  transition: background-color 0.5s ease;
-}
-
-.contribute-container:hover {
-  animation: rgbFlow 1.9s infinite linear;
-  animation-fill-mode: forwards;
-}
-
-
-
-
-
-
-
-
-
 
 
 

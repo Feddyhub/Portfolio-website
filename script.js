@@ -238,14 +238,12 @@ function toggleLang(checkbox) {
 }
 
 
-
-
   const typed = new Typed("#typed-output", {
     strings: [
       "Data Scientist",
       "Backend Developer",
-      "Full Stack Developer",
       "Machine Learning Engineer",
+      "Full Stack Developer",
       "Software Engineer",
       
     ],
@@ -254,4 +252,43 @@ function toggleLang(checkbox) {
     backDelay: 1500,
     loop: true
   });
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter-value");
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const duration = 4111;
+      const stepTime = 20;
+
+      let count = 0;
+      const step = Math.ceil(target / (duration / stepTime));
+
+      const getColor = (value) => {
+        if (value >= 300) return "#23c629";       // Parlak yeşil
+        if (value >= 250) return "#70d66b";       // Açık yeşil
+        if (value >= 150) return "#e6d03b";       // Sarı
+        if (value >= 80)  return "#f19136";       // Turuncu
+        return "#cc4444";                         // Kırmızı/Gri
+      };
+
+      const updateCounter = () => {
+        count += step;
+        if (count >= target) {
+          counter.textContent = target;
+          counter.style.color = getColor(target);
+        } else {
+          counter.textContent = count;
+          counter.style.color = getColor(count);
+          setTimeout(updateCounter, stepTime);
+        }
+      };
+
+      updateCounter();
+    });
+  });
+
 
