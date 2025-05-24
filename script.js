@@ -192,3 +192,66 @@ const slideFolder = './assets/memory-slide/';
  document.getElementById('darkModeToggle').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
   });
+
+
+
+
+
+
+
+
+
+
+function toggleLang(checkbox) {
+  const isTurkish = checkbox.checked;
+
+  if (isTurkish) {
+    fetch("lang/turkish.json")
+      .then(res => res.json())
+      .then(data => {
+        // DOM'daki tüm text node'ları dolaş
+        document.querySelectorAll("*").forEach(el => {
+          for (let i = 0; i < el.childNodes.length; i++) {
+            const node = el.childNodes[i];
+            if (node.nodeType === 3) { // text node
+              const text = node.nodeValue.trim();
+              if (data[text]) {
+                node._original = text; // İngilizce metni sakla
+                node.nodeValue = data[text]; // Türkçe'ye çevir
+              }
+            }
+          }
+        });
+      })
+      .catch(err => console.error("JSON yüklenemedi:", err));
+  } else {
+    // İngilizceye geri dön
+    document.querySelectorAll("*").forEach(el => {
+      for (let i = 0; i < el.childNodes.length; i++) {
+        const node = el.childNodes[i];
+        if (node.nodeType === 3 && node._original) {
+          node.nodeValue = node._original;
+        }
+      }
+    });
+  }
+}
+
+
+
+
+  const typed = new Typed("#typed-output", {
+    strings: [
+      "Data Scientist",
+      "Backend Developer",
+      "Full Stack Developer",
+      "Machine Learning Engineer",
+      "Software Engineer",
+      
+    ],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1500,
+    loop: true
+  });
+
