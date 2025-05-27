@@ -2676,6 +2676,114 @@ padding-top:0.8rem;
 
 
 
+/* === MEGA MENU === */
+.mega-dropdown {
+  position: relative;
+}
+
+.mega-dropdown .mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2a2a2a;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  flex-direction: row;
+  gap: 2rem;
+  min-width: 640px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.services-item.mega-dropdown:hover .mega-menu {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* === COLUMNS === */
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.dropdown-column h4 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #555;
+  padding-bottom: 4px;
+  opacity: 0.85;
+}
+
+/* === LINKS === */
+.dropdown-column a {
+  color: #cccccc;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  opacity: 0.8;
+}
+
+.dropdown-column a:hover {
+  color: #ff9900;
+  padding-left: 6px;
+  opacity: 1;
+}
+
+/* === Dark Mode === */
+body.dark-mode .mega-menu {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .dropdown-column h4 {
+  color: #f1f1f1;
+}
+
+body.dark-mode .dropdown-column a {
+  color: #dddddd;
+}
+
+body.dark-mode .dropdown-column a:hover {
+  color: #ffc266;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2812,3 +2920,7 @@ body.dark-mode .carousel-project-card .btn:hover {
 .star-rating-display.locked .star {
   cursor: default;
 }
+
+
+
+
