@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     
 
 
@@ -28,29 +29,31 @@
 
   <body>
     <nav id="desktop-nav">
-      <div class="logo" id="dynamic-logo-desktop">Murat Ferhat Derya</div>
+      <div class="logo" id="dynamic-logo-desktop">Feddy </div>
 
       <div>
         <ul class="nav-links">
           <li><a href="#about" data-i18n="about">About</a></li>
           <li><a href="#experience" data-i18n="experience">Skills</a></li>
-       <li class="services-item mega-dropdown">
+
+       <!-- Dropdown Yapısı -->
+<li class="services-item mega-dropdown">
   <a href="#services" class="services-link" data-i18n="services">Services</a>
   <div class="mega-menu">
     <div class="dropdown-column">
-      <h4>🌐 Web</h4>
+      <h4><i class="bi bi-code-slash"></i> Web</h4>
       <a href="contactme/contactme.html?service=web-custom">Website (Custom)</a>
       <a href="contactme/contactme.html?service=web-wordpress">Website (WordPress)</a>
       <a href="contactme/contactme.html?service=mobile-app">Mobile App (Android)</a>
     </div>
     <div class="dropdown-column">
-      <h4>📊 Data</h4>
+      <h4><i class="bi bi-bar-chart-line"></i> Data</h4>
       <a href="contactme/contactme.html?service=data-science">Data Science</a>
       <a href="contactme/contactme.html?service=data-scraping">Data Scraping</a>
       <a href="contactme/contactme.html?service=data-analysis">Data Analysis</a>
     </div>
     <div class="dropdown-column">
-      <h4>🤖 AI</h4>
+      <h4><i class="bi bi-cpu"></i> AI</h4>
       <a href="contactme/contactme.html?service=ml">Machine Learning</a>
       <a href="contactme/contactme.html?service=cv">Computer Vision</a>
       <a href="contactme/contactme.html?service=chatbot">Chatbot Development</a>
@@ -120,7 +123,7 @@
             </div>
           </div>
           <div class="button-group">
-            <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+            <button class="btn btn-color-2" onclick="window.open('./contactme/CV.pdf')">Download CV</button>
             <button class="btn btn-color-1" onclick="location.href='/contactme/contactme.html'">Contact-page</button>
 
           </div>
@@ -147,7 +150,8 @@
 
 <div class="section-container">
   <div class="section__pic-container">
-    <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
+    <img src="./assets/about-pic.jpg" alt="Profile picture" id="about-profile-pic" />
+
   </div>
   <div class="about-details-container">
     <div class="about-containers">
