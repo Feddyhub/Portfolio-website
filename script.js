@@ -7,7 +7,7 @@ function toggleMenu() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const logoElementDesktop = document.getElementById('dynamic-logo-desktop');
-  const logoTexts = ["FEDAI", "Kimkio", "Carsell", "Fedai.ai","Arkenom Teknoloji","Optiwisdom"];
+  const logoTexts = ["Kimkio", "Carsell", "Fedai.ai","Arkenom Teknoloji","Optiwisdom"];
   let currentTextIndex = 0;
 
   if (logoElementDesktop) { // Elementin var olduğundan emin olun

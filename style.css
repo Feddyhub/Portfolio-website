@@ -2902,4 +2902,736 @@ body.dark-mode .carousel-project-card .btn:hover {
 
 
 
-/*Responsive Tasarim icin*/
+
+
+
+
+
+
+
+/* ----------------------------------- */
+@media (max-width: 1200px) {
+  nav#desktop-nav .nav-links { /* #desktop-nav içindeki linkler */
+    gap: 1.8rem;
+    font-size: 1.35rem;
+  }
+
+  nav#desktop-nav .logo { /* #desktop-nav içindeki logo */
+    font-size: 1.9rem;
+  }
+
+  #profile {
+    gap: 3rem;
+  }
+
+  #profile .section__pic-container.profile-pic-override {
+    width: 350px;
+    height: 350px;
+    /* Y ekseninde 250px aşağıya taşı */
+    transform: translateY(250px);
+  }
+
+  .title { /* Genel .title sınıfı için */
+    font-size: 2.8rem;
+  }
+
+  /* #about içindeki .section-container için masaüstü transformu kalsın */
+  #about .section-container {
+    transform: translateX(5%);
+    gap: 1.5rem; /* Biraz daraltalım */
+  }
+
+  #about .about-details-container {
+    width: 60%; /* Biraz daraltalım */
+    padding-left: 20px; /* Biraz daraltalım */
+  }
+   #about .details-container { /* About içindeki Experience/Education kartları */
+      width: 48%; /* Yan yana sığması için */
+  }
+
+  /* about-profile-pic'ten gereksiz stilleri kaldır */
+#about-profile-pic {
+    display: none !important;
+  }
+
+  .carousel-projects-wrapper {
+    max-width: 900px;
+    transform: scaleX(0.85) scaleY(0.85);
+  }
+
+  .mega-menu { /* Navigasyon içindeki mega menu */
+    min-width: 580px;
+  }
+}
+
+/* ----------------------------------- */
+/* ===== TABLETLER (<= 992px) ===== */
+/* ----------------------------------- */
+@media (max-width: 992px) {
+  /* === NAVIGASYON === */
+  nav#desktop-nav {
+    display: none;
+  }
+  nav#hamburger-nav {
+    display: flex; /* Göster */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    height: auto; /* İçeriğe göre */
+    position: relative; /* menu-links için */
+    background-color: #1f1f1f; /* Masaüstü nav ile aynı arka plan */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  nav#hamburger-nav .logo {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #f5f5f5; /* Logo rengi */
+  }
+  .hamburger-icon span {
+      background-color: #f5f5f5; /* Hamburger çizgileri beyaz */
+  }
+  /* Dark mode için hamburger ikon rengi (body.dark-mode ile) */
+  body.dark-mode nav#hamburger-nav {
+      background-color: #f3f3f3; /* Dark mode nav arka planı */
+  }
+  body.dark-mode nav#hamburger-nav .logo {
+      color: #000000; /* Dark mode logo rengi */
+  }
+  body.dark-mode .hamburger-icon span {
+      background-color: var(--text-color); /* Dark mode text rengi */
+  }
+
+  .menu-links { /* Açılır menü */
+    top: 100%; /* Hamburger nav'ın hemen altına */
+    right: 1rem; /* Sağa yasla */
+    left: auto;
+    width: auto;
+    min-width: 200px;
+    background-color: #2a2a2a; /* Navigasyon ile uyumlu */
+    border-radius: 0 0 8px 8px; /* Alt köşeler yuvarlak */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  .menu-links a {
+    color: #d2d2d2;
+    font-size: 1.2rem;
+  }
+  .menu-links a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  body.dark-mode .menu-links {
+    background-color: #e9e9e9; /* Dark mode için açık renk menü */
+  }
+  body.dark-mode .menu-links a {
+    color: #333;
+  }
+  body.dark-mode .menu-links a:hover {
+    background-color: #d0d0d0;
+  }
+
+  /* === GENEL SECTION AYARLARI (MOBİL İÇİN) === */
+  .section-container { /* #about içindeki ana sarmalayıcı */
+    transform: none !important; /* Önceki transform'u iptal et */
+    padding: 1.5rem 1rem; /* İç boşluk */
+    flex-direction: column;
+    transform: none !important; /* Önceki transform'u iptal et */
+    padding: 1.5rem 1rem; /* İç boşluk */
+    flex-direction: column;
+    align-items: center; /* İçeriği ortala */
+    gap: 2rem; /* Elemanlar arası boşluk */
+  }
+
+  /* --- 1. #profile Section'ındaki Resmin Konumu --- */
+  #profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Resim ve metni ortala */
+    height: auto; /* İçeriğe göre yükseklik */
+    padding-top: 12vh; /* Hamburger nav'dan sonra boşluk (nav yüksekliğine göre ayarla) */
+                        /* VEYA sabit bir değer örn: padding-top: 80px; */
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.5rem; /* Resim ve metin (.section__text) arası boşluk */
+  }
+
+  #profile .section__pic-container.profile-pic-override {
+    width: 280px; /* Tablet boyutu */
+    height: 280px;
+    margin: 0 auto; /* Yatayda ortala */
+    order: -1; /* .section__text'ten önce gelmesi için */
+    /* Mobil responsive için transform'u sıfırla */
+    transform: none;
+  }
+
+  #profile .section__text {
+    text-align: center;
+    order: 0; /* Resimden sonra gelmesi için */
+    width: 100%; /* Tam genişlik alsın */
+  }
+  /* --- Bitiş: #profile Section --- */
+
+  /* --- 2. #about Section'ındaki Resmin Konumu --- */
+  #about {
+    padding-top: 2rem; /* Üstten genel boşluk */
+  }
+  #about > .section__text__p1, /* "Get To Know More" */
+  #about > .title {            /* "About Me" */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #about .contribute-container {
+    margin-top: 1.5rem; /* Üstündeki başlıkla boşluk */
+    margin-bottom: 2.5rem; /* Altındaki resim (.section-container) ile boşluk */
+  }
+
+  /* #about .section-container zaten yukarıda genel .section-container olarak ayarlandı. */
+  /* Bu blokta resim ve about-details-container var. */
+
+  #about .section-container .section__pic-container { /* #about içindeki resim sarmalayıcısı */
+    order: -1; /* .about-details-container'dan ÖNCE gelmesi için */
+    width: 100%; /* Resmin taşmamasını sağlar */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0; /* Gap zaten .section-container'da var */
+  }
+  
+  /* about-profile-pic için temizlenmiş stiller */
+  #about .section-container .section__pic-container img#about-profile-pic { 
+    width: 80%;
+    max-width: 350px; /* Tablet için makul bir boyut */
+    height: auto;
+    border-radius: 15%;
+    /* Gereksiz transform/position stilleri kaldırıldı */
+  }
+
+  #about .section-container .about-details-container {
+    order: 0; /* Resimden SONRA gelmesi için */
+    width: 100%;
+    max-width: 600px;
+    padding-left: 0; /* Mobil için sıfırla */
+    gap: 1.5rem; /* İçindeki .about-containers ve .text-container arası */
+  }
+  #about .about-details-container .about-containers { /* Experience/Education kartlarını saran div */
+    flex-direction: column; /* Kartlar alt alta */
+    align-items: center; /* Kartları ortala */
+    gap: 1.5rem;
+    width: 100%; /* Ebeveynine göre tam genişlik */
+  }
+  #about .about-details-container .details-container { /* Experience/Education kartları */
+    width: 100%;
+    max-width: 450px; /* Çok genişlemesin */
+  }
+  #about .text-container { /* About metnini içeren div */
+    width: 100%;
+    max-width: 600px; /* Ortalama için */
+  }
+  /* --- Bitiş: #about Section --- */
+
+  /* --- 3. #experience (Skills) Kartları & #highlights-contact Kartları --- */
+  /* Her iki section da benzer yapıda kartlar kullanıyor: .details-container */
+  #experience .experience-details-container .about-containers,
+  #highlights-contact .experience-details-container .about-containers {
+    flex-direction: column; /* Kartları alt alta getir */
+    align-items: center;    /* Alt alta gelen kartları ortala */
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+  #experience .details-container, /* Skills kartları */
+  #highlights-contact .details-container.color-container { /* Contact/Memories/Coffee kartları */
+    width: 100% !important; /* Diğer kuralları ezmek için, flex-basis de olabilir */
+    max-width: 500px; /* Çok genişlemesin */
+    min-height: auto; /* İçeriğe göre yükseklik */
+    flex-grow: 0; /* Büyümesin */
+    flex-shrink: 1; /* Küçülebilsin */
+    flex-basis: auto; /* Temel genişlik otomatik */
+  }
+  /* --- Bitiş: #experience & #highlights-contact --- */
+
+  /* Diğer genel ayarlar */
+  .title { /* Genel .title sınıfı */
+    font-size: 2.5rem;
+  }
+  .section__text__p1, .section__text__p2 { /* Genel metinler */
+    font-size: 1.1rem;
+  }
+
+  /* Butonlar (#profile içindeki) */
+  #profile .btn-container {
+    flex-direction: column; /* Arama ve buton grubu alt alta */
+    align-items: center; /* Ortala */
+    gap: 1.5rem;
+  }
+  #profile .search-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0; /* .btn-container gap'i yeterli */
+  }
+  #profile .button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px; /* Butonların çok ayrılmasını engelle */
+  }
+  .btn { /* Genel butonlar */
+    padding: 0.8rem;
+    width: auto; /* İçeriğe göre */
+    min-width: 120px; /* Minimum genişlik */
+    font-size: 0.9rem;
+    flex: 1; /* #profile .button-group içinde eşit dağılsın */
+  }
+   #profile .button-group .btn { /* Profile butonları için özel */
+     max-width: 200px; /* Çok genişlemesin */
+   }
+
+  /* Carousel */
+  .carousel-projects-wrapper {
+    transform: scale(0.95);
+    max-width: 95%;
+  }
+  .carousel-project-title-main {
+    font-size: 2.2rem;
+  }
+  .carousel-project-card {
+    min-height: auto;
+    padding-bottom: 3rem; /* Butonlar için yer */
+  }
+  .carousel-project-card .article-container { /* Carousel içindeki resim alanı */
+    width: 100%;
+    transform: scale(1) skew(0deg); /* Mobil için efektleri sıfırla */
+    padding-top: 1rem;
+  }
+  .carousel-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+  .prev-arrow { left: 10px; } /* Biraz içe alalım */
+  .next-arrow { right: 10px; }
+
+  /* Genel arama kutusu (eğer #profile dışındaysa) */
+  .search-box {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ----------------------------------- */
+/* ===== KÜÇÜK TABLETLER VE BÜYÜK TELEFONLAR (<= 768px) ===== */
+/* ----------------------------------- */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav#hamburger-nav .logo {
+    font-size: 1.6rem;
+  }
+  nav#hamburger-nav {
+    padding: 0.8rem 1.5rem; /* Biraz daha kompakt */
+  }
+
+  /* === #profile Section === */
+  #profile {
+    padding-top: 10vh; /* Daha da ayarla */
+    gap: 1.2rem;
+  }
+  #profile .section__pic-container.profile-pic-override {
+    width: 240px;
+    height: 240px;
+    /* Mobil için transform'u sıfırla */
+    transform: none;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .section__text__p1, .section__text__p2 {
+    font-size: 1rem;
+  }
+  #profile .btn-container { /* Zaten column, gap ayarı */
+    gap: 1.2rem;
+  }
+  .btn { /* Genel butonlar */
+    width: 100%; /* Tam genişlik kaplasın (max-width ile sınırlı) */
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+   #profile .button-group .btn { /* Profile butonları için */
+     min-width: 100px; /* Çok küçülmesin */
+   }
+
+  /* === #about Section === */
+  #about .contribute-container {
+    margin-bottom: 2rem; /* Boşluk ayarı */
+    max-width: 95%; /* Dar ekranlarda taşmasın */
+  }
+  #about .section-container .section__pic-container img#about-profile-pic {
+    max-width: 300px;
+    /* Gereksiz stiller kaldırıldı */
+  }
+  #about .section-container .about-details-container {
+      gap: 1.5rem; /* İç boşluk */
+  }
+  #about .about-details-container .details-container h2 { /* Kart başlıkları */
+      font-size: 1.6rem; /* Biraz daha küçük */
+  }
+  #about .text-container p { /* About metni */
+      font-size: 0.95rem;
+  }
+  .accordion-header {
+    padding: 0.8rem 1rem; /* İç boşluk */
+    font-size: 1rem; /* Başlık fontu */
+  }
+  .accordion-content p { /* Accordion içeriği */
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Skills ve Contact Kartları */
+  #experience .experience-sub-title, /* Skills ana başlığı */
+  #highlights-contact .title.section-title { /* Highlights ana başlığı */
+    font-size: 2rem;
+    padding: 1rem 0.8rem;
+  }
+  #experience .details-container h1.experience-sub-title, /* Skills kart başlığı */
+  #experience .details-container h2.experience-sub-title,
+  #highlights-contact .experience-sub-title.project-title { /* Contact kart başlığı */
+    font-size: 1.5rem; /* Kart başlıkları */
+  }
+  #experience .details-container,
+  #highlights-contact .details-container.color-container {
+    max-width: 90%; /* Kart genişliği */
+  }
+
+  /* Carousel */
+  .carousel-projects-wrapper {
+    transform: scale(1); /* Tam boyut */
+    border-radius: 0; /* Köşe yuvarlaklığı kalksın */
+    margin-top: 1rem; /* Üstten boşluk */
+  }
+  .carousel-project-title-main {
+    font-size: 2rem; /* Ana başlık */
+    margin-bottom: 1.5rem;
+  }
+  .carousel-project-title { /* Slayt başlığı */
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .carousel-project-description {
+    font-size: 0.95rem;
+    max-width: 95%;
+    padding: 0 0.5rem; /* Yazının kenarlara yapışmasını engelle */
+  }
+  .carousel-arrow {
+    width: 40px; /* Oklar biraz küçülsün */
+    height: 40px;
+    font-size: 1.3rem;
+  }
+  .prev-arrow { left: 5px; }
+  .next-arrow { right: 5px; }
+
+  /* Arama Kutusu */
+  .search-box {
+    max-width: 90%;
+  }
+  .search-box input {
+    padding: 14px 15px 14px 45px;
+    font-size: 15px;
+  }
+  .search-btn {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+}
+
+/* ----------------------------------- */
+/* ===== TELEFONLAR (<= 576px) ===== */
+/* ----------------------------------- */
+@media (max-width: 576px) {
+  /* Navbar */
+  nav#hamburger-nav {
+    padding: 0.8rem 1rem;
+  }
+  nav#hamburger-nav .logo {
+    font-size: 1.5rem; /* Daha küçük logo */
+  }
+  .menu-links a {
+    font-size: 1.1rem;
+    padding: 10px 15px; /* İç boşluk */
+  }
+
+  /* Profil Section */
+  #profile {
+    padding-top: 8vh; /* İyice ayarla */
+    gap: 1rem;
+  }
+  #profile .section__pic-container.profile-pic-override {
+    width: 200px; /* Daha küçük resim */
+    height: 200px;
+    /* Mobil için transform'u sıfırla */
+    transform: none;
+  }
+  .title {
+    font-size: 2rem; /* Başlık boyutu */
+    margin-bottom: 1rem;
+  }
+  .section__text__p1 {
+    font-size: 1rem; /* Metin boyutu */
+  }
+  .section__text__p2 { /* Typed output */
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    min-height: 3em; /* Yazı yokken bile yer kaplasın */
+  }
+  #socials-container {
+    gap: 1rem; /* İkonlar arası boşluk */
+    margin-top: 1.5rem;
+  }
+  .icon { /* Sosyal medya ikonları */
+    height: 2.2rem;
+  }
+
+  /* About Section */
+  #about .contribute-container {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+  }
+  #about .contribute-container h2 {
+      font-size: 1.3rem;
+  }
+  #about .section-container .section__pic-container img#about-profile-pic {
+    max-width: 85%; /* Resim daha fazla yer kaplasın */
+    /* Gereksiz stiller kaldırıldı */
+  }
+  #about .about-details-container .details-container h2 {
+      font-size: 1.4rem;
+  }
+  #about .text-container p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+  }
+  .accordion-header h3 { /* Accordion başlıkları */
+    font-size: 0.95rem;
+  }
+
+  /* Skills ve Contact Kartları */
+  #experience .experience-sub-title,
+  #highlights-contact .title.section-title {
+    font-size: 1.8rem;
+  }
+  #experience .details-container h1.experience-sub-title,
+  #experience .details-container h2.experience-sub-title,
+  #highlights-contact .experience-sub-title.project-title {
+    font-size: 1.4rem; /* Kart başlıkları */
+  }
+  #experience .details-container .article-container article div h3, /* Skills kart iç başlık */
+  #experience .details-container .article-container article div p {  /* Skills kart iç metin */
+    font-size: 0.85rem;
+  }
+  #highlights-contact .details-container.color-container {
+    max-width: 95%;
+    padding: 1.2rem; /* Kart iç boşluğu */
+  }
+  #highlights-contact .about-containers {
+    gap: 1.2rem; /* Kartlar arası boşluk */
+  }
+
+  /* Contact Card içindeki detaylar */
+  .contact-infos-list .info-item {
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .project-contact-icon { /* İletişim ikonları */
+    font-size: 1.3rem;
+  }
+  .contact-infos-list h5 { /* İletişim başlıkları */
+    font-size: 0.9rem;
+  }
+  .contact-infos-list p { /* İletişim metinleri */
+    font-size: 0.85rem;
+  }
+  .wat-card .project-description-text { /* Memories açıklama */
+    font-size: 0.9rem;
+  }
+  .donate-textarea.project-text-input { /* Donate textarea */
+    font-size: 0.9rem;
+    min-height: 100px;
+    padding: 0.8rem;
+  }
+
+  /* Carousel */
+  .carousel-project-title-main {
+    font-size: 1.8rem;
+  }
+  .carousel-project-title {
+    font-size: 1.5rem;
+  }
+  .carousel-project-description {
+    font-size: 0.9rem;
+    min-height: auto;
+    margin-bottom: 1.5rem;
+  }
+  .carousel-button-group .btn { /* Carousel butonları */
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+    min-width: 90px;
+  }
+  .carousel-arrow { /* Carousel okları */
+      display: none; /* Çok küçük ekranlarda gizleyebiliriz, dokunmatik kaydırma tercih edilebilir */
+  }
+
+  /* Arama Kutusu */
+  .search-box {
+    max-width: 95%;
+    border-radius: 25px; /* Biraz daha az yuvarlak */
+  }
+  .search-icon {
+    left: 15px;
+    font-size: 1rem; /* İkon boyutu */
+  }
+  .search-box input {
+    padding: 12px 15px 12px 40px;
+    font-size: 0.9rem; /* Input yazı boyutu */
+  }
+  .search-btn {
+    padding: 0 18px;
+    font-size: 0.85rem; /* Buton yazı boyutu */
+  }
+
+  /* Dil Değiştirici */
+  .lang-switch {
+    width: 60px;
+    height: 30px;
+  }
+  .lang-slider::before {
+    height: 22px;
+    width: 22px;
+    top: 4px; left: 4px;
+  }
+  .lang-switch input:checked + .lang-slider::before {
+    transform: translateX(28px); /* Kayma mesafesi */
+  }
+  .lang-icon {
+    height: 18px;
+    width: 18px;
+  }
+  .lang-icon.left { left: 7px; } /* Konumlar */
+  .lang-icon.right { right: 7px; }
+
+  /* Footer */
+  footer nav .nav-links {
+      flex-direction: column; /* Linkler alt alta */
+      gap: 0.5rem;
+      font-size: 1rem; /* Daha küçük yazı */
+  }
+  footer p {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+  }
+}
+
+/* ----------------------------------- */
+/* ===== ÇOK KÜÇÜK TELEFONLAR (<= 380px, opsiyonel ince ayar) ===== */
+/* ----------------------------------- */
+@media (max-width: 380px) {
+  #profile .section__pic-container.profile-pic-override {
+    width: 180px;
+    height: 180px;
+    /* Mobil için transform'u sıfırla */
+    transform: none;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .section__text__p2 { /* Typed output */
+    font-size: 1.1rem;
+  }
+  #profile .btn { /* Profil butonları */
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+   #profile .button-group {
+     flex-direction: column; /* Butonlar alt alta */
+     gap: 0.8rem;
+   }
+   #profile .button-group .btn {
+     width: 100%; /* Tam genişlik */
+     max-width: 200px; /* Çok genişlemesin */
+   }
+
+  .carousel-project-title-main {
+    font-size: 1.6rem;
+  }
+  .carousel-project-title {
+    font-size: 1.3rem;
+  }
+  .search-box input {
+    font-size: 0.85rem;
+  }
+  .search-btn {
+    font-size: 0.8rem;
+    padding: 0 15px;
+  }
+}
+
+/* --- TABLETLER (<= 992px) ve altı için geçerli olacak şekilde --- */
+@media (max-width: 992px) {
+  #profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    /* Navbar'dan sonra başlaması için PADDING-TOP ÖNEMLİ */
+    /* Hamburger nav yüksekliği genellikle daha azdır, masaüstü nav 17vh idi. */
+    /* Bu değeri tarayıcıda deneyerek bulun. Örn: nav#hamburger-nav yüksekliği 80px ise: */
+    padding-top: 100px; /* VEYA padding-top: calc(var(--hamburger-nav-height, 80px) + 20px); */
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.5rem; /* Resim ve metin arası */
+  }
+
+  #profile .section__pic-container.profile-pic-override {
+    /* width ve height zaten ayarlıydı */
+    margin: 0; /* Üst/alt margin'i sıfırlayıp #profile gap'ine bırakalım */
+    order: -1;
+    /* Mobil responsive için transform'u sıfırla */
+    transform: none;
+    /* Flex item olduğu için align-self: flex-start; veya center; denenebilir ama #profile align-items:center var */
+  }
+
+  #profile .section__text {
+    text-align: center;
+    order: 0;
+    margin-top: 0; /* Resimle arasındaki boşluk gap ile kontrol edilecek */
+  }
+}
+
+/* Daha küçük ekranlar için #profile padding-top ayarı gerekebilir */
+@media (max-width: 768px) {
+  #profile {
+    padding-top: 90px; /* Hamburger nav'ın yüksekliğine göre tekrar ayarla */
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #profile {
+    padding-top: 80px; /* Hamburger nav'ın yüksekliğine göre tekrar ayarla */
+    gap: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
