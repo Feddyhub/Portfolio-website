@@ -962,7 +962,7 @@ body.dark-mode #experience .experience-sub-title {
 #highlights-contact .about-containers {
   display: flex;               /* Kartları yatayda hizala */
   justify-content: center;     /* Ortala */
-  gap: 1.1rem;                 /* Kartlar arası boşluk */
+  gap: 1.55rem;                 /* Kartlar arası boşluk */
   flex-wrap: wrap;             /* Taşma durumunda alta geç */
   padding: 2rem 1rem;          /* Kenarlardan boşluk ver (ek) */
   position: relative;
@@ -2184,7 +2184,7 @@ a:hover {
 
 .about-containers {
   gap: 2rem;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   padding-top: 10px;
   margin-bottom: 2rem;
   margin-top: 2.5rem;
@@ -3629,9 +3629,13 @@ body.dark-mode .carousel-project-card .btn:hover {
 
 
 
+#loop-card {
+  background: radial-gradient(circle at 0% 50%, #222 0%, #000 70%);
+  box-shadow: inset 0 0 30px #ff7d00;
+  animation: glowPulse 5s ease-in-out infinite;
+}
 
-
-
-
-
-
+@keyframes glowPulse {
+  0%, 100% { box-shadow: inset 0 0 20px #ff0000; }
+  50% { box-shadow: inset 0 0 90px #0084ff; }
+}

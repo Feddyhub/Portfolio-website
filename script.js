@@ -350,3 +350,48 @@ function toggleLang(checkbox) {
     window.location.href = '/donate/donate.html';
   });
 
+
+
+
+
+
+
+
+
+let emojiProgress = 0;
+let emojiInterval;
+
+const emojiStages = [
+  "💤 Warming up...",
+  "☕ Brewing focus...",
+  "💻 Coding mode...",
+  "🧠 Neural firing...",
+  "🚀 Launching idea...",
+  "✅ Task completed!"
+];
+
+function startEmojiLoading() {
+  if (emojiProgress >= 100) {
+    emojiProgress = 0;
+    document.getElementById("loading-bar-inner").style.width = "0%";
+    document.getElementById("loading-status").innerText = "Hover to simulate productivity...";
+  }
+
+  emojiInterval = setInterval(() => {
+    if (emojiProgress < 100) {
+      emojiProgress++;
+      document.getElementById("loading-bar-inner").style.width = emojiProgress + "%";
+
+      // Her aşamada yeni emoji + mesaj
+      if (emojiProgress === 10) document.getElementById("loading-status").innerText = emojiStages[0];
+      if (emojiProgress === 30) document.getElementById("loading-status").innerText = emojiStages[1];
+      if (emojiProgress === 50) document.getElementById("loading-status").innerText = emojiStages[2];
+      if (emojiProgress === 70) document.getElementById("loading-status").innerText = emojiStages[3];
+      if (emojiProgress === 90) document.getElementById("loading-status").innerText = emojiStages[4];
+    } else {
+      clearInterval(emojiInterval);
+      document.getElementById("loading-status").innerText = emojiStages[5];
+    }
+  }, 35);
+}
+

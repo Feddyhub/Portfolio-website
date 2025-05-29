@@ -333,8 +333,9 @@ In each video, I tried to improve the viewer experience.</p>
                         <picture>
                             <!-- Gerçek resim yollarınızı kullanın -->
                             
-                            <source srcset="./assets/project-1.gif" type="image/gif" />
-                            <img src="./assets/project-1.gif" alt="Official Chatbot Project" class="project-img" />
+                            <source srcset="./assets/chatbot.gif" type="image/gif" />
+<img src="./assets/chatbot.gif" alt="Official Chatbot Project" class="project-img" />
+
                         </picture>
                     </div>
                    <h2 class="carousel-project-title">Telegram Chatbot</h2>
@@ -357,10 +358,11 @@ This Telegram bot, built on top of ChatGPT, can engage in natural language conve
                 <div class="carousel-project-card">
                     <div class="article-container">
                          <picture>
-                             <!-- Gerçek resim yollarınızı kullanın -->
-                             <source srcset="./assets/project-2.gif" type="image/gif" />
-                             <img src="./assets/project-2.gif" alt="Price Tracker" class="project-img" />
-                        </picture>
+                            <picture>
+  <source srcset="./assets/batman.gif" type="image/gif" />
+  <img src="./assets/batman.gif" alt="Price Tracker" class="project-img" />
+</picture>
+
                     </div>
                    <h2 class="carousel-project-title">Weather API AI Agent</h2>
 <p class="carousel-project-description">
@@ -390,9 +392,9 @@ An AI agent that understands and delivers weather information without needing yo
 
                         </picture>
                     </div>
-                    <h2 class="carousel-project-title">Send Email AI Agent</h2>
+                    <h2 class="carousel-project-title">Industrial Vibration Analyzer .exe</h2>
 <p class="carousel-project-description">
-  An AI assistant that drafts emails by generating personalized content and subject lines based on personal data (age, title, favorite color, etc.) ✉️. Soon, it will be integrated with automatic sending support ⚙️.
+A Windows-based desktop application developed with PySide6, designed upon special industry requirements 🏭. It analyzes and stores vibration signals from factory machines, supports waveform visualization, user authentication, and session-based data logging 📈🔐.
 </p>
 
                     <div class="carousel-button-group">
@@ -417,9 +419,11 @@ An AI agent that understands and delivers weather information without needing yo
 
 <!-- Burada bir gif hatasi var. ve siralama yaparken API lari dagitarak koy.-->
 
+<picture>
+  <source srcset="./assets/cat.gif" type="image/gif" />
+  <img src="./assets/cat.gif" alt="FAQ AI Agent" class="project-img" />
+</picture>
 
-                <source srcset="./assets/project-faq.gif" type="image/gif" />
-                <img src="./assets/dbh.gif" alt="FAQ AI Agent" class="project-img" />
             </picture>
         </div>
         <h2 class="carousel-project-title">Kurumsal FAQ AI Agent</h2>
@@ -508,7 +512,7 @@ Designed especially for European citizens, CarSell helps you decide which countr
         <div class="about-containers"> <!-- Bu class ismi de about bölümünden, isterseniz değiştirebiliriz -->
 
           <!-- Card 1: Get In Touch -->
-          <div class="details-container color-container contact-card">
+          <div class="details-container color-container contact-card" id="contact-card">
             <div class="card-header">
               <h2 class="experience-sub-title project-title">Get In Touch</h2>
               <p class="project-subtitle-extra">Available 24/7</p>
@@ -550,23 +554,30 @@ Designed especially for European citizens, CarSell helps you decide which countr
               </div>
             </div>
           </div>
+<!-- Card 2: Infinity Line Loading -->
+<div class="details-container color-container wat-card" id="loop-card">
+  <h2 class="experience-sub-title project-title">♾️ Infinite Motion</h2>
 
-          <!-- Card 2: WAT Anıları -->
-          <div class="details-container color-container wat-card">
-            <h2 class="experience-sub-title project-title">✨ Memories ✨</h2>
-            <div id="memory-slider">
-  <img id="memory-slide-img" src="./assets/memory-slide/slide1.jpg" alt="Memory Slide" />
-            </div>
-            <p class="section__text__p1 project-description-text">
-           <p id="memory-slide-caption" class="section__text__p1 project-description-text">
-  Burada arkadaşlarla eğleniyoruz.
-</p>
-            </p>
-          </div>
+  <svg class="infinity-line" viewBox="0 0 300 200">
+  <path d="M50,100 
+           C50,70 150,70 150,100 
+           C150,130 250,130 250,100 
+           C250,70 150,70 150,100 
+           C150,130 50,130 50,100" 
+        fill="none" />
+</svg>
+
+
+
+  <p class="section__text__p1 project-description-text">
+    Creativity in motion, always chasing the next idea...
+  </p>
+</div>
+
 
 
         <!-- Card 3: Coffee Donation -->
-<div class="details-container color-container donate-card">
+<div class="details-container color-container donate-card" id="donate-card">
   <h2 class="experience-sub-title project-title coffee-title">Buy Me a Coffee ☕</h2>
 
   <div class="article-container coffee-icon-area">
