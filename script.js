@@ -118,11 +118,23 @@ iconButtons.forEach(button => {
 
 
 
-// Accordion açma/kapama fonksiyonu
-function toggleAccordion(index) {
-  const items = document.querySelectorAll('.accordion-item');
-  items[index].classList.toggle('open');
-}
+  function toggleAccordion(index) {
+    const allItems = document.querySelectorAll(".accordion-item");
+
+    allItems.forEach((item, i) => {
+      if (i === index) {
+        item.classList.toggle("active");
+      } else {
+        item.classList.remove("active"); // sadece biri açık kalsın
+      }
+    });
+  }
+
+
+
+
+
+
 
 
 

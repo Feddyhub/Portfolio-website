@@ -406,12 +406,7 @@ a:hover {
 }
 
 
-.about-containers {
-  display: flex;
-  gap: 3rem;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Projeler sığmadığında alt satıra geçsin */
-}
+
 
 .details-container {
   display: flex;
@@ -430,6 +425,8 @@ a:hover {
   padding: 1rem;
 }
 
+
+
 .accordion {
   display: flex;
   flex-direction: column;
@@ -438,9 +435,12 @@ a:hover {
 
 .accordion-item {
   width: 100%;
-  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
+/* === Başlık === */
 .accordion-header {
   background-color: var(--header-bg);
   color: var(--text-color);
@@ -448,33 +448,48 @@ a:hover {
   cursor: pointer;
   border-radius: 8px;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .accordion-header:hover {
   background-color: var(--highlight-color);
+  box-shadow: 0 0 0 2px #ff7d0033; /* çok hafif turuncu glow efekti */
 }
 
+/* === İçerik (başlangıçta kapalı) === */
 .accordion-content {
-  display: none;
-  padding: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   margin-top: 0.5rem;
-  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
-/* Dark Mode ve Flex düzenlemeleri */
+/* === Açık accordion-item === */
+.accordion-item.active .accordion-content {
+  max-height: 1000px; /* içerik yüksekliğine göre artırılabilir */
+  padding: 1rem;
+}
+
+/* === Dark Mode === */
 .dark-mode .accordion-header {
   background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .accordion-header:hover {
+  background-color: #444;
+  box-shadow: 0 0 0 2px #ffae4299;
 }
 
 .dark-mode .accordion-content {
   background-color: #2d2d2d;
   color: #f1f1f1;
+  border-color: #444;
 }
-
 
 
 .about-pic {
@@ -517,10 +532,7 @@ a:hover {
     width: 100%; /* Detaylar tam genişlik */
   }
 
-  .about-containers {
-    flex-direction: column;
-    gap: 1rem;
-  }
+  
 
   .details-container {
     width: 100%; /* Projeler küçük ekranlarda tam genişlik */
@@ -722,13 +734,6 @@ a:hover {
   position: relative;
 }
 
-.about-containers {
-  gap: 2rem;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  margin-bottom: 2rem;
-  margin-top: 2.5rem;
-}
 
 .about-details-container {
   justify-content: center;
@@ -736,11 +741,7 @@ a:hover {
   
 }
 
-.about-containers,
-.about-details-container {
-  display: flex;
-  
-}
+
 
 
 #about-profile-pic {
@@ -812,13 +813,6 @@ a:hover {
   text-align: center; /* Yazıyı yatayda ortaladık */
 }
 
-.experience-detail-container {
-  max-width: 800px; /* Container'ın genişliğini sınırladık */
-  width: 100%; /* Container genişliğini %100 yaparak esnek olmasını sağladık */
-  padding: 0px; /* İçerik ile sınır arasına boşluk ekledik */
-  margin: 0 auto; /* Ortalamak için */
-  box-sizing: border-box; /* Padding dahil box modelini kullanıyoruz */
-}
 
 
 @keyframes rgbFlow {
@@ -937,12 +931,7 @@ a:hover {
   margin-bottom: 3rem; /* Kartlarla arasına boşluk */
 }
 
-.experience-details-container {
-  /* Bu sınıf #experience bölümünden geliyor. #highlights-contact için özel bir stil gerekmiyorsa,
-     genel tanımı kullanılabilir. Örn: Üst boşluğu ayarlamak için: */
-  margin-top: 5px;
-  padding-top: 10px;
-}
+
 
 #experience .experience-sub-title {
   font-size: 1.8rem;
@@ -971,13 +960,43 @@ body.dark-mode #experience .experience-sub-title {
 
 
 #highlights-contact .about-containers {
-  /* Bu sınıf #about bölümünden geliyor. Flex ve gap tanımları oradan miras alınır.
-     #highlights-contact için özel bir stil gerekmiyorsa, genel tanımı kullanılabilir.
-     Örn: Kartları ortalamak için (genel .about-containers'da yoksa): */
-  display: flex; /* Zaten .about-containers genel tanımında var */
-  justify-content: center; /* Kartları yatayda ortala */
-  gap: 1rem; /* Zaten .about-containers genel tanımında var */
-  flex-wrap: wrap; /* Zaten .about-containers genel tanımında var */
+  display: flex;               /* Kartları yatayda hizala */
+  justify-content: center;     /* Ortala */
+  gap: 1.1rem;                 /* Kartlar arası boşluk */
+  flex-wrap: wrap;             /* Taşma durumunda alta geç */
+  padding: 2rem 1rem;          /* Kenarlardan boşluk ver (ek) */
+  position: relative;
+}
+
+/* 🎯 Kartlara özel hover efekti */
+#highlights-contact .about-containers .details-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+#highlights-contact .about-containers .details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+/* 🎯 Kart geçişi daha belirgin olması için iç başlıklara animasyon */
+#highlights-contact .about-containers .details-container:hover .project-title {
+  color: #ff7d00;
+  transition: color 0.3s ease;
+}
+
+/* 🎯 Kart geçişinde alt metin opaklaşsın */
+#highlights-contact .about-containers .details-container:hover .project-subtitle-extra {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* 🎯 Responsive padding düzeltmeleri */
+@media (max-width: 768px) {
+  #highlights-contact .about-containers {
+    padding: 1rem 0.5rem;
+  }
 }
 
 /* KARTLARIN GENEL STİLİ (#highlights-contact içindeki .details-container) */
@@ -1957,12 +1976,7 @@ a:hover {
 }
 
 
-.about-containers {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Projeler sığmadığında alt satıra geçsin */
-}
+
 
 .details-container {
   display: flex;
@@ -1995,133 +2009,6 @@ a:hover {
   margin-bottom: 1rem;
   text-align: justify;
   background-color: #25202018; /* Koyu arka plan */
-}
-
-
-.accordion p,
-.accordion li,
-.accordion span,
-.accordion div {
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: #000000;
-  line-height: 1.6;
-  letter-spacing: 0.3px;
-  text-align: justify;
-
-}
-
-
-.accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.accordion-item {
-  width: 100%;
-  transition: max-height 0.3s ease-out;
-}
-
-.accordion-header {
-  background-color: var(--header-bg);
-  color: var(--text-color);
-  padding: 1rem;
-  cursor: pointer;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.accordion-header:hover {
-  background-color: var(--highlight-color);
-}
-
-.accordion-content {
-  display: none;
-  padding: 1rem;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  margin-top: 0.5rem;
-  overflow: hidden;
-}
-
-/* 🌙 Dark Mode için Accordion stilleri */
-.dark-mode .accordion-header {
-  background-color: #585858; /* Daha doygun koyu kırmızı */
-  color: #ffffff; /* Başlıkta beyaz yazı */
-  border-bottom: 1px solid #444; /* Alt çizgi ile ayrım */
-}
-
-.dark-mode .accordion-content {
-  background-color: #1e1e1e; /* Daha koyu zemin */
-  color: #e0e0e0; /* Açık gri yazı */
-  border-left: 2px solid #292525; /* İçerik sol kenarına vurgu */
-  padding: 1rem;
-}
-
-
-/* Fotoğrafın sabit pozisyonu */
-.section__pic-container {
-  width: 30%; /* Fotoğrafın genişliği %30 */
-  margin-right: 2rem;
-  position: relative;
-  flex-shrink: 0; /* Resmin küçülmesini engeller */
-}
-
-.about-pic {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  display: block; /* Resmin düzgün yerleşmesi için */
-  transform: translateX(0px)
-  
-}
-
-/* Accordion (Açılır içerik) stilleri */
-.accordion-item.open .accordion-content {
-  display: block;
-}
-
-/* Button Animations for Accordion */
-.accordion-item {
-  max-height: 1000px; /* Yüksekliği arttırarak açılır içerik için alan sağladık */
-  overflow: hidden;
-}
-
-/* Buton ve başlık stilleri */
-.accordion-header h3 {
-  font-size: 1rem;
-}
-
-/* Responsive düzenlemeler */
-@media (max-width: 750px) {
-  .section-container {
-    flex-direction: column; /* Küçük ekranlarda dikey düzen */
-    gap: 1rem;
-  }
-
-  .about-details-container {
-    width: 100%; /* Detaylar tam genişlik */
-  }
-
-  .about-containers {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .details-container {
-    width: 100%; /* Projeler küçük ekranlarda tam genişlik */
-  }
-
-  .section__pic-container {
-    width: 70%; /* Resim tam genişlik */
-    margin-left: 120px;
-    margin-bottom: 0; /* Küçük ekranlarda resim ile metin arasına boşluk ekleyelim */
-    transform: translateY(-120%);
-  }
 }
 
 
@@ -2369,14 +2256,6 @@ a:hover {
   text-align: center; /* Yazıyı yatayda ortaladık */
 }
 
-.experience-detail-container {
-  max-width: 800px; /* Container'ın genişliğini sınırladık */
-  width: 100%; /* Container genişliğini %100 yaparak esnek olmasını sağladık */
-  padding: 0px; /* İçerik ile sınır arasına boşluk ekledik */
-  margin: 0 auto; /* Ortalamak için */
-  box-sizing: border-box; /* Padding dahil box modelini kullanıyoruz */
-}
-
 
 
 
@@ -2450,22 +2329,9 @@ a:hover {
   margin-bottom: 3rem; /* Kartlarla arasına boşluk */
 }
 
-.experience-details-container {
-  /* Bu sınıf #experience bölümünden geliyor. #highlights-contact için özel bir stil gerekmiyorsa,
-     genel tanımı kullanılabilir. Örn: Üst boşluğu ayarlamak için: */
-  margin-top: 5px;
-  padding-top: 10px;
-}
 
-#highlights-contact .about-containers {
-  /* Bu sınıf #about bölümünden geliyor. Flex ve gap tanımları oradan miras alınır.
-     #highlights-contact için özel bir stil gerekmiyorsa, genel tanımı kullanılabilir.
-     Örn: Kartları ortalamak için (genel .about-containers'da yoksa): */
-  display: flex; /* Zaten .about-containers genel tanımında var */
-  justify-content: center; /* Kartları yatayda ortala */
-  gap: 2rem; /* Zaten .about-containers genel tanımında var */
-  flex-wrap: wrap; /* Zaten .about-containers genel tanımında var */
-}
+
+
 
 /* KARTLARIN GENEL STİLİ (#highlights-contact içindeki .details-container) */
 #highlights-contact .details-container.color-container {
@@ -3036,3 +2902,4 @@ body.dark-mode .carousel-project-card .btn:hover {
 
 
 
+/*Responsive Tasarim icin*/
