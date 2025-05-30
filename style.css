@@ -2909,7 +2909,7 @@ body.dark-mode .carousel-project-card .btn:hover {
 
 
 
-/* ----------------------------------- */
+/* -----------Media bolumu------------------------ */
 @media (max-width: 1200px) {
   nav#desktop-nav .nav-links { /* #desktop-nav içindeki linkler */
     gap: 1.8rem;
@@ -2962,6 +2962,9 @@ body.dark-mode .carousel-project-card .btn:hover {
   .mega-menu { /* Navigasyon içindeki mega menu */
     min-width: 580px;
   }
+
+ 
+
 }
 
 /* ----------------------------------- */
@@ -3480,8 +3483,10 @@ body.dark-mode .carousel-project-card .btn:hover {
     min-width: 90px;
   }
   .carousel-arrow { /* Carousel okları */
-      display: none; /* Çok küçük ekranlarda gizleyebiliriz, dokunmatik kaydırma tercih edilebilir */
+      width: 40px;
+    height: 40px;
   }
+    
 
   /* Arama Kutusu */
   .search-box {
