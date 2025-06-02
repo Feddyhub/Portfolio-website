@@ -2,10 +2,13 @@
   "html": "",
   "My Portfolio": "",
   "Murat Ferhat Derya": "",
+  "Contact-page": "İletişim Sayfası",
 "Services":"Hizmetler",
+
+"Experiences":"Deneyimler",
   "About": "Hakkında",
   "Skills": "Yetenekler",
-  "Projects": "Projeler",
+  "Projects": "Projelerim",
   "Contact": "İletişim",
   "Experience": "Deneyim",
   "highlights-contact": "",
@@ -15,9 +18,11 @@
   "Download CV": "CV’yi İndir",
   "Get To Know More": "Daha Fazlasını Öğren",
   "About Me": "Hakkımda",
-  "Github": "Github",
+  "Github ": " Github",
   "312": "",
-  "+ Contributions": "",
+
+
+  "+ Contributions": "+ Katkı ",
   "Arkenom Teknoloji": "",
   "Intern Data Scientist": "Stajyer Veri Bilimci",
   "Education": "Eğitim",
@@ -38,7 +43,7 @@
   "🚀 I describe myself as a": "🚀 Kendimi, teknoloji aracılığıyla gerçek dünya problemlerini çözmekten keyif alan, meraklı ve açık fikirli bir öğrenici olarak tanımlıyorum.",
   
   "Accordion Section": "",
-  "Experiences": "",
+  
   "Internship at AI Department – CRM Technologies Company": "Yapay Zeka Departmanında Staj – CRM Teknolojileri Şirketi",
   "During the summer of my 3rd year, I worked in the artificial intelligence department, taking part in tasks such as": "3. sınıf yaz döneminde, yapay zeka departmanında çalıştım ve şu gibi görevlerde yer aldım:",
   "data analysis, model training, and forecasting": "",
