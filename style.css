@@ -1687,6 +1687,9 @@ body, html {
 .dark-mode #cv_indir{
 background-color: rgb(255, 255, 255);
 }
+#cv_indir{
+background-color: white;
+}
 
 
 .counter-value {
