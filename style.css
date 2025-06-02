@@ -1616,7 +1616,7 @@ body, html {
 }
 
 .dark-mode .search-box {
-  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 4px 20px rgba(163, 4, 4, 0.07);
   border-color: var(--highlight-color);
 }
 
@@ -1636,7 +1636,7 @@ body, html {
 }
 
 .dark-mode .search-icon {
-  color: #aaa;
+  color: #ffffff;
 }
 
 .search-box input {
@@ -1666,7 +1666,7 @@ body, html {
 
 .search-btn {
   border: none;
-  background-color: var(--highlight-color, #6c63ff);
+  background-color: var(--highlight-color, #5d55ff);
   color: white;
   padding: 0 30px; /* Daha geniş buton */
   cursor: pointer;
@@ -1684,6 +1684,10 @@ body, html {
 .dark-mode .search-btn:hover {
   background-color: #7975e6;
 }
+.dark-mode #cv_indir{
+background-color: rgb(255, 255, 255);
+}
+
 
 .counter-value {
   font-weight: 700;
@@ -2989,14 +2993,14 @@ body.dark-mode .carousel-project-card .btn:hover {
   nav#hamburger-nav .logo {
     font-size: 1.8rem;
     margin: 0;
-    color: #f5f5f5; /* Logo rengi */
+    color: #000000; /* Logo rengi */
   }
   .hamburger-icon span {
-      background-color: #f5f5f5; /* Hamburger çizgileri beyaz */
+      background-color: #000000; /* Hamburger çizgileri beyaz */
   }
   /* Dark mode için hamburger ikon rengi (body.dark-mode ile) */
   body.dark-mode nav#hamburger-nav {
-      background-color: #f3f3f3; /* Dark mode nav arka planı */
+      background-color: #080808; /* Dark mode nav arka planı */
   }
   body.dark-mode nav#hamburger-nav .logo {
       color: #000000; /* Dark mode logo rengi */
@@ -3652,3 +3656,108 @@ padding-top: 1rem;
   font-size: 1rem;
   color: #ccc;
 }
+
+@media screen and (max-width: 768px) {
+  .mega-menu.open {
+    display: flex;
+    flex-direction: column;  /* ↩ ALT ALTA */
+    gap: 1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    width: 90vw;
+    padding: 1rem;
+    background-color: #222;
+    border-radius: 8px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .dropdown-column {
+    flex: unset;
+    width: 100%;             /* ↩ TAM GENİŞLİKTE */
+    margin-bottom: 0.5rem;
+  }
+
+  .dropdown-column h4 {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .dropdown-column a {
+    display: block;
+    padding-left: 1rem;
+    color: #ccc;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .dropdown-column a:hover {
+    color: #fff;
+  }
+
+  .mega-menu::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .mega-menu::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 3px;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .hamburger-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .mobile-services {
+    flex: 12;
+    margin-right: 3rem;
+  }
+
+  .mobile-toggles {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+   
+  }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 4px;
+    margin-left: 3.1rem;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: #f1f1f1;
+  }
+
+  .lang-switch {
+    transform: scale(0.9);
+  }
+
+  #darkModeToggleMini {
+    font-size: 1.4rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+

@@ -86,24 +86,77 @@
         </ul>
       </div>
     </nav>
-    
-    <nav id="hamburger-nav">
-      <div class="logo">Murat Ferhat Derya</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#highlights-contact" onclick="toggleMenu()">highlights-contact</a></li>
-        </ul>
-        
-      </div>
-    </nav>
+
+<nav id="hamburger-nav">
+  <div class="hamburger-nav-inner">
+
+    <!-- SOL: Services -->
+    <div class="mobile-services">
+      <div class="services-item mega-dropdown">
+  <a href="#services" class="services-link" data-i18n="services" tabindex="0">Services</a>
+  <div class="mega-menu">
+    <div class="dropdown-column">
+      <h4><i class="bi bi-code-slash"></i> Web</h4>
+      <a href="contactme/contactme.html?service=web-custom">Website (Custom)</a>
+      <a href="contactme/contactme.html?service=web-wordpress">Website (WordPress)</a>
+      <a href="contactme/contactme.html?service=mobile-app">Mobile App (Android)</a>
+    </div>
+    <div class="dropdown-column">
+      <h4><i class="bi bi-bar-chart-line"></i> Data</h4>
+      <a href="contactme/contactme.html?service=data-science">Data Science</a>
+      <a href="contactme/contactme.html?service=data-scraping">Data Scraping</a>
+      <a href="contactme/contactme.html?service=data-analysis">Data Analysis</a>
+    </div>
+    <div class="dropdown-column">
+      <h4><i class="bi bi-cpu"></i> AI</h4>
+      <a href="contactme/contactme.html?service=ml">Machine Learning</a>
+      <a href="contactme/contactme.html?service=cv">Computer Vision</a>
+      <a href="contactme/contactme.html?service=chatbot">Chatbot Development</a>
+      <a href="contactme/contactme.html?service=ai-agent">AI Agent</a>
+      <a href="contactme/contactme.html?service=llm">LLM (Large Language Models)</a>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <!-- ORTA: Dil + Dark mode toggle -->
+    <div class="mobile-toggles">
+      <label class="lang-switch">
+        <input type="checkbox" onchange="toggleLang(this)">
+        <span class="lang-slider">
+          <img src="assets/usa.png" alt="English" class="lang-icon left">
+          <img src="assets/tr.png" alt="Türkçe" class="lang-icon right">
+        </span>
+      </label>
+
+      <button id="darkModeToggleMini" class="icon-button" title="Toggle Dark Mode">🌙</button>
+    </div>
+
+    <!-- SAĞ: Hamburger Menü -->
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+  <!-- Menu Linkleri -->
+  <ul class="menu-links">
+    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+    <li><a href="#highlights-contact" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
     <section id="profile">
       <div class="section__pic-container profile-pic-override">
   <img src="./assets/profile-pic.jpeg" alt="Profile" >
@@ -125,7 +178,7 @@
             </div>
           </div>
           <div class="button-group">
-            <button class="btn btn-color-2" onclick="window.open('./contactme/CV.pdf')">Download CV</button>
+            <button class="btn btn-color-2" id="cv_indir" onclick="window.open('./contactme/CV.pdf')">Download CV</button>
             <button class="btn btn-color-1" onclick="location.href='contactme/contactme.html'"   >Contact-page</button>
 
           </div>

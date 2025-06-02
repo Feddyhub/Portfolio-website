@@ -395,3 +395,13 @@ function startEmojiLoading() {
   }, 35);
 }
 
+
+document.getElementById('darkModeToggleMini')?.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+
+function toggleMobileDropdown() {
+  const menu = document.getElementById("mobileDropdownMenu");
+  menu.classList.toggle("open");
+}
