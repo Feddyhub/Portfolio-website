@@ -405,3 +405,24 @@ function toggleMobileDropdown() {
   const menu = document.getElementById("mobileDropdownMenu");
   menu.classList.toggle("open");
 }
+
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("chatbotModal");
+  const closeBtn = document.querySelector(".close-btn");
+
+  modal.style.display = "block";
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  window.onclick = (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+});
+
