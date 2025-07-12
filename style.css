@@ -3851,19 +3851,19 @@ padding-top: 1rem;
 
 /* GIF - BOYUT %15 EN VE BOY ARTTIRILDI */
 .chatbot-gif {
-  width: 115%;
-  max-width: 350px;
+  width: 102%;
+  max-width: 280px;
   height: auto;
-  min-height: 250px;
+  min-height: 190px;
   object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  border-radius: 14px;
+  box-shadow: 0 8px 19px rgba(0,0,0,0.3);
   border: 2px solid #333;
   transition: transform 0.3s ease;
 }
 
 .chatbot-gif:hover {
-  transform: scale(1.85);
+  transform: scale(1.52);
 }
 
 /* Açıklama kısmı */

@@ -20,6 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+  const originalTitle = document.title;
+  let timeoutId;
+
+  window.addEventListener('blur', () => {
+    timeoutId = setTimeout(() => {
+      document.title = "👋 Hey! :)";
+    }, 2500); // 1 saniye sonra değiştirsin
+  });
+
+  window.addEventListener('focus', () => {
+    clearTimeout(timeoutId);
+    document.title = originalTitle;
+  });
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const experienceElement = document.getElementById('experience-text');
