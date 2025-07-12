@@ -3838,7 +3838,7 @@ padding-top: 1rem;
 /* Başlık */
 .chatbot-header {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 900;
   font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
   color: #1a1a1a;
@@ -3851,25 +3851,25 @@ padding-top: 1rem;
 
 /* GIF - BOYUT %15 EN VE BOY ARTTIRILDI */
 .chatbot-gif {
-  width: 102%;
-  max-width: 280px;
+  width: 100%;
+  max-width: 250px;
   height: auto;
-  min-height: 190px;
+  min-height: 150px;
   object-fit: contain;
   border-radius: 14px;
   box-shadow: 0 8px 19px rgba(0,0,0,0.3);
   border: 2px solid #333;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .chatbot-gif:hover {
-  transform: scale(1.52);
+  transform: scale(1.15);
 }
 
 /* Açıklama kısmı */
 .chatbot-description {
   text-align: center;
-  margin-top: 13px;
+  margin-top: 10px;
   padding: 0 10px;
 }
 
