@@ -196,8 +196,8 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
 
-background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23000000' fill-opacity='0.05' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+background-color: #ffffffd0;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23000000' fill-opacity='0.055' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
 
 
   background-repeat: repeat;
@@ -383,15 +383,6 @@ a:hover {
   text-align: center;
 }
 
-/* Genel yapı düzeni */
-.section-container {
-  display: flex;
-  align-items: flex-start; 
-  justify-content: flex-start;
-  padding: 2rem;
-  transform: translateX(8%);
-  gap: 2rem; /* Elemanlar arasında boşluk */
-}
 
 .about-details-container {
   margin-top: 10px;
@@ -440,21 +431,38 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-/* === Başlık === */
 .accordion-header {
-  background-color: var(--header-bg);
-  color: var(--text-color);
-  padding: 1rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.1rem; /* Daha büyük yazı */
+  font-weight: 600;  /* Daha kalın yazı */
+  background-color: #ffffff;
+  color: #2b2b2b; /* Vurucu koyu gri */
+  border-radius: 0.6rem;
+  border: 1px solid #bbb;
   cursor: pointer;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .accordion-header:hover {
-  background-color: var(--highlight-color);
-  box-shadow: 0 0 0 2px #ff7d0033; /* çok hafif turuncu glow efekti */
+  background-color: #d66d6d; /* Hover'da biraz koyu tonu */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
 }
+
+.accordion-header.active {
+  background-color: #b85f5f;
+  color: #1e1e1e; /* Açıkken biraz daha koyu yazı */
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+  font-weight: 700; /* Daha da vurgulu */
+}
+
+
+
 
 /* === İçerik (başlangıçta kapalı) === */
 .accordion-content {
@@ -787,10 +795,6 @@ a:hover {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.section-container {
-  gap: 3rem;
-  height: 100%;
-}
 
 
 
@@ -806,7 +810,7 @@ a:hover {
 }
 
 .experience-sub-title {
-  color: rgb(38, 38, 38);
+  color: rgb(182, 23, 23);
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 2rem;
@@ -1236,16 +1240,9 @@ body.dark-mode #experience .experience-sub-title {
 
 
 
-.carousel-project-title-main {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3.2rem;
-  font-weight: 650;
-  color: var(--accent-color); /* mevcut temaya uyum sağlar */
-  text-align: center;
-  margin-bottom: 1.5rem;
-  border-radius: 2px;
 
-}
+
+
 
 
 
@@ -1280,67 +1277,11 @@ body.dark-mode #experience .experience-sub-title {
   from {opacity: 0.3;}
   to {opacity: 1;}
 }
-.carousel-project-card {
-  background-color: #f9f9f9; /* Beyaza yakın açık gri */
-  border: 1px solid #000000;
-  color: #000000;
-  border-radius: 1.5rem;
-  padding-top: 3px;
-  padding: 2px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 650px;
-  box-shadow: 0 6px 15px rgba(255,255,255,0.05);
-  padding-bottom: 120px;
-}
-.carousel-project-card .article-container {
-  width: 150%;
-  max-width: 646px;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-radius: 2rem;
-  overflow: hidden;
-  transform: scale(0.97, 0.96) skew(-1.2deg);
-  padding-top:2rem;
-  margin-top: 1rem;
-}
-.carousel-project-card .project-img {
-  width: 100%;
-  height: auto;
-  max-height: 350px;
-  object-fit: cover;
-  display: block;
-  border-radius: 1rem;
-}
-.carousel-project-title {
-  font-size: 2rem;
-  margin-top: 1.2rem ;
-  padding-top: 0.8rem;
-  font-weight: 580;
-  color: #000000;
-  margin-bottom: 1.5rem;
 
-}
-.carousel-project-description {
-  font-size: 1.05rem;
-  color: #2c2c2c;
-  line-height: 1.6;
-  margin-bottom: 1.8rem;
-margin-top: 0.8rem;
-padding-top:0.8rem;
-  max-width: 90%;
-  min-height: 60px;
-}
-.carousel-button-group {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: auto;
-  width: 100%;
-  padding-bottom: 0.5rem;
-}
+
+
+
+
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -1970,6 +1911,8 @@ a:hover {
   gap: 2rem; /* Elemanlar arasında boşluk */
 }
 
+
+
 .about-details-container {
   margin-top: 10px;
   padding-top: 10px;
@@ -2006,6 +1949,9 @@ a:hover {
   margin-bottom: 1rem;
   text-align: justify;
   background-color: #fdfdfd;
+font-family: 'PT Sans Narrow', sans-serif;
+
+
 }
 
 .dark-mode .text-container p {
@@ -2042,14 +1988,57 @@ a:hover {
 #profile .button-group .btn {
   flex: 1; /* Butonların eşit genişlikte olmasını sağlar */
 }
-.section__pic-container {
+
+
+.section__pic-container.profile-pic-override {
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  height: 300px;
+  width: 300px;
+  margin: auto 10;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Fotoğraf Konteyneri: Kart Stili */
+.section__pic-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+  height: 450px;
+  
+  border-radius: 3.5rem; /* %15 daha yuvarlak görünüm */
+  border: 1px solid rgba(200, 200, 200, 0.3); /* daha soft ve stil sahibi */
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* daha yaygın ve estetik gölge */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section__pic-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* Fotoğraf içeriği */
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.03) contrast(1.05); /* hafif zenginleştirme */
+}
+
+
+.section__pic-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* İçerideki fotoğraf (örnek olarak img varsa) */
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section__text {
@@ -2468,17 +2457,36 @@ a:hover {
 
 
 
-
 .carousel-project-title-main {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3.2rem;
-  font-weight: 650;
-  color: var(--accent-color); /* mevcut temaya uyum sağlar */
-  text-align: center;
-  margin-bottom: 1.5rem;
-  border-radius: 1.2rem;
-padding: 0.6rem 1.4rem;
-}
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 0.8rem;
+            background-color: #fdfdfd;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+.carousel-project-title-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(180, 60, 60, 0.1), transparent);
+            transition: left 0.8s;
+        }
+
+  .carousel-project-title-main:hover::before {
+            left: 100%;
+        }
+
 
 
 
@@ -2513,21 +2521,44 @@ padding: 0.6rem 1.4rem;
   from {opacity: 0.3;}
   to {opacity: 1;}
 }
+
+/* Kartın kendisi */
 .carousel-project-card {
-  background-color: #f9f9f9; /* Beyaza yakın açık gri */
+  position: relative;
+  background-color: #ffffff;
   border: 1px solid #000000;
   color: #000000;
   border-radius: 1.5rem;
-  padding-top: 3px;
-  padding: 2px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 650px;
-  box-shadow: 0 6px 15px rgba(255,255,255,0.05);
-  padding-bottom: 120px;
+  padding: 2px 0 120px 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+  transition: background 1.2s linear;
 }
+
+
+/* Arka plan blur için parent element */
+.carousel-cards-wrapper {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Diğer kartlar blur olur */
+.carousel-project-card:not(:hover) {
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-project-card:hover ~ .carousel-project-card {
+  filter: blur(2px) brightness(0.7);
+  opacity: 0.5;
+  z-index: 1;
+}
+
 .carousel-project-card .article-container {
   width: 150%;
   max-width: 646px;
@@ -2556,96 +2587,105 @@ padding: 0.6rem 1.4rem;
   margin-bottom: 1.5rem;
 
 }
-.carousel-project-description {
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: #000000;
-  line-height: 1.6;
-  letter-spacing: 0.3px;
-  text-align: justify;
-  margin: 0.8rem auto 1.8rem auto;
-  padding-top: 0.8rem;
-  max-width: 90%;
-  min-height: 60px;
-}
+
+ .carousel-project-description {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #000000;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            text-align: justify;
+            margin: 0.8rem auto 1.8rem auto;
+            padding: 1.2rem;
+            max-width: 90%;
+            min-height: 60px;
+            background-color: #ffffff;
+            border-radius: 0.8rem;
+            border: 0.2px solid #f0f0f0;
+            
+        }
+
 
 .carousel-button-group {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: auto;
-  width: 100%;
-  padding-bottom: 0.5rem;
-}
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: auto;
+            width: 75%;
+            padding-bottom: 0.5rem;
+            background-color: #fdfdfd;
+        }
+
+
 .carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%) scale(1.08);
-  z-index: 10;
-  background-color: #333333; /* Renk biraz açıklaştırıldı: 2a2a2a -> 333333 */
-  color: #d2d2d2;
-  border: 1px solid #555;
-  width: 52px;
-  height: 52px;
-  font-size: 1.8rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
-  /* Ters köşeleri yumuşatmak için border-radius değerleri */
-  border-radius: 6px 12px 6px 12px; /* Sol üst, sağ üst, sağ alt, sol alt */
-}
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) scale(1.05);
+            z-index: 10;
+            background-color: #3b3838;
+            color: #333;
+            border: 1px solid #ccc;
+            width: 48px;
+            height: 48px;
+            font-size: 1.6rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
 
-.carousel-arrow:hover {
-  background-color: #3d3d3d; /* Hover rengi de biraz açıklaştırıldı */
-  color: #ffffff;
-  border-color: #888;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  transform: translateY(-50%) scale(1.12);
-  text-decoration: none;
-}
+        .carousel-arrow:hover {
+            background-color: #e45454;
+            color: #000;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
 
-.prev-arrow {
-  left: 15px;
-  border-radius: 12px 6px 12px 6px; /* Önceki buton için ters köşeler */
-}
+        .prev-arrow {
+            left: 15px;
+            border-radius: 12px 6px 12px 6px;
+        }
 
-.next-arrow {
-  right: 15px;
-  border-radius: 6px 12px 6px 12px; /* Sonraki buton için ters köşeler */
-}
+        .next-arrow {
+            right: 15px;
+            border-radius: 6px 12px 6px 12px;
+        }
 
-/* Arrow içeriğini konumlandırma */
-.prev-arrow::before,
-.next-arrow::before {
-  content: "";
-  position: absolute;
-  width: 30%;
-  height: 30%;
-  border-top: 3px solid #d2d2d2; /* Ok rengi link rengiyle aynı */
-  border-right: 3px solid #d2d2d2; /* Ok rengi link rengiyle aynı */
-  transition: border-color 0.3s ease;
-}
+        .prev-arrow::before,
+        .next-arrow::before {
+            content: "";
+            position: absolute;
+            width: 30%;
+            height: 30%;
+            border-top: 3px solid #d2d2d2;
+            border-right: 3px solid #d2d2d2;
+            transition: border-color 0.3s ease;
+        }
 
-.carousel-arrow:hover::before {
-  border-top-color: #ffffff; /* Hover durumunda ok rengi beyaz */
-  border-right-color: #ffffff; /* Hover durumunda ok rengi beyaz */
-}
+        .carousel-arrow:hover::before {
+            border-top-color: #ffffff;
+            border-right-color: #ffffff;
+        }
 
-.prev-arrow::before {
-  transform: rotate(-135deg);
-  margin-left: 7px;
-}
+        .prev-arrow::before {
+            transform: rotate(-135deg);
+            margin-left: 7px;
+        }
 
-.next-arrow::before {
-  transform: rotate(45deg);
-  margin-right: 7px;
-}
+        .next-arrow::before {
+            transform: rotate(45deg);
+            margin-right: 7px;
+        }
 
-
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
 
 
 
@@ -3290,10 +3330,10 @@ body.dark-mode .carousel-project-card .btn:hover {
   #about .text-container p { /* About metni */
       font-size: 0.95rem;
   }
-  .accordion-header {
-    padding: 0.8rem 1rem; /* İç boşluk */
-    font-size: 1rem; /* Başlık fontu */
-  }
+
+
+
+  
   .accordion-content p { /* Accordion içeriği */
     font-size: 0.9rem;
     line-height: 1.5;

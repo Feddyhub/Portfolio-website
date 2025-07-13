@@ -59,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(() => {
       experienceElement.innerHTML = experienceTexts[experienceIndex];
       experienceIndex = (experienceIndex + 1) % experienceTexts.length;
-    }, 3580);
+    }, 5580);
   }
 
   if (educationElement) {
     setInterval(() => {
       educationElement.innerHTML = educationTexts[educationIndex];
       educationIndex = (educationIndex + 1) % educationTexts.length;
-    }, 4660);
+    }, 5580);
   }
 });
 
