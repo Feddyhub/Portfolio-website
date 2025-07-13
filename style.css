@@ -176,7 +176,7 @@ body, html {
 }
 
 .search-box-container .btn {
-  background-color: #4b6cc1;
+  background-color: #2f4479;
   border-color: #4b6cc1;
   transition: all 0.3s ease;
 }
@@ -247,7 +247,7 @@ nav,
 a {
   color: #d2d2d2; /* açık gri - beyaz arası */
   text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition: color 0.33s ease, text-decoration 0.33s ease;
 }
 
 a:hover {
@@ -399,18 +399,9 @@ a:hover {
 
 
 
-.details-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  width: 48%; /* Daha uygun genişlik */
-}
 
-.details-container h3 {
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
+
+
 
 .text-container {
   padding: 1rem;
@@ -536,15 +527,10 @@ a:hover {
     gap: 1rem;
   }
 
-  .about-details-container {
-    width: 100%; /* Detaylar tam genişlik */
-  }
-
+  
   
 
-  .details-container {
-    width: 100%; /* Projeler küçük ekranlarda tam genişlik */
-  }
+
 
   .section__pic-container {
     width: 720%; /* Resim tam genişlik */
@@ -595,6 +581,7 @@ a:hover {
 #profile .button-group .btn {
   flex: 1; /* Butonların eşit genişlikte olmasını sağlar */
 }
+
 .section__pic-container {
   display: flex;
   height: 4200px;
@@ -705,36 +692,14 @@ a:hover {
   letter-spacing: 0.5px;
 }
 
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(45, 45, 45) 0.1rem solid;
-}
 
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
-  transform: translateY(-3px);
-}
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(45, 45, 45);
-  color: white;
-}
 
-.btn-color-1:hover {
-  background: rgb(20, 20, 20);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
-.btn-color-2 {
-  background: none;
-}
 
-.btn-color-2:hover {
-  border: rgb(235, 235, 235) 0.1rem solid;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
+
+
+
 
 /* ABOUT SECTION (Değiştirilmedi) */
 
@@ -743,11 +708,7 @@ a:hover {
 }
 
 
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
-  
-}
+
 
 
 
@@ -778,22 +739,8 @@ a:hover {
   bottom: 2.5rem;
 }
 
-.details-container {
-  padding: 1.8rem;
-  flex: 1;
-  background: #f9f9f9; /* <-- burada değişiklik yapıldı */
-  border-radius: 1.5rem;
-  border: rgb(45, 45, 45) 0.1rem solid;
-  border-color: rgb(150, 150, 150);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 
-.details-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
 
 
 
@@ -870,45 +817,6 @@ a:hover {
 
 
 
-/* Ok Butonları */
-.arrow-left, .arrow-right {
-  background-color: transparent;
-  border: 2px solid #007bff; /* Ok butonunun kenar rengi */
-  color: #007bff;
-  font-size: 28px;
-  padding: 12px 16px;
-  border-radius: 50%; /* Yuvarlak butonlar */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 0 15px; /* Araya boşluk ekliyoruz */
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Butonlara biraz gölge */
-}
-
-.arrow-left:hover, .arrow-right:hover {
-  background-color: #007bff;
-  color: white;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); /* Hoverda daha belirgin gölge */
-}
-
-.arrow-left:focus, .arrow-right:focus {
-  outline: none;
-  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
-}
-
-/* Ok Butonlarının Konumları */
-.arrow-left {
-  position: absolute;
-  left: 10px; /* Konumu tam istediğiniz gibi yerleştirebilirsiniz */
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.arrow-right {
-  position: absolute;
-  right: 10px; /* Konumu tam istediğiniz gibi yerleştirebilirsiniz */
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 
 
@@ -964,67 +872,19 @@ body.dark-mode #experience .experience-sub-title {
 
 
 #highlights-contact .about-containers {
-  display: flex;               /* Kartları yatayda hizala */
-  justify-content: center;     /* Ortala */
-  gap: 1.55rem;                 /* Kartlar arası boşluk */
-  flex-wrap: wrap;             /* Taşma durumunda alta geç */
-  padding: 2rem 1rem;          /* Kenarlardan boşluk ver (ek) */
+  display: flex;                 
+  justify-content: center;       
+  gap: 1.55rem;                  
+  flex-wrap: wrap;              
+  padding: 2rem 1rem;           
   position: relative;
 }
 
-/* 🎯 Kartlara özel hover efekti */
-#highlights-contact .about-containers .details-container {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
 
-#highlights-contact .about-containers .details-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-}
 
-/* 🎯 Kart geçişi daha belirgin olması için iç başlıklara animasyon */
-#highlights-contact .about-containers .details-container:hover .project-title {
-  color: #ff7d00;
-  transition: color 0.3s ease;
-}
 
-/* 🎯 Kart geçişinde alt metin opaklaşsın */
-#highlights-contact .about-containers .details-container:hover .project-subtitle-extra {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
 
-/* 🎯 Responsive padding düzeltmeleri */
-@media (max-width: 768px) {
-  #highlights-contact .about-containers {
-    padding: 1rem 0.5rem;
-  }
-}
 
-/* KARTLARIN GENEL STİLİ (#highlights-contact içindeki .details-container) */
-#highlights-contact .details-container.color-container {
-  padding: 1.8rem;
-  flex: 1 1 320px; /* Büyüme, küçülme, temel genişlik */
-  max-width: 400px;
-  min-height: 500px; /* Kartların benzer yükseklikte olması ve içeriğin iyi dağılması için */
-  background: var(--card-bg);
-  border-radius: 1.5rem;
-  border: 1px solid var(--border-color);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Başlık/içerik üstte, buton/input grubu altta */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#highlights-contact .details-container.color-container:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-}
-.dark-mode #highlights-contact .details-container.color-container:hover {
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08); /* Dark mode için hover gölgesi */
-}
 
 /* KART İÇİ article-container (resim/ikon/bilgi alanı) */
 #highlights-contact .article-container {
@@ -1036,24 +896,14 @@ body.dark-mode #experience .experience-sub-title {
   flex-grow: 0; /* Genellikle içeriğin büyümesini istemeyiz, spesifik kartlar hariç */
 }
 
-/* KART BAŞLIKLARI (.experience-sub-title.project-title) */
-#highlights-contact .experience-sub-title.project-title {
-  /* Bu sınıf #experience bölümünden geliyor. #highlights-contact için özelleştirme: */
-  color: var(--text-color);
-  font-weight: 600;
-  font-size: 1.6rem; /* Kart başlıkları için uygun bir boyut */
-  margin-top: 0; /* Kartın en üstündeyse */
-  margin-bottom: 1rem; /* Altındaki içerikle boşluk */
-}
 
 /* CARD 1: GET IN TOUCH (.contact-card) */
 .contact-card .card-header {
   width: 100%;
    /* İletişim bilgileriyle arası boşluk */
 }
-.contact-card .experience-sub-title.project-title {
-  margin-bottom: 0.4rem; /* "Available" yazısıyla daha az boşluk */
-}
+
+
 .contact-card .project-subtitle-extra { /* "Available 24/7" */
   font-size: 1rem;
   color: var(--text-color);
@@ -1757,12 +1607,12 @@ nav,
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #ff7b008f; /* Turuncu ton, senin stiline uygun */
+  background-color: #ffffff; /* Turuncu ton, senin stiline uygun */
   transition: width 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #ff7d00;
+  color: #ff0000;
 }
 
 .nav-links li a:hover::after {
@@ -2141,21 +1991,26 @@ font-family: 'PT Sans Narrow', sans-serif;
   letter-spacing: 0.5px;
 }
 
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(45, 45, 45) 0.1rem solid;
-}
 
 .btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
   transform: translateY(-3px);
 }
+.btn-color-1{
+background-color: #000000;
+color: white;}
 
-.btn-color-1,
+.btn-color-1:hover {
+  border: rgb(255, 209, 209) 0.1rem solid;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+color: rgb(255, 83, 83);
+}   
+
+
 .btn-color-2:hover {
-  background: rgb(45, 45, 45);
-  color: white;
+  background: rgb(17, 17, 17);
+  color: rgb(206, 76, 76);
 }
 
 .btn-color-1:hover {
@@ -2163,12 +2018,10 @@ font-family: 'PT Sans Narrow', sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.btn-color-2 {
-  background: none;
-}
+
 
 .btn-color-2:hover {
-  border: rgb(235, 235, 235) 0.1rem solid;
+  border: rgb(233, 116, 116) 0.1rem solid;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -2195,13 +2048,16 @@ font-family: 'PT Sans Narrow', sans-serif;
 .about-containers,
 .about-details-container {
   display: flex;
-  
+  transform: translateY(-1px);
 }
 
-.about-pic {
-  border-radius: 2rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+.details-container:hover{
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.918);
+  transform: translateY(-22px);
+
 }
+
 
 .arrow {
   position: absolute;
@@ -2242,14 +2098,6 @@ font-family: 'PT Sans Narrow', sans-serif;
   margin-bottom: 10px; /* Alt boşluğu koruduk */
   display: flex;
   justify-content: center; /* İçeriği yatayda ortaladık */
-}
-
-.experience-sub-title {
-  color: rgb(65, 65, 65);
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  text-align: center; /* Yazıyı yatayda ortaladık */
 }
 
 
@@ -2479,7 +2327,7 @@ font-family: 'PT Sans Narrow', sans-serif;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(180, 60, 60, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(219, 34, 34, 0.384), transparent);
             transition: left 0.8s;
         }
 
@@ -2615,7 +2463,10 @@ font-family: 'PT Sans Narrow', sans-serif;
             padding-bottom: 0.5rem;
             background-color: #fdfdfd;
         }
-
+.carousel-button-group .btn.btn-color-2.project-btn:hover {
+  background-color: #ee3c39af; /* Kırmızı arka plan */
+  color: rgb(255, 255, 255);              /* Beyaz yazı */
+}
 
 .carousel-arrow {
             position: absolute;
@@ -3164,12 +3015,7 @@ body.dark-mode .carousel-project-card .btn:hover {
     padding-left: 0; /* Mobil için sıfırla */
     gap: 1.5rem; /* İçindeki .about-containers ve .text-container arası */
   }
-  #about .about-details-container .about-containers { /* Experience/Education kartlarını saran div */
-    flex-direction: column; /* Kartlar alt alta */
-    align-items: center; /* Kartları ortala */
-    gap: 1.5rem;
-    width: 100%; /* Ebeveynine göre tam genişlik */
-  }
+ 
   #about .about-details-container .details-container { /* Experience/Education kartları */
     width: 100%;
     max-width: 450px; /* Çok genişlemesin */
@@ -3182,13 +3028,7 @@ body.dark-mode .carousel-project-card .btn:hover {
 
   /* --- 3. #experience (Skills) Kartları & #highlights-contact Kartları --- */
   /* Her iki section da benzer yapıda kartlar kullanıyor: .details-container */
-  #experience .experience-details-container .about-containers,
-  #highlights-contact .experience-details-container .about-containers {
-    flex-direction: column; /* Kartları alt alta getir */
-    align-items: center;    /* Alt alta gelen kartları ortala */
-    gap: 1.5rem;
-    padding: 1rem 0.5rem;
-  }
+ 
   #experience .details-container, /* Skills kartları */
   #highlights-contact .details-container.color-container { /* Contact/Memories/Coffee kartları */
     width: 100% !important; /* Diğer kuralları ezmek için, flex-basis de olabilir */
@@ -3485,9 +3325,6 @@ body.dark-mode .carousel-project-card .btn:hover {
     max-width: 95%;
     padding: 1.2rem; /* Kart iç boşluğu */
   }
-  #highlights-contact .about-containers {
-    gap: 1.2rem; /* Kartlar arası boşluk */
-  }
 
   /* Contact Card içindeki detaylar */
   .contact-infos-list .info-item {
@@ -3524,11 +3361,7 @@ body.dark-mode .carousel-project-card .btn:hover {
     min-height: auto;
     margin-bottom: 1.5rem;
   }
-  .carousel-button-group .btn { /* Carousel butonları */
-    padding: 0.7rem 1rem;
-    font-size: 0.8rem;
-    min-width: 90px;
-  }
+
   .carousel-arrow { /* Carousel okları */
       width: 40px;
     height: 40px;
