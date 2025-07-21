@@ -2515,6 +2515,7 @@ body.dark-mode .carousel-button-group {
   transition: all 0.25s ease;
 }
 
+
 .services-item.mega-dropdown:hover .mega-menu {
     display: flex;
     flex-direction: column;
@@ -2814,6 +2815,22 @@ body.dark-mode .carousel-project-card .btn:hover {
   .mega-menu { /* Navigasyon içindeki mega menu */
     min-width: 580px;
   }
+.mega-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #161616e3;
+  padding: 1rem;
+  width: 90vw;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+}
+
+.mega-menu.open {
+  display: flex;
+}
+
 
  
 

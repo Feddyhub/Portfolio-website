@@ -186,22 +186,7 @@ function toggleLang(input) {
 
 
 
-const slideFolder = './assets/memory-slide/';
-  const slides = [
-    {
-      file: 'slide1.jpg',
-      caption: 'Burada arkadaşlarla eğleniyoruz. 🎉'
-    },
-    {
-      file: 'slide2.jpg',
-      caption: 'Sahil kenarında güzel bir gün. 🌊'
-    },
-    {
-      file: 'slide3.jpg',
-      caption: 'Hackathon sabahı, kahveler elimizde ☕'
-    }
-    // Listeyi istediğin kadar uzatabilirsin
-  ];
+
 
   let currentIndex = 0;
   const slideImg = document.getElementById('memory-slide-img');
@@ -358,69 +343,33 @@ function toggleLang(checkbox) {
 
 
 
+  function toggleMobileDropdown() {
+    const menu = document.getElementById("mobileDropdownMenu");
+    menu.classList.toggle("open");
+    document.body.style.overflow = menu.classList.contains("open") ? "hidden" : "";
+  }
+
+  // Dışarı tıklanırsa menüyü kapat
+  document.addEventListener("click", function (event) {
+    const menu = document.getElementById("mobileDropdownMenu");
+    const toggle = document.querySelector('a[onclick="toggleMobileDropdown()"]');
+
+    if (
+      menu.classList.contains("open") &&
+      !menu.contains(event.target) &&
+      !toggle.contains(event.target)
+    ) {
+      menu.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+  });
+
 
 
 
   document.querySelector('.donate-action-button').addEventListener('click', function () {
     window.location.href = '/donate/donate.html';
   });
-
-
-
-
-
-
-
-
-
-let emojiProgress = 0;
-let emojiInterval;
-
-const emojiStages = [
-  "💤 Warming up...",
-  "☕ Brewing focus...",
-  "💻 Coding mode...",
-  "🧠 Neural firing...",
-  "🚀 Launching idea...",
-  "✅ Task completed!"
-];
-
-function startEmojiLoading() {
-  if (emojiProgress >= 100) {
-    emojiProgress = 0;
-    document.getElementById("loading-bar-inner").style.width = "0%";
-    document.getElementById("loading-status").innerText = "Hover to simulate productivity...";
-  }
-
-  emojiInterval = setInterval(() => {
-    if (emojiProgress < 100) {
-      emojiProgress++;
-      document.getElementById("loading-bar-inner").style.width = emojiProgress + "%";
-
-      // Her aşamada yeni emoji + mesaj
-      if (emojiProgress === 10) document.getElementById("loading-status").innerText = emojiStages[0];
-      if (emojiProgress === 30) document.getElementById("loading-status").innerText = emojiStages[1];
-      if (emojiProgress === 50) document.getElementById("loading-status").innerText = emojiStages[2];
-      if (emojiProgress === 70) document.getElementById("loading-status").innerText = emojiStages[3];
-      if (emojiProgress === 90) document.getElementById("loading-status").innerText = emojiStages[4];
-    } else {
-      clearInterval(emojiInterval);
-      document.getElementById("loading-status").innerText = emojiStages[5];
-    }
-  }, 35);
-}
-
-
-document.getElementById('darkModeToggleMini')?.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
-
-
-function toggleMobileDropdown() {
-  const menu = document.getElementById("mobileDropdownMenu");
-  menu.classList.toggle("open");
-}
-
 
 
 

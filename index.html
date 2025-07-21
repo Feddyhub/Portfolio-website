@@ -11,7 +11,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
     />
-  <link rel="icon" type="image/svg" href="assets/logo.svg" />
+  <link rel="icon" type="image/svg" href="assets/logo.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -46,8 +46,8 @@
 
        <!-- Dropdown Yapısı -->
 <li class="services-item mega-dropdown">
-  <a href="#services" class="services-link" data-i18n="services">Services</a>
-  <div class="mega-menu">
+<a href="javascript:void(0);" class="services-link" data-i18n="services" tabindex="0" onclick="toggleMobileDropdown()">Services</a>
+  <div class="mega-menu" id="mobileDropdownMenu">
     <div class="dropdown-column">
       <h4><i class="bi bi-code-slash"></i> Web</h4>
       <a href="contactme/contactme.html?service=web-custom">Website (Custom)</a>
