@@ -251,10 +251,7 @@ a:hover {
   display: none;
 }
 
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-}
+
 
 .hamburger-icon {
   display: flex;
@@ -1600,10 +1597,6 @@ a:hover {
   display: none;
 }
 
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-}
 
 .hamburger-icon {
   display: flex;
@@ -1619,6 +1612,7 @@ a:hover {
   height: 2px;
   background-color: rgb(30, 30, 30);
   transition: all 0.3s ease-in-out;
+z-index: 9999;
 }
 
 .menu-links {
@@ -2816,6 +2810,7 @@ body.dark-mode .carousel-project-card .btn:hover {
     position: relative; /* menu-links için */
     background-color: #1f1f1f; /* Masaüstü nav ile aynı arka plan */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+z-index: 9999;
   }
   nav#hamburger-nav .logo {
     font-size: 1.8rem;
@@ -3546,14 +3541,15 @@ padding-top: 1rem;
     justify-content: center;
     align-items: flex-end;
     gap: 4px;
-    margin-left: 3.1rem;
+    margin-left: 4.1rem;
   }
 
   .hamburger-icon span {
     display: block;
     height: 2px;
     width: 20px;
-    background-color: #f1f1f1;
+    background-color:   #ff6767b0;
+
   }
 
   .lang-switch {
