@@ -343,6 +343,47 @@ function toggleLang(checkbox) {
 
 
 
+
+
+
+  document.querySelector('.donate-action-button').addEventListener('click', function () {
+    window.location.href = '/donate/donate.html';
+  });
+
+
+
+
+
+
+
+document.getElementById('darkModeToggleMini')?.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+
+
+
+  function toggleMobileDropdown() {
+    const menu = document.getElementById("mobileDropdownMenu");
+    menu.classList.toggle("open");
+    document.body.style.overflow = menu.classList.contains("open") ? "hidden" : "";
+  }
+
+  // Dışarı tıklanırsa menüyü kapat
+  document.addEventListener("click", function (event) {
+    const menu = document.getElementById("mobileDropdownMenu");
+    const toggle = document.querySelector(".services-link");
+
+    if (menu.classList.contains("open") &&
+        !menu.contains(event.target) &&
+        !toggle.contains(event.target)) {
+      menu.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+  });
+
+
+
   function toggleMobileDropdown() {
     const menu = document.getElementById("mobileDropdownMenu");
     menu.classList.toggle("open");
@@ -364,12 +405,6 @@ function toggleLang(checkbox) {
     }
   });
 
-
-
-
-  document.querySelector('.donate-action-button').addEventListener('click', function () {
-    window.location.href = '/donate/donate.html';
-  });
 
 
 
