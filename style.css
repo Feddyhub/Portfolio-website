@@ -2502,7 +2502,7 @@ body.dark-mode .carousel-button-group {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #2a2a2a;
+  background-color: #fd0f0f;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
@@ -2516,10 +2516,37 @@ body.dark-mode .carousel-button-group {
 }
 
 .services-item.mega-dropdown:hover .mega-menu {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    pointer-events: auto;
+    width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: #161616e3;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(119, 51, 51, 0.63);
+  }
+.dark-mode .services-item.mega-dropdown:hover .mega-menu {
   display: flex;
+  flex-direction: column;
   opacity: 1;
   pointer-events: auto;
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: #fff6f6f2; /* Daha koyu ve daha opak */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08); /* Hafif beyaz gölge */
+
+  border: 1px solid rgba(255, 255, 255, 0.12); /* İnce açık çerçeve */
+  color: #f0f0f0; /* Tüm içeriğin temel yazı rengi */
 }
+
 
 /* === COLUMNS === */
 .dropdown-column {
@@ -2556,19 +2583,19 @@ body.dark-mode .carousel-button-group {
 
 /* === Dark Mode === */
 body.dark-mode .mega-menu {
-  background-color: #ffffff;
+  background-color: #474646;
 }
 
 body.dark-mode .dropdown-column h4 {
-  color: #000000;
+  color: #332929;
 }
 
 body.dark-mode .dropdown-column a {
-  color: #dddddd;
+  color: #462828;
 }
 
 body.dark-mode .dropdown-column a:hover {
-  color: #fff348;
+  color: #381d1d;
 }
 
 
@@ -3460,57 +3487,6 @@ padding-top: 1rem;
   color: #ccc;
 }
 
-@media screen and (max-width: 768px) {
-  .mega-menu.open {
-    display: flex;
-    flex-direction: column;  /* ↩ ALT ALTA */
-    gap: 1rem;
-    max-height: 60vh;
-    overflow-y: auto;
-    width: 90vw;
-    padding: 1rem;
-    background-color: #222;
-    border-radius: 8px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .dropdown-column {
-    flex: unset;
-    width: 100%;             /* ↩ TAM GENİŞLİKTE */
-    margin-bottom: 0.5rem;
-  }
-
-  .dropdown-column h4 {
-    margin-bottom: 0.3rem;
-    font-size: 1rem;
-    color: #fff;
-  }
-
-  .dropdown-column a {
-    display: block;
-    padding-left: 1rem;
-    color: #ccc;
-    font-size: 0.95rem;
-    text-decoration: none;
-  }
-
-  .dropdown-column a:hover {
-    color: #fff;
-  }
-
-  .mega-menu::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .mega-menu::-webkit-scrollbar-thumb {
-    background-color: #666;
-    border-radius: 3px;
-  }
-}
 
 
 
