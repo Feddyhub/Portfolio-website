@@ -16,13 +16,7 @@ body, html {
   --border-color: #dee2e6;
 }
 
-.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f1f1f1;
-  --header-bg: #1a1a1a;
-  --card-bg: #1e1e1e;
-  --border-color: #333333;
-}
+
 
 /* CSS - Geliştirilmiş arama çubuğu stilleri (Değiştirilmedi) */
 .search-container {
@@ -44,10 +38,6 @@ body, html {
   transition: all 0.3s ease;
 }
 
-.dark-mode .search-box {
-  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.07);
-  border-color: var(--highlight-color);
-}
 
 .search-box:focus-within {
   border-color: var(--highlight-color);
@@ -64,9 +54,6 @@ body, html {
   z-index: 1;
 }
 
-.dark-mode .search-icon {
-  color: #aaa;
-}
 
 .search-box input {
   flex: 1;
@@ -79,19 +66,12 @@ body, html {
   font-family: inherit; /* Sitenin fontunu kullan */
 }
 
-.dark-mode .search-box input {
-  background: #2d2d2d;
-  color: #f1f1f1;
-}
 
 .search-box input::placeholder {
   color: #888;
   font-weight: 300; /* Daha ince placeholder metin */
 }
 
-.dark-mode .search-box input::placeholder {
-  color: #aaa;
-}
 
 .search-btn {
   border: none;
@@ -110,9 +90,6 @@ body, html {
   letter-spacing: 1px; /* Hover durumunda harf aralığını artır */
 }
 
-.dark-mode .search-btn:hover {
-  background-color: #7975e6;
-}
 
 .counter-value {
   font-weight: 700;
@@ -121,9 +98,6 @@ body, html {
   position: relative;
 }
 
-.dark-mode .counter-value {
-  color: #6d8ae8;
-}
 
 .form-container input {
   width: 80%;
@@ -268,21 +242,8 @@ a:hover {
   cursor: default;
 }
 
-/* Dark mode butonunun uyumu */
-.dark-mode-toggle button {
-  background: transparent;
-  border: 1px solid #555;
-  padding: 6px 10px;
-  color: #d2d2d2;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
 
-.dark-mode-toggle button:hover {
-  background-color: #333;
-  color: #fff;
-  border-color: #888;
-}
+
 
 /* HAMBURGER MENU (Değiştirilmedi) */
 
@@ -404,7 +365,8 @@ a:hover {
 
 
 .text-container {
-  padding: 1rem;
+  padding: 0.5rem;
+
 }
 
 
@@ -480,8 +442,8 @@ a:hover {
 }
 
 .dark-mode .accordion-header:hover {
-  background-color: #444;
-  box-shadow: 0 0 0 2px #ffae4299;
+  background-color: #a83c3c;
+  box-shadow: 0 0 0 2px #c7454599;
 }
 
 .dark-mode .accordion-content {
@@ -821,9 +783,6 @@ a:hover {
 
 
 #highlights-contact {
-  /* Bu section için özel padding veya margin gerekirse burada tanımlanabilir. */
-  /* Üstteki genel section düzeltmeleri yapıldıysa, buraya çok fazla eklemeye gerek olmayabilir. */
-  /* Örneğin, diğer section'lardan farklı bir alt boşluk isteniyorsa: */
   padding-bottom: 6rem; /* Örnek */
 }
 
@@ -948,36 +907,9 @@ body.dark-mode #experience .experience-sub-title {
   word-break: break-word; /* Uzun e-postaların taşmasını engeller */
 }
 
-/* CARD 2: WAT ANILARI (.wat-card) */
-.wat-card .experience-sub-title.project-title { /* "✨ WAT ANILARI ✨" */
-  margin-bottom: 1.5rem; /* Resimle arası boşluk */
-}
-.wat-card .wat-slider-container { /* Resim alanı */
- /* Resim için bir yükseklik */
-  margin-bottom: 1.5rem; /* Açıklama yazısıyla arası boşluk */
-  width: 100%;
-  height: 100%;
-  display: flex; /* Resmi ortalamak için */
-  justify-content: center;
-}
-.wat-card .project-img { /* WAT anıları resmi */
-  border-radius: 1rem;
-  width: 100%; /* Kapsayıcısının genişliğine uysun */
-  max-width: 300px; /* Resmin çok fazla büyümesini engelle */
-  height: auto; /* Orantıyı koru */
-  max-height: 220px; /* Maksimum yükseklik */
-  object-fit: cover; /* Alana sığdırırken kırp */
-  border: 1px solid var(--border-color);
-}
-.wat-card .project-description-text { /* WAT anıları açıklama yazısı */
-  /* .section__text__p1 genel stilini kullanır, burada özelleştirilebilir */
-  font-size: 1rem;
-  line-height: 1.7;
-  margin: 0 0.5rem 1rem 0.5rem;
-  flex-grow: 1; /* Varsa dikeyde kalan boşluğu doldurur */
-  color: var(--text-color);
-  opacity: 0.9;
-}
+
+
+
 /* Kart yapısını daha yumuşak ve ortalanmış hale getir */
 .donate-card {
   align-items: center;
@@ -1477,6 +1409,7 @@ body, html {
 }
 .dark-mode #cv_indir{
 background-color: rgb(255, 255, 255);
+/*cv*/
 }
 #cv_indir{
 background-color: white;
@@ -1618,6 +1551,14 @@ nav,
 .nav-links li a:hover::after {
   width: 100%;
 }
+body.dark-mode .nav-links li a:hover {
+  color: #f80d0d; /* Daha soft bir kırmızı */
+}
+
+body.dark-mode .nav-links li a:hover::after {
+  width: 100%;
+  background-color: #ff6b6b; /* underline rengi de uyumlu olsun */
+}
 
 
 /* Link stilleri */
@@ -1647,8 +1588,8 @@ a:hover {
 
 /* Dark mode butonunun uyumu */
 .dark-mode-toggle button {
-  background: transparent;
-  border: 1px solid #555;
+
+  border: 1px solid #1f1f1f;
   padding: 6px 10px;
   color: #d2d2d2;
   border-radius: 4px;
@@ -1751,14 +1692,16 @@ a:hover {
 /* Genel yapı ve tema düzenlemeleri */
 
 
-/* Genel yapı düzeni */
 .section-container {
   display: flex;
-  align-items: flex-start; 
-  justify-content: flex-start;
-  padding: 2rem;
-  transform: translateX(8%);
-  gap: 2rem; /* Elemanlar arasında boşluk */
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  max-width: 1200px;
+  margin: 0 auto; /* Ortalamak için */
+  padding: 0 1rem; /* Kenarlardan boşluk */
 }
 
 
@@ -1771,11 +1714,33 @@ a:hover {
   justify-content: center;
   gap: 2rem;
   width: 50%; /* Daha geniş alan */
-  padding-left: 40px;
   transform: translateX(0px); /* Sağ tarafa kaydırma */
 }
 
 
+/* Dil değiştirme kutusu */
+body.dark-mode .lang-toggle-wrapper {
+  background-color: rgba(233, 233, 233, 0.486);
+  border-radius: 8px;
+  padding: 4px 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Butonu */
+body.dark-mode #darkModeToggle {
+  background-color: rgba(233, 233, 233, 0.486);
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover efekti (her ikisi için geçerli) */
+body.dark-mode .lang-toggle-wrapper:hover,
+body.dark-mode #darkModeToggle:hover {
+  background-color: rgba(255, 88, 88, 0.952);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
 
 
 .details-container {
@@ -1792,11 +1757,11 @@ a:hover {
 }
 
 .text-container p {
-  font-size: 1.05rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 390;
   color: #000000;
-  letter-spacing: 0.2px;
-  margin-bottom: 1rem;
+  letter-spacing: 0.155px;
+  margin-bottom: 0.8rem;
   text-align: justify;
   background-color: #fdfdfd;
 font-family: 'PT Sans Narrow', sans-serif;
@@ -1822,9 +1787,14 @@ font-family: 'PT Sans Narrow', sans-serif;
 #profile {
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  align-items: center; /* Dikey ortalama */
+  gap: 3rem;
+padding-top: 7rem;;
+  padding-bottom: 15rem;
+  flex-wrap: wrap; /* Mobilde düzgün görünüm için */
+  height: auto; /* Otomatik yükseklik */
 }
+
 
 #profile .search-container {
   width: 100%; /* Arama container'ının tam genişlikte olmasını sağla */
@@ -1955,14 +1925,14 @@ font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .icon-button:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* veya koyu tema için rgba(255,255,255,0.05) */
+  background-color: rgba(0, 0, 0, 0.705); /* veya koyu tema için rgba(255,255,255,0.05) */
   transform: scale(1.1);
 }
 
 
 
 .icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 /* BUTTONS (Değiştirilmedi) */
@@ -2272,27 +2242,9 @@ color: rgb(255, 83, 83);
   word-break: break-word; /* Uzun e-postaların taşmasını engeller */
 }
 
-/* CARD 2: WAT ANILARI (.wat-card) */
-.wat-card .experience-sub-title.project-title { /* "✨ WAT ANILARI ✨" */
-  margin-bottom: 1.5rem; /* Resimle arası boşluk */
-}
-.wat-card .wat-slider-container { /* Resim alanı */
- /* Resim için bir yükseklik */
-  margin-bottom: 1.5rem; /* Açıklama yazısıyla arası boşluk */
-  width: 100%;
-  height: 100%;
-  display: flex; /* Resmi ortalamak için */
-  justify-content: center;
-}
-.wat-card .project-img { /* WAT anıları resmi */
-  border-radius: 1rem;
-  width: 100%; /* Kapsayıcısının genişliğine uysun */
-  max-width: 300px; /* Resmin çok fazla büyümesini engelle */
-  height: auto; /* Orantıyı koru */
-  max-height: 220px; /* Maksimum yükseklik */
-  object-fit: cover; /* Alana sığdırırken kırp */
-  border: 1px solid var(--border-color);
-}
+
+
+
 .wat-card .project-description-text { /* WAT anıları açıklama yazısı */
   /* .section__text__p1 genel stilini kullanır, burada özelleştirilebilir */
   font-size: 1rem;
@@ -2463,6 +2415,9 @@ color: rgb(255, 83, 83);
             padding-bottom: 0.5rem;
             background-color: #fdfdfd;
         }
+body.dark-mode .carousel-button-group {
+    background-color: #2e2e2e93; /* Veya #121212, #2c2c2c gibi daha yumuşak tonlar */
+}
 .carousel-button-group .btn.btn-color-2.project-btn:hover {
   background-color: #ee3c39af; /* Kırmızı arka plan */
   color: rgb(255, 255, 255);              /* Beyaz yazı */
@@ -2640,41 +2595,16 @@ body.dark-mode .dropdown-column a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================= */
 /* KONTRAST TEMA DARK MODE */
 /* ======================= */
 body.dark-mode {
-  background-color: #2d2d2d; /* Siyah yerine doğal koyu gri */
+  background-color: #252424ec; /* Siyah yerine doğal koyu gri */
   color: #f1f1f1;
 }
 
 body.dark-mode nav {
-  background-color: #f3f3f3;
+  background-color: #fcfcfcf8;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
@@ -2683,7 +2613,7 @@ body.dark-mode a {
 }
 body.dark-mode a:hover {
   color: #333333; /* #222222 yerine biraz daha açık */
-  text-decoration-color: #dddddd;
+  text-decoration-color: #c21d1d;
 }
 
 body.dark-mode .logo {
@@ -2719,12 +2649,13 @@ body.dark-mode .search-box-container .btn {
 
 body.dark-mode .carousel-project-title,
 body.dark-mode .carousel-project-description {
-  color: #ffffff !important; /* Görünürlük için !important eklendi */
+  color: #fdfdfd !important; /* Görünürlük için !important eklendi */
+background-color: #444444bd;
 }
 
 body.dark-mode .carousel-arrow {
-  background-color: #933636;
-  color: #000000;
+  background-color: #a35858;
+  color: #020000;
   border-color: #cccccc;
 }
 
@@ -2750,6 +2681,10 @@ body.dark-mode .nav-links a:hover {
   text-decoration-color: #aaaaaa;
 }
 
+body.dark-mode .carousel-button-group{
+color: red;}
+
+
 body.dark-mode .carousel-projects-wrapper {
   background-color: #1e1e1e; /* #1a1a1a yerine biraz daha açık */
   border-color: #555;
@@ -2757,12 +2692,13 @@ body.dark-mode .carousel-projects-wrapper {
 
 body.dark-mode .carousel-project-title-main {
   color: #ffffff !important; /* #000000 yerine beyaz - görünürlük için */
+background-color: #4e4d4d71;
 }
 
 body.dark-mode .carousel-project-card {
   background-color: #2e2e2e;
   color: #ffffff;
-  border-color: #666666;
+  border-color: #505050a4;
 }
 
 /* === CAROUSEL CARD BUTONLARI İÇİN EK DÜZELTME === */
@@ -3299,10 +3235,7 @@ body.dark-mode .carousel-project-card .btn:hover {
   #about .about-details-container .details-container h2 {
       font-size: 1.4rem;
   }
-  #about .text-container p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-  }
+
   .accordion-header h3 { /* Accordion başlıkları */
     font-size: 0.95rem;
   }
@@ -3340,9 +3273,7 @@ body.dark-mode .carousel-project-card .btn:hover {
   .contact-infos-list p { /* İletişim metinleri */
     font-size: 0.85rem;
   }
-  .wat-card .project-description-text { /* Memories açıklama */
-    font-size: 0.9rem;
-  }
+ 
   .donate-textarea.project-text-input { /* Donate textarea */
     font-size: 0.9rem;
     min-height: 100px;
