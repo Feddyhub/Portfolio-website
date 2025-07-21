@@ -490,16 +490,8 @@ a:hover {
   }
 
   
+
   
-
-
-
-  .section__pic-container {
-    width: 720%; /* Resim tam genişlik */
-    margin-left: px;
-    margin-bottom: 0; /* Küçük ekranlarda resim ile metin arasına boşluk ekleyelim */
-    transform: translateY(-120%);
-  }
 }
 
 /* SADECE İLK FOTOĞRAF (profile-pic.jpeg) için özel kare ve sağa kaydırma */
@@ -550,8 +542,8 @@ a:hover {
   width: 400px;
   margin: auto 0;
   border-radius: 520%;
-  overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+ 
+  box-shadow: 0 8px 16px rgba(22, 2, 2, 0.1);
 }
 
 .section__text {
@@ -679,7 +671,7 @@ a:hover {
   width: 95%;
   border-radius: 15%;
   object-fit: cover;
-  display: block;
+  
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
 }
@@ -1817,7 +1809,7 @@ padding-top: 7rem;;
   margin: auto 10;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(100, 46, 46, 0.432);
 }
 
 /* Fotoğraf Konteyneri: Kart Stili */
@@ -2007,6 +1999,14 @@ color: rgb(255, 83, 83);
   padding-top: 10px;
   margin-bottom: 2rem;
   margin-top: 2.5rem;
+
+}
+/* Mobil ekranlar için alt alta gelsin */
+@media (max-width: 768px) {
+  .about-containers {
+    flex-direction: column;
+    align-items: center; /* opsiyonel: kartları ortalar */
+  }
 }
 
 .about-details-container {
@@ -2019,6 +2019,7 @@ color: rgb(255, 83, 83);
 .about-details-container {
   display: flex;
   transform: translateY(-1px);
+
 }
 
 .details-container:hover{
@@ -2783,10 +2784,6 @@ body.dark-mode .carousel-project-card .btn:hover {
       width: 48%; /* Yan yana sığması için */
   }
 
-  /* about-profile-pic'ten gereksiz stilleri kaldır */
-#about-profile-pic {
-    display: none !important;
-  }
 
   .carousel-projects-wrapper {
     max-width: 900px;
@@ -2927,22 +2924,7 @@ body.dark-mode .carousel-project-card .btn:hover {
   /* #about .section-container zaten yukarıda genel .section-container olarak ayarlandı. */
   /* Bu blokta resim ve about-details-container var. */
 
-  #about .section-container .section__pic-container { /* #about içindeki resim sarmalayıcısı */
-    order: -1; /* .about-details-container'dan ÖNCE gelmesi için */
-    width: 100%; /* Resmin taşmamasını sağlar */
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0; /* Gap zaten .section-container'da var */
-  }
-  
-  /* about-profile-pic için temizlenmiş stiller */
-  #about .section-container .section__pic-container img#about-profile-pic { 
-    width: 80%;
-    max-width: 350px; /* Tablet için makul bir boyut */
-    height: auto;
-    border-radius: 15%;
-    /* Gereksiz transform/position stilleri kaldırıldı */
-  }
+ 
 
   #about .section-container .about-details-container {
     order: 0; /* Resimden SONRA gelmesi için */
@@ -2950,6 +2932,7 @@ body.dark-mode .carousel-project-card .btn:hover {
     max-width: 600px;
     padding-left: 0; /* Mobil için sıfırla */
     gap: 1.5rem; /* İçindeki .about-containers ve .text-container arası */
+
   }
  
   #about .about-details-container .details-container { /* Experience/Education kartları */
@@ -3088,15 +3071,8 @@ body.dark-mode .carousel-project-card .btn:hover {
      min-width: 100px; /* Çok küçülmesin */
    }
 
-  /* === #about Section === */
-  #about .contribute-container {
-    margin-bottom: 2rem; /* Boşluk ayarı */
-    max-width: 95%; /* Dar ekranlarda taşmasın */
-  }
-  #about .section-container .section__pic-container img#about-profile-pic {
-    max-width: 300px;
-    /* Gereksiz stiller kaldırıldı */
-  }
+  
+  
   #about .section-container .about-details-container {
       gap: 1.5rem; /* İç boşluk */
   }
@@ -3228,10 +3204,35 @@ body.dark-mode .carousel-project-card .btn:hover {
   #about .contribute-container h2 {
       font-size: 1.3rem;
   }
-  #about .section-container .section__pic-container img#about-profile-pic {
-    max-width: 85%; /* Resim daha fazla yer kaplasın */
-    /* Gereksiz stiller kaldırıldı */
+/* Mobilde: kutu boyunu dikey yap */
+@media (max-width: 768px) {
+  #about .contribute-container {
+    width: 90%;
+    height: 300px;             /* Daha dikey yapı */
+    overflow-x: auto;          /* Yatay kaydırılabilirlik */
+    overflow-y: hidden;
+    white-space: nowrap;       /* İçeriği yatay akışa zorla */
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    touch-action: pan-x;       /* Mobilde sürüklemeyi destekle */
+    scrollbar-width: none;     /* Firefox için scroll gizle */
+    -ms-overflow-style: none;  /* IE */
   }
+
+  #about .contribute-container::-webkit-scrollbar {
+    display: none;             /* Chrome/Safari scrollbar gizle */
+  }
+
+  #about .contribute-container img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    display: inline-block;
+  }
+}
+
+ 
   #about .about-details-container .details-container h2 {
       font-size: 1.4rem;
   }
