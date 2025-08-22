@@ -1,427 +1,103 @@
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  const logoElementDesktop = document.getElementById('dynamic-logo-desktop');
-  const logoTexts = ["Kimkio", "Carsell", "Fedai.ai","Arkenom Teknoloji","Optiwisdom"];
-  let currentTextIndex = 0;
-
-  if (logoElementDesktop) { // Elementin var olduğundan emin olun
-    setInterval(() => {
-      logoElementDesktop.textContent = logoTexts[currentTextIndex];
-      currentTextIndex = (currentTextIndex + 1) % logoTexts.length;
-    }, 2999); // Metin her 2 saniyede bir değişir (2000 milisaniye)
-  }
-
-});
-
-
-  const originalTitle = document.title;
-  let timeoutId;
-
-  window.addEventListener('blur', () => {
-    timeoutId = setTimeout(() => {
-      document.title = "👋 Hey! :)";
-    }, 2500); // 1 saniye sonra değiştirsin
-  });
-
-  window.addEventListener('focus', () => {
-    clearTimeout(timeoutId);
-    document.title = originalTitle;
-  });
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  const experienceElement = document.getElementById('experience-text');
-  const educationElement = document.getElementById('education-text');
-
-  const experienceTexts = [
-    '<span class="arkenom-text">Arkenom Teknoloji</span><br>Intern Data Scientist',
-    '<span class="arkenom-text">OptiWisdom</span><br>Intern Data Analyst',
-    '<span class="arkenom-text">FEDAI</span><br>YouTube Content Creator',
-    '<span class="arkenom-text">Sunset Pier</span><br>Dishwasher - New Jersey',
-  ];
-
-  const educationTexts = [
-    'Dokuz Eylül University<br>CS-AI Community Leader',
-    'Faculty of Science <br>Content Creator with LightBoard'
-  ];
-
-  let experienceIndex = 0;
-  let educationIndex = 0;
-
-  if (experienceElement) {
-    setInterval(() => {
-      experienceElement.innerHTML = experienceTexts[experienceIndex];
-      experienceIndex = (experienceIndex + 1) % experienceTexts.length;
-    }, 5580);
-  }
-
-  if (educationElement) {
-    setInterval(() => {
-      educationElement.innerHTML = educationTexts[educationIndex];
-      educationIndex = (educationIndex + 1) % educationTexts.length;
-    }, 5580);
-  }
-});
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const carouselWrapper = document.querySelector('.carousel-projects-wrapper');
-  const projectItems = document.querySelectorAll('.carousel-project-item');
-  const prevButton = document.querySelector('.prev-arrow');
-  const nextButton = document.querySelector('.next-arrow');
-  const totalSlides = projectItems.length;
-  let currentIndex = 0;
-
-  function updateCarousel() {
-      projectItems.forEach((item, index) => {
-          if (index === currentIndex) {
-              item.classList.add('active-slide');
-          } else {
-              item.classList.remove('active-slide');
-          }
-      });
-  }
-
-  function goToSlide(index) {
-      if (index < 0) {
-          currentIndex = totalSlides - 1;
-      } else if (index >= totalSlides) {
-          currentIndex = 0;
-      } else {
-          currentIndex = index;
-      }
-      updateCarousel();
-  }
-
-  prevButton.addEventListener('click', () => {
-      goToSlide(currentIndex - 1);
-  });
-
-  nextButton.addEventListener('click', () => {
-      goToSlide(currentIndex + 1);
-  });
-
-  // Sayfa yüklendiğinde ilk slaydı aktif et
-  updateCarousel();
-});
-
-
-const iconButtons = document.querySelectorAll('.icon-button');
-const animationDuration = 600; // CSS'deki transition süresi (milisaniye)
-const holdDuration = 750; // Simgenin animasyon sonunda bekleme süresi (milisaniye)
-
-iconButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.add('clicked');
-
-    // Animasyon süresi + bekleme süresi kadar sonra 'clicked' sınıfını kaldır
-    setTimeout(() => {
-      button.classList.remove('clicked');
-    }, animationDuration + holdDuration);
-  });
-});
-
-
-
-  function toggleAccordion(index) {
-    const allItems = document.querySelectorAll(".accordion-item");
-
-    allItems.forEach((item, i) => {
-      if (i === index) {
-        item.classList.toggle("active");
-      } else {
-        item.classList.remove("active"); // sadece biri açık kalsın
-      }
-    });
-  }
-
-
-
-
-
-
-
-
-
-// Scroll animasyonu: IntersectionObserver
 document.addEventListener('DOMContentLoaded', () => {
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const fadeObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Hedef class'lar
-  const fadeElements = document.querySelectorAll('.fade-in-section, .fade-scale-section, .fade-left, .fade-right');
-  fadeElements.forEach(el => fadeObserver.observe(el));
-});
-
-
-
-function toggleLang(input) {
-  const lang = input.checked ? "usa" : "tr";
-  setLanguage(lang); // varsa bu fonksiyonunla dili değiştir
-}
-
-
-
-
-
-
-
-
-  let currentIndex = 0;
-  const slideImg = document.getElementById('memory-slide-img');
-  const slideCaption = document.getElementById('memory-slide-caption');
-
-  function showNextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    slideImg.src = slideFolder + slides[currentIndex].file;
-    slideCaption.textContent = slides[currentIndex].caption;
+  /* === AOS (dikey açılış) === */
+  if (window.AOS) {
+    AOS.init({ duration: 900, easing: "ease-out", once: true, offset: 120 });
   }
 
-  setInterval(showNextSlide, 7000);
+  /* === Typed.js === */
+  const typedTarget = document.getElementById("typed-output");
+  if (typedTarget && window.Typed) {
+    new Typed("#typed-output", {
+      strings: ["Data Scientist", "Backend Developer", "Machine Learning Engineer", "AI Agent Builder"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 1400,
+      loop: true,
+    });
+  }
 
+  /* === Light mode === */
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const modeIcon = document.getElementById("mode-icon");
 
- document.getElementById('darkModeToggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
+  if (toggleBtn && modeIcon) {
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
 
+      if (document.body.classList.contains("light-theme")) {
+        modeIcon.textContent = "☀️"; // Light Mode
+      } else {
+        modeIcon.textContent = "🌙"; // Dark Mode
+      }
+    });
+  }
 
-
-
-
-
-
-
-
-
-function toggleLang(checkbox) {
-  const isTurkish = checkbox.checked;
-
-  if (isTurkish) {
-    fetch("lang/turkish.json")
-      .then(res => res.json())
-      .then(data => {
-        // DOM'daki tüm text node'ları dolaş
-        document.querySelectorAll("*").forEach(el => {
-          for (let i = 0; i < el.childNodes.length; i++) {
-            const node = el.childNodes[i];
-            if (node.nodeType === 3) { // text node
-              const text = node.nodeValue.trim();
-              if (data[text]) {
-                node._original = text; // İngilizce metni sakla
-                node.nodeValue = data[text]; // Türkçe'ye çevir
-              }
-            }
-          }
-        });
-      })
-      .catch(err => console.error("JSON yüklenemedi:", err));
-  } else {
-    // İngilizceye geri dön
-    document.querySelectorAll("*").forEach(el => {
-      for (let i = 0; i < el.childNodes.length; i++) {
-        const node = el.childNodes[i];
-        if (node.nodeType === 3 && node._original) {
-          node.nodeValue = node._original;
+  /* === Accordion === */
+  document.querySelectorAll(".accordion-header").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.parentElement;
+      document.querySelectorAll(".accordion-item").forEach(el => {
+        if (el !== item) {
+          el.classList.remove("open");
+          el.querySelector(".accordion-header")?.setAttribute("aria-expanded", "false");
         }
+      });
+      const isOpen = item.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+
+  /* === Services Mega Menu === */
+  const servicesTrigger = document.getElementById("servicesTrigger");
+  const servicesMenu = document.getElementById("servicesMenu");
+  if (servicesTrigger && servicesMenu) {
+    servicesTrigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isOpen = !servicesMenu.hasAttribute("hidden");
+      if (isOpen) {
+        servicesMenu.setAttribute("hidden", "");
+        servicesTrigger.setAttribute("aria-expanded", "false");
+      } else {
+        servicesMenu.removeAttribute("hidden");
+        servicesTrigger.setAttribute("aria-expanded", "true");
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (!servicesTrigger.contains(e.target) && !servicesMenu.contains(e.target)) {
+        servicesMenu.setAttribute("hidden", "");
+        servicesTrigger.setAttribute("aria-expanded", "false");
       }
     });
   }
-}
 
-
-  const typed = new Typed("#typed-output", {
-    strings: [
-      "Data Scientist",
-      "Backend Developer",
-      "Machine Learning Engineer",
-      "Full Stack Developer",
-      "Software Engineer",
-      
-    ],
-    typeSpeed: 60,
-    backSpeed: 30,
-    backDelay: 1500,
-    loop: true
-  });
-
-
-
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".counter-value");
-
-    counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      const duration = 4411;
-      const stepTime = 20;
-
-      let count = 0;
-      const step = Math.ceil(target / (duration / stepTime));
-
-      const getColor = (value) => {
-        if (value >= 300) return "#23c629";       // Parlak yeşil
-        if (value >= 250) return "#70d66b";       // Açık yeşil
-        if (value >= 150) return "#e6d03b";       // Sarı
-        if (value >= 80)  return "#f19136";       // Turuncu
-        return "#cc4444";                         // Kırmızı/Gri
-      };
-
-      const updateCounter = () => {
-        count += step;
-        if (count >= target) {
-          counter.textContent = target;
-          counter.style.color = getColor(target);
-        } else {
-          counter.textContent = count;
-          counter.style.color = getColor(count);
-          setTimeout(updateCounter, stepTime);
-        }
-      };
-
-      updateCounter();
+  /* === Hamburger Menü === */
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener("click", () => {
+      const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
+      const next = !expanded;
+      hamburgerBtn.setAttribute("aria-expanded", String(next));
+      mobileMenu.hidden = !next;                     
+      mobileMenu.classList.toggle("open", next);     
     });
-  });
-
-
-
-
-
-
-  const starContainer = document.getElementById('starRating');
-  const stars = starContainer.querySelectorAll('.star');
-  let locked = false;
-  let rating = 2; // Başlangıçta 2 yıldız dolu
-
-  function updateStars(tempRating = rating) {
-    stars.forEach((star, index) => {
-      star.classList.toggle('filled', index < tempRating);
+    document.querySelectorAll(".moblink").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburgerBtn.setAttribute("aria-expanded", "false");
+        mobileMenu.hidden = true;
+        mobileMenu.classList.remove("open");
+      });
     });
   }
 
-  updateStars(); // İlk yüklemede 2 yıldız dolu
-
-  stars.forEach((star, idx) => {
-    star.addEventListener('mouseenter', () => {
-      if (!locked) updateStars(idx + 1);
+  /* === Scroll Progress === */
+  const progressBar = document.querySelector('.scroll-progress');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progressBar.style.width = scrollPercent + "%";
     });
-
-    star.addEventListener('mouseleave', () => {
-      if (!locked) updateStars(); // Geri eski rating'e dön
-    });
-
-    star.addEventListener('click', () => {
-      if (!locked) {
-        rating = idx + 1;
-        updateStars();
-        locked = true;
-        starContainer.classList.add('locked');
-        console.log("Kullanıcının verdiği puan:", rating);
-      }
-    });
-  });
-
-
-
-
-
-
-  document.querySelector('.donate-action-button').addEventListener('click', function () {
-    window.location.href = '/donate/donate.html';
-  });
-
-
-
-
-
-
-
-document.getElementById('darkModeToggleMini')?.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+  }
 });
-
-
-
-
-  function toggleMobileDropdown() {
-    const menu = document.getElementById("mobileDropdownMenu");
-    menu.classList.toggle("open");
-    document.body.style.overflow = menu.classList.contains("open") ? "hidden" : "";
-  }
-
-  // Dışarı tıklanırsa menüyü kapat
-  document.addEventListener("click", function (event) {
-    const menu = document.getElementById("mobileDropdownMenu");
-    const toggle = document.querySelector(".services-link");
-
-    if (menu.classList.contains("open") &&
-        !menu.contains(event.target) &&
-        !toggle.contains(event.target)) {
-      menu.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-  });
-
-
-
-  function toggleMobileDropdown() {
-    const menu = document.getElementById("mobileDropdownMenu");
-    menu.classList.toggle("open");
-    document.body.style.overflow = menu.classList.contains("open") ? "hidden" : "";
-  }
-
-  // Dışarı tıklanırsa menüyü kapat
-  document.addEventListener("click", function (event) {
-    const menu = document.getElementById("mobileDropdownMenu");
-    const toggle = document.querySelector('a[onclick="toggleMobileDropdown()"]');
-
-    if (
-      menu.classList.contains("open") &&
-      !menu.contains(event.target) &&
-      !toggle.contains(event.target)
-    ) {
-      menu.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-  });
-
-
-
-
-window.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("chatbotModal");
-  const closeBtn = document.querySelector(".close-btn");
-
-  modal.style.display = "block";
-
-  closeBtn.onclick = () => {
-    modal.style.display = "none";
-  };
-
-  window.onclick = (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
-});
-

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-9VXYXqKyvKHzN1t9UuNqzCDQf9KFLiT96aZpQa2Pb5qE+9VCv0JxHtbj3so+j1n1cOi5znLk+lNT6hRA0rG1Rg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+  <link rel="icon" type="image/svg" href="assets/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your_fontawesome_kit_id.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Personal Website</title>
+  <meta name="application-name" content="Murat Ferhat Derya" />
+  <meta name="author" content="Murat Ferhat Derya" />
+  <meta name="description" content="Murat Ferhat Derya - Personal Website | Backend, Data Science, AI projects" />
+
+
+
+
+ 
+    
+
+
+  </head>
+
+
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo" id="dynamic-logo-desktop">FEDAI</div>
+
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="about">About</a></li>
+          <li><a href="#experience" data-i18n="experience">Skills</a></li>
+
+       <!-- Dropdown Yapısı -->
+<li class="services-item mega-dropdown">
+<a href="javascript:void(0);" class="services-link" data-i18n="services" tabindex="0" onclick="toggleMobileDropdown()">Services</a>
+  <div class="mega-menu" id="mobileDropdownMenu">
+    <div class="dropdown-column">
+      <h4><i class="bi bi-code-slash"></i> Web</h4>
+      <a href="contactme/contactme.html?service=web-custom">Website (Custom)</a>
+      <a href="contactme/contactme.html?service=web-wordpress">Website (WordPress)</a>
+      <a href="contactme/contactme.html?service=mobile-app">Mobile App (Android)</a>
+    </div>
+    <div class="dropdown-column">
+      <h4><i class="bi bi-bar-chart-line"></i> Data</h4>
+      <a href="contactme/contactme.html?service=data-science">Data Science</a>
+      <a href="contactme/contactme.html?service=data-scraping">Data Scraping</a>
+      <a href="contactme/contactme.html?service=data-analysis">Data Analysis</a>
+    </div>
+    <div class="dropdown-column">
+      <h4><i class="bi bi-cpu"></i> AI</h4>
+      <a href="contactme/contactme.html?service=ml">Machine Learning</a>
+      <a href="contactme/contactme.html?service=cv">Computer Vision</a>
+      <a href="contactme/contactme.html?service=chatbot">Chatbot Development</a>
+      <a href="contactme/contactme.html?service=ai-agent">AI Agent</a>
+      <a href="contactme/contactme.html?service=llm">LLM (Large Language Models)</a>
+    </div>
+  </div>
+</li>
+
+
+          <li><a href="#projects" data-i18n="projects">Projects</a></li>
+          <li><a href="#highlights-contact" data-i18n="contact">Contact</a></li>
+
+          <li class="nav-item lang-toggle-wrapper">
+<label class="lang-switch">
+  <input type="checkbox" onchange="toggleLang(this)">
+  <span class="lang-slider">
+    <img src="assets/usa.png" alt="English" class="lang-icon left">
+<img src="assets/tr.png" alt="Türkçe" class="lang-icon right">
+
+  </span>
+</label>
+
+</li>
+
+<button id="darkModeToggle" class="icon-button" title="Toggle Dark Mode">
+              <span id="mode-icon">🌙</span>
+        
+        </ul>
+      </div>
+    </nav>
+
+<nav id="hamburger-nav">
+  <div class="hamburger-nav-inner">
+
+    <!-- SOL: Services -->
+    <div class="mobile-services">
+      <div class="services-item mega-dropdown">
+  <a href="#services" class="services-link" data-i18n="services" tabindex="0">Services</a>
+  <div class="mega-menu">
+    <div class="dropdown-column">
+      <h4><i class="bi bi-code-slash"></i> Web</h4>
+      <a href="contactme/contactme.html?service=web-custom">Website (Custom)</a>
+      <a href="contactme/contactme.html?service=web-wordpress">Website (WordPress)</a>
+      <a href="contactme/contactme.html?service=mobile-app">Mobile App (Android)</a>
+    </div>
+    <div class="dropdown-column">
+      <h4><i class="bi bi-bar-chart-line"></i> Data</h4>
+      <a href="contactme/contactme.html?service=data-science">Data Science</a>
+      <a href="contactme/contactme.html?service=data-scraping">Data Scraping</a>
+      <a href="contactme/contactme.html?service=data-analysis">Data Analysis</a>
+    </div>
+    <div class="dropdown-column">
+      <h4><i class="bi bi-cpu"></i> AI</h4>
+      <a href="contactme/contactme.html?service=ml">Machine Learning</a>
+      <a href="contactme/contactme.html?service=cv">Computer Vision</a>
+      <a href="contactme/contactme.html?service=chatbot">Chatbot Development</a>
+      <a href="contactme/contactme.html?service=ai-agent">AI Agent</a>
+      <a href="contactme/contactme.html?service=llm">LLM (Large Language Models)</a>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <!-- ORTA: Dil + Dark mode toggle -->
+    <div class="mobile-toggles">
+      <label class="lang-switch">
+        <input type="checkbox" onchange="toggleLang(this)">
+        <span class="lang-slider">
+          <img src="assets/usa.png" alt="English" class="lang-icon left">
+          <img src="assets/tr.png" alt="Türkçe" class="lang-icon right">
+        </span>
+      </label>
+
+      <button id="darkModeToggleMini" class="icon-button" title="Toggle Dark Mode">🌙</button>
+    </div>
+
+    <!-- SAĞ: Hamburger Menü -->
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+  <!-- Menu Linkleri -->
+  <ul class="menu-links">
+    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+    <li><a href="#highlights-contact" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+    <section id="profile">
+      <div class="section__pic-container profile-pic-override">
+  <img src="./assets/profile-pic.jpeg" alt="Profile" >
+</div>
+
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm  </p>
+        <h1 class="title">Murat Ferhat Derya  </h1>
+        <p class="section__text__p2">
+  <span id="typed-output"></span>
+</p>
+
+        <div class="btn-container">
+          <div class="search-container">
+            <div class="search-box">
+              <i class="bi bi-search search-icon"></i>
+              <input type="text" placeholder="ask whatever you want &#128521 . . .">
+              <button class="search-btn">Search</button>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-color-2" id="cv_indir" onclick="window.open('./contactme/CV.pdf')">Download CV</button>
+            <button class="btn btn-color-1" onclick="location.href='contactme/contactme.html'"   >Contact-page</button>
+
+          </div>
+        </div>
+        
+        
+        <div id="socials-container">
+          <img src="./assets/dark-png/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/in/feddyhub'" />
+          <img src="./assets/dark-png/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Feddyhub'" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+
+      <div class="contribute-container" id="contributeBox">
+  <h2>Github  <span class="counter-value" data-target="422">+ 0</span>+ Contributions</h2>
+  <img src="./assets/contribute-img.png" alt="Feddyhub Contributions" class="contribute-img" />
+</div>
+
+      
+
+
+<div class="section-container">
+  <div class="section__pic-container">
+    <img src="./assets/about-pic.jpg" alt="Profile picture" id="about-profile-pic" />
+
+  </div>
+  <div class="about-details-container">
+    <div class="about-containers">
+      <div class="details-container">
+<h2>Experiences</h2>
+        <img src="./assets/dark-png/experience.png" alt="Experience icon" class="icon" />
+        
+        <p id="experience-text">
+          <span class="arkenom-text">Arkenom Teknoloji</span><br />Intern Data Scientist
+        </p>
+      </div>
+      <div class="details-container">
+<h2>Education</h2>
+        <img src="./assets/dark-png/education.png" alt="Education icon" class="icon" />
+        
+        <p id="education-text">
+          Dokuz Eylül University<br />CS-AI Community Leader
+        </p>
+      </div>
+    </div>
+    <div class="text-container">
+    <p>
+<p>👋 Hello, I'm <strong>Ferhat</strong>. I’m a 4th-year Computer Science student and will be graduating in about <strong>two months</strong>. Throughout my university life, I have maintained both a social and productive profile; I have actively improved myself in the field of software development.</p>
+
+<p>💡 My main areas of interest are <strong>Data Science</strong> and <strong>Back-End development</strong>. In addition, over time I have also worked on projects in areas such as <em>front-end, mobile development, and DevOps</em> 🧠. I can say I've gotten hands-on experience in many technical fields—excluding cybersecurity.</p>
+
+<p>🚀 I describe myself as a <em>curious</em>, <em>open-minded learner</em> who <strong>enjoys solving real-world problems through technology</strong>.</p>
+
+    </div>
+
+          
+          <!-- Accordion Section -->
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(0)">
+                <h3>Experiences</h3>
+              </div>
+              <div class="accordion-content">
+                <p>
+
+<p style="margin-bottom: 24px;">📌 <strong>Internship at AI Department – CRM Technologies Company</strong><br>
+During the summer of my 3rd year, I worked in the artificial intelligence department, taking part in tasks such as <em>data analysis, model training, and forecasting</em>.</p>
+
+<p style="margin-bottom: 24px;">📌 <strong>Volunteer Data Analyst – OptiWisdom</strong><br>
+I conducted analytical studies on various data sources, from Google Ads to SQL. It broadened my perspective both technically and in terms of business intelligence.</p>
+
+<p style="margin-bottom: 24px;">📌 <strong>Faculty of Science – Lightboard Video Production</strong><br>
+I both prepared the content and actively participated in the recording/editing processes of software-themed videos published on the faculty’s channel.</p>
+
+
+
+
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(1)">
+                <h3>My Projects</h3>
+              </div>
+              <div class="accordion-content">
+                <p>
+<p style="margin-bottom: 24px;">🤖 <strong>Telegram Chatbot & Intelligent Assistants</strong><br>
+I developed agent systems that <u>perform customized tasks through natural language conversations</u> with users.</p>
+
+<p style="margin-bottom: 24px;">🚗 <strong>Car Price Comparison and Valuation Platform</strong><br>
+In this web application I built using my own collected data, users can discover their vehicle's market value using the <strong>AI-powered “Find My Car’s Value”</strong> feature.</p>
+
+<p style="margin-bottom: 24px;">🔧 <strong>Predictive Maintenance with Machine Vibration Data</strong><br>
+I designed and developed an executable application that analyzes industrial machine vibration data to <em>predict when maintenance is needed</em>. In this project, I achieved highly successful results by integrating <strong>signal processing</strong> techniques with <strong>machine learning</strong> in an engineer-friendly application.</p>
+
+<p style="margin-bottom: 24px;">📌 <strong>Life Expectancy Prediction Project</strong><br>
+🌍 We trained an <strong>artificial intelligence model</strong> using <em>life expectancy</em> data from various countries. According to the model's output, the expected life span for Turkey in 2013 was predicted to be <strong>77.3 years</strong>.<br>
+When compared with the actual data, we observed that the average life expectancy for that year was <strong>77 years</strong>.<br>
+This outcome was very insightful in terms of evaluating the accuracy of our model and the quality of the data.</p>
+
+
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(2)">
+                <h3>FEDAI Youtube Channel</h3>
+              </div>
+              <div class="accordion-content">
+                <p>
+
+                 <p style="margin-bottom: 24px;">📺 <strong>FEDAI YouTube Channel</strong><br>
+In my 3rd year, I launched a YouTube channel called <strong>FEDAI</strong> where I publish <u>beginner-level tutorial videos</u>, <u>project walkthroughs</u>, and <u>algorithm solution examples</u> aimed at newcomers to software development.  
+My goal was to <em>present technical knowledge in a simple and understandable way</em> and help those taking their first steps into the software world.</p>
+
+<p style="margin-bottom: 24px;">🎞️ During the video production process, I didn’t just create content; I also learned every step of <strong>editing and publishing videos</strong>.  
+In each video, I tried to improve the viewer experience.</p>
+
+
+                </p>
+              </div>
+            </div>
+   <div class="accordion-item">
+  <div class="accordion-header" onclick="toggleAccordion(3)">
+    <h3>Work and Travel (USA – New Jersey)</h3>
+  </div>
+  <div class="accordion-content">
+  <p style="margin-bottom: 24px;">✈️ During the summer break of my 2nd year, I had the opportunity to live and work for 4 months in <strong>New Jersey, USA</strong> as part of the Work and Travel program.</p>
+
+<p style="margin-bottom: 24px;">🌍 This experience provided me with both <em>cultural awareness</em> 🧠 and <em>foreign language practice</em> 🗣️.  
+🤝 It also played a major role in developing my skills in <strong>taking responsibility</strong>, <strong>working effectively within a team</strong>, and 🧭 <strong>quickly adapting to new environments</strong>.</p>
+
+  </div>
+</div>
+</div>
+          </div>
+
+        </div>
+      </div>
+      
+
+
+
+      <section id="experience">
+        <p class="section__text__p1"></p>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <!-- Data Scientist -->
+            <div class="details-container">
+              <h1 class="experience-sub-title">Data Scientist</h1>
+              <div class="article-container">
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Python</h3><p>Pandas, NumPy, Sklearn, etc.</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Data Preprocessing</h3><p>Cleaning, Encoding, Feature Engineering</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Data Visualization</h3><p>Matplotlib, Seaborn, Plotly</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Neural Networks</h3><p>TensorFlow, CNN, LSTM</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Time Series</h3><p>ARIMA, LSTM, Forecasting</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>MLOps & Deployment</h3><p>Docker, FastAPI, Streamlit</p></div></article>
+              </div>
+            </div>
+            <!-- Backend Developer -->
+            <div class="details-container">
+              <h2 class="experience-sub-title">Backend Developer</h2>
+              <div class="article-container">
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>RESTful APIs</h3><p>FastAPI, Flask</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>SQL</h3><p>PostgreSQL, MySQL</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Async Programming</h3><p>Asyncio, FastAPI</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Git & GitHub</h3><p>Version Control & CI/CD</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>PyQt6 & Qt Designer</h3> <p>Desktop GUI Applications, PySide6, .exe Compilation (Windows)</p></div></article>
+              </div>
+            </div>
+            <!-- Frontend Developer -->
+            <div class="details-container">
+              <h2 class="experience-sub-title">and More ...</h2>
+              <div class="article-container">
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>HTML</h3><p>HTML, DOM Manipulation</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>CSS</h3><p>Flexbox, Grid, Sass, Animations</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>JavaScript</h3><p>ES6+, DOM, Fetch API</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Version Control-Deploying</h3><p>Git, GitHub,Railway </p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>Video Editing</h3><p>Capcut,Sony Vegas Pro</p></div></article>
+                <article><img src="./assets/dark-png/checkmark.png" class="icon" /><div><h3>English Proficiency</h3><p>B1+ (Intermediate - Upper Intermediate) </p></div></article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    
+
+    <section id="projects" class="carousel-section">
+
+        <div class="carousel-projects-wrapper">
+<h1 class="carousel-project-title-main">Projects</h1>
+            <!-- İlk Proje -->
+            <div class="carousel-project-item active-slide" data-slide-index="0"> <!-- data attribute eklendi -->
+              
+                <div class="carousel-project-card">
+                  
+
+                    <div class="article-container">
+                      
+                        <picture>
+                            <!-- Gerçek resim yollarınızı kullanın -->
+                            
+                            <source srcset="./assets/chatbot.gif" type="image/gif" />
+<img src="./assets/chatbot.gif" alt="Official Chatbot Project" class="project-img" />
+
+                        </picture>
+                    </div>
+                   <h2 class="carousel-project-title">Telegram Chatbot</h2>
+<p class="carousel-project-description">
+This Telegram bot, built on top of ChatGPT, can engage in natural language conversations 🤖, understand commands, and perform tasks. It features easy integration, a customizable message structure, and a real-time response system ⚡.
+</p>
+                    <div class="carousel-button-group">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Feddyhub/-Telegram-Chatbot---OPENAI---'"> <!-- '#' yerine gerçek link -->
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="window.location.href='https://t.me/fedai_arkenom_bot';">
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İkinci Proje -->
+            <div class="carousel-project-item" data-slide-index="1"> <!-- data attribute eklendi -->
+                <div class="carousel-project-card">
+                    <div class="article-container">
+                         <picture>
+                            <picture>
+  <source srcset="./assets/batman.gif" type="image/gif" />
+  <img src="./assets/batman.gif" alt="Price Tracker" class="project-img" />
+</picture>
+
+                    </div>
+                   <h2 class="carousel-project-title">Weather API AI Agent</h2>
+<p class="carousel-project-description">
+An AI agent that understands and delivers weather information without needing you to type the city name 🌦️—it makes smart predictions based on clues like location, weather type, or time of day 🧠.
+</p>
+
+                    <div class="carousel-button-group">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Feddyhub/-Telegram-Chatbot---OPENAI---'"> <!-- '#' yerine gerçek link -->
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="window.location.href='https://t.me/fedai_arkenom_bot'"> <!-- '#' yerine gerçek link -->
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Üçüncü Proje (Örnek olarak eklendi) -->
+            <div class="carousel-project-item" data-slide-index="2"> <!-- data attribute eklendi -->
+                <div class="carousel-project-card">
+                    <div class="article-container">
+                         <picture>
+                             <!-- Gerçek resim yollarınızı kullanın -->
+                            <source srcset="./assets/dbh.gif" type="image/gif" />
+<img src="./assets/dbh.gif" alt="Task Manager App" class="project-img" />
+
+
+                        </picture>
+                    </div>
+                    <h2 class="carousel-project-title">Industrial Vibration Analyzer .exe</h2>
+<p class="carousel-project-description">
+A Windows-based desktop application developed with PySide6, designed upon special industry requirements 🏭. It analyzes and stores vibration signals from factory machines, supports waveform visualization, user authentication, and session-based data logging 📈🔐.
+</p>
+
+                    <div class="carousel-button-group">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Feddyhub/final_project_GUI'"> <!-- '#' yerine gerçek link -->
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- '#' yerine gerçek link -->
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- Kurumsal FAQ AI Agent Projesi -->
+<div class="carousel-project-item" data-slide-index="3">
+
+    <div class="carousel-project-card">
+        <div class="article-container">
+            <picture>
+                <!-- Gerçek resim yollarınızı kullanın -->
+
+<!-- Burada bir gif hatasi var. ve siralama yaparken API lari dagitarak koy.-->
+
+<picture>
+  <source srcset="./assets/cat.gif" type="image/gif" />
+  <img src="./assets/cat.gif" alt="FAQ AI Agent" class="project-img" />
+</picture>
+
+            </picture>
+        </div>
+        <h2 class="carousel-project-title">Official FAQ AI Agent</h2>
+        <p class="carousel-project-description">
+            This intelligent assistant goes beyond standard FAQ systems by understanding and answering organization-specific questions 💼. It delivers accurate and consistent information by grasping user intent—without being hindered by dialect variations or typos 🧠.
+        </p>
+
+        <div class="carousel-button-group">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Feddyhub/-Telegram-Chatbot---OPENAI---'">
+                Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="window.location.href='https://t.me/fedai_arkenom_bot'">
+                Live Demo
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- CarSell Project -->
+<div class="carousel-project-item" data-slide-index="X"> <!-- X yerine sıralama -->
+    <div class="carousel-project-card">
+        <div class="article-container">
+            <picture>
+                <source srcset="./assets/carsell.gif" type="image/gif" />
+                <img src="./assets/carsell.gif" alt="CarSell" class="project-img" />
+            </picture>
+        </div>
+        <h2 class="carousel-project-title"><h2>CarSell – Smart Car Price Comparison<br> AI Valuation Tool</h2>
+
+        <p class="carousel-project-description">
+            CarSell is a smart web platform that allows you to compare used car prices across different countries 🌍. Users can select any two countries and a specific car model to analyze price differences based on year, market conditions, and other filters.
+
+Designed especially for European citizens, CarSell helps you decide which country makes the most sense for buying your next vehicle 🚗. It also includes an AI-powered assistant that estimates the ideal selling price for your car.
+        </p>
+
+        <div class="carousel-button-group">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Feddyhub/2nd-Hand-Car-Database-Own-Scraped-and-ML_Price-on-Dashoard'">
+                Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://feddycars.streamlit.app/'">
+                Live Demo
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- OK BUTONLARI (Mevcut yapınızdaki gibi) -->
+            <button class="carousel-arrow prev-arrow">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-arrow next-arrow">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            
+
+
+            
+        </div>
+    </section>
+
+    <section id="highlights-contact"> <!-- ID'yi değiştirdim, çakışmayı önlemek için -->
+      <p class="section__text__p1">Discover More</p>
+      <h1 class="title section-title">Highlights & Contact</h1> <!-- class="title" genel bir stil alabilir, section-title spesifik -->
+
+      <div class="experience-details-container"> <!-- Bu class ismi experience bölümünden geliyor, isterseniz değiştirebiliriz -->
+        <div class="about-containers"> <!-- Bu class ismi de about bölümünden, isterseniz değiştirebiliriz -->
+
+          <!-- Card 1: Get In Touch -->
+          <div class="details-container color-container contact-card" id="contact-card">
+            <div class="card-header">
+              <h2 class="experience-sub-title project-title">Get In Touch</h2>
+              <p class="project-subtitle-extra">Available 24/7</p>
+            </div>
+
+
+
+
+            <div class="article-container contact-info-visuals">
+              <div class="contact-infos-list">
+<!-- Harita görseli -->
+    <div class="contact-map">
+      <img src="./assets/maps.png" alt="Our Location Map" class="contact-map-img">
+    </div>
+               <div class="info-item">
+  <i class="fas fa-map-marker-alt project-contact-icon"></i>
+  <div>
+    <h5>📍 Location</h5>
+    <p>Izmir, Turkey based.<br>Open to business travel</p>
+  </div>
+</div>
+
+<div class="info-item">
+  <i class="fas fa-phone-alt project-contact-icon"></i>
+  <div>
+    <h5>📞 Phone Number</h5>
+    <p>+90 (543) 236 3918</p>
+  </div>
+</div>
+
+<div class="info-item">
+  <i class="fas fa-envelope project-contact-icon"></i>
+  <div>
+    <h5>📧 Email Address</h5>
+    <p>muratferhatderya@gmail.com</p>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+<!-- Card 2: Infinity Line Loading -->
+<div class="details-container color-container wat-card" id="loop-card">
+  <h2 class="experience-sub-title project-title">♾️ Infinite Motion</h2>
+</svg>
+
+
+
+  <p class="section__text__p1 project-description-text">
+    Creativity in motion, always chasing the next idea...
+  </p>
+</div>
+
+
+
+        <!-- Card 3: Coffee Donation -->
+<div class="details-container color-container donate-card" id="donate-card">
+  <h2 class="experience-sub-title project-title coffee-title">Buy Me a Coffee ☕</h2>
+
+  <div class="article-container coffee-icon-area">
+    <img src="./assets/your-coffee.jpeg" alt="Coffee Icon" class="project-svg-icon coffee-img-custom">
+  </div>
+
+  <div class="star-rating-display" id="starRating">
+  <span class="star" data-value="1">★</span>
+  <span class="star" data-value="2">★</span>
+  <span class="star" data-value="3">★</span>
+  <span class="star" data-value="4">★</span>
+  <span class="star" data-value="5">★</span>
+</div>
+
+<div class="btn-container project-input-group">
+  <textarea class="project-text-input donate-textarea" placeholder="Leave a kind message..."></textarea>
+
+  <a 
+    href="https://feddyhub.github.io/Portfolio-website/donate/donate.html"
+    class="btn btn-color-2 project-btn donate-action-button"
+    role="button"
+  >
+    Support with Coffee
+  </a>
+</div>
+
+
+
+</div>
+
+
+
+        </div>
+      </div>
+      <!-- Bu bölümün kendi oku olmayacak, genel section oku kullanılabilir veya kaldırılabilir -->
+      <!-- Eğer her section'ın kendi oku olacaksa, CSS'te .arrow için `position:absolute` ve `section { position:relative; }` doğru olmalı -->
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#footer'"
+      />
+    </section>
+    
+    <footer>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+       
+      </nav>
+      <p>Copyright &copy; 2025 Murat Ferhat Derya</p>
+    </footer>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+
+
+<!-- CHATBOT POPUP -->
+<div id="chatbotModal" class="modal">
+  <div class="modal-content chatbot-modal">
+    
+    <!-- KAPATMA TUŞU - SAĞ ÜST KÖŞEDE -->
+    <span class="close-btn">&times;</span>
+    
+    <!-- HEADER YAZI -->
+    <h2 class="chatbot-header">✨Fedai Chatbot Deneyin✨</h2>
+
+    <!-- GIF - BOYUT ARTTIRILDI -->
+    <img src="./assets/chatbot_modal.gif" alt="Chatbot GIF" class="chatbot-gif" />
+
+    <!-- ALT METİNLER -->
+    <div class="chatbot-description">
+      <!-- Agent listesi kaldırıldı -->
+      <p class="chatbot-subtext">4o Mini Gücünde Telegram Bot</p>
+      <p class="chatbot-subtext">Gerçek zamanlı, hızlı, akıllı!</p>
+      <a href="https://t.me/fedai_arkenom_bot" class="chatbot-btn">HEMEN DENE</a>
+  </div>
+</div>
+
+  </body>
+</html>
